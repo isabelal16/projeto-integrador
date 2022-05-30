@@ -1,0 +1,17 @@
+.menu{
+    background: #B5D3AF;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+.menu a{
+    color: black;
+    text-decoration: none;
+    margin: 20px;
+}
+
+body{
+    margin: 0%;
+}
