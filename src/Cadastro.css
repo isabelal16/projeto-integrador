@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Grape+Nuts&family=Raleway&family=Secular+One&display=swap');
+
+.centro{
+ 
+    text-align:center;
+ 
+}
+ 
+body{
+ 
+    color:rgb(0, 0, 0);
+    font-family:'Secular One', sans-serif;
+    background-color:#AABC8A;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+    border:none;
+    border-radius: 6px;
+}
+ 
+h1{
+ 
+    font-family:  'Grape Nuts', cursive;
+    color:rgb(0, 0, 0);
+    font-size: 80px;
+ 
+}
+ 
+.caixa1{
+ 
+    background-color: #B8D6B3;
+    text-align: center;
+    border:none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px #ccc;
+    margin-top: 70px;
+}
+
+.caixa2{
+ 
+    background-color: #B8D6B3;
+    text-align: center;
+    border:none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px #ccc;
+    margin: 30px;
+}
+ 
+button{
+ 
+   background-color: rgba(60, 85, 51, 0.87);
+   border-radius: 6px;
+   box-shadow: 0px 0px 6px #ccc;
+}
+ 
+.buttonC{
+    background-color:rgb(92, 84, 84); 
+    color:white;
+}
+
+input{
+ 
+    padding: 6.5px;
+    width: 397px;
+    border:none;
+    border-radius: 6px;
+   
+}
+ 
+p{
+ 
+    font-size: 15px;
+ 
+}
