@@ -8,20 +8,25 @@ const  Rodape = () => {
         <div className='rodape'>
 
             <div>
+                <img src='Fotorodape.jpg'/>
+                <p>Cuidado, carinho e atenção <br/> para seu animal de estimacão</p>
+            </div>
+
+            <div>
                 <h1>Contato</h1>
-                <p>(16)3370-0934</p>
-                <p>contato@AvocadoBichos.com.br</p>
+                <p><i className="fa-solid fa-phone"></i> (16)3370-0934</p>
+                <p><i class="fa-solid fa-envelope"></i> contato@AvocadoBichos.com.br</p>
             </div>
 
             <div>
                 <h1>Endereço</h1>
-                <p>Av. Henrique Gregori, 463 - Vila <br/> Bela Vista - São Carlos/SP</p>
+                <p><i className="fa-solid fa-location-dot"></i> Av. Henrique Gregori, 463 - Vila <br/> Bela Vista - São Carlos/SP</p>
             </div>
 
             <div>
                 <h1>Redes sociais</h1>
-                <p>Instagram</p>
-                <p>Facebook</p>
+                <p><i className="fa-brands fa-instagram"></i> AvocadosBichos</p>
+                <p><i className="fa-brands fa-facebook"></i> BichosAvocados</p>
             </div>
             
         </div>

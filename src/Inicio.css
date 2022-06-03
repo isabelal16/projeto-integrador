@@ -12,17 +12,18 @@ img{
     margin-left: 150px;
     width: 1200px;
     margin-top: 0;
+    margin-bottom: 20px;
     
 }
 
-.painel p{
+.painel2{
     font-size: 30px;
     font-family: 'Rokkitt', serif;
     font-family: 'Tiro Devanagari Hindi', serif;
     color: rgb(134, 134, 134);
 }
 
-.painel h1{
+.painel1{
     font-size: 80px;
     font-family: 'Rokkitt', serif;
     font-family: 'Tiro Devanagari Hindi', serif;

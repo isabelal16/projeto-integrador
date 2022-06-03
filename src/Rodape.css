@@ -1,12 +1,23 @@
 .rodape{
-    background: rgb(1, 37, 1);
+    background: #082E01;
     margin: 0;
     padding: 15px;
     color: white;
     display: flex;
     justify-content: space-around;
+    text-align: center;
 }
 
-.texto1{
-    font-size: 5px;
+.rodape h1{
+    font-size: 30px;
+}
+
+.rodape p{
+    font-size: 17px;
+    color: rgb(134, 134, 134);
+}
+
+.rodape img{
+    width: 110px;
+    margin-left: 0px;
 }
