@@ -1,7 +1,7 @@
 import React from 'react';
-import Menu from './Menu';
+import {  Routes, Route, Link } from 'react-router-dom';
 
-const Cadastro = ( ) => {
+const Cadastro = ( ) => { 
 
     require("./Cadastro.css");
 
@@ -14,77 +14,52 @@ const Cadastro = ( ) => {
 
                 <br/>
     
-                <h1><i class="fa-solid fa-dog"></i>Cadastro do Animal & Tutor:</h1>
+                <h1><i className="fa-solid fa-dog"></i>Cadastro do Animal & Tutor:</h1>
                 <p>Caso o animal seja porte grande ou silvestre, entre em contato:</p>
-                <p><i class="fa-brands fa-whatsapp"></i> (16) 994566268</p>
-                <p><i class="fa-solid fa-phone"></i> 01633800072</p>
-                <h2>(CASO O TUTOR JÁ TENHA O ANIMAL CADASTRADO, APENAS FAÇA O LOGIN)</h2>
+                <h4>(CASO O TUTOR JÁ TENHA O ANIMAL CADASTRADO, APENAS FAÇA O LOGIN)</h4>
 
                 <hr/>
 
-                <p class="centro"><i class="fa-solid fa-heart-pulse"></i>Informe os seus dados<i class="fa-solid fa-heart-pulse"></i></p>
+                <p className="centro"><i className="fa-solid fa-heart-pulse"></i>Informe os seus dados<i className="fa-solid fa-heart-pulse"></i></p>
 
                 <form className='centro'>
                     <label>
 
-                        <i class="fa-solid fa-user"></i><input required minlength="5" id="txttutor" type="text" placeholder="Digite o nome do tutor:"/>
+                        <i className="fa-solid fa-user"></i><input required minLength="5" type="text" placeholder="Digite o nome do tutor:"/>
  
                         <br/>
                         <br/>
 
-                        <i class="fa-solid fa-calendar-days"></i><input  id="txtaniversario" type="text" Placeholder="Digite a sua data de nascimento:"/>
+                        <i className="fa-solid fa-calendar-days"></i><input type="text" placeholder="Digite a sua data de nascimento:"/>
 
                         <br/>
                         <br/>
 
-                        <i class="fa-solid fa-pen"></i><input required minlength="4" id="txtuser" type="text" placeholder="Digite o nome para seu usuário:"/>
+                        <i className="fa-solid fa-pen"></i><input required minLength="4" type="text" placeholder="Digite o nome para seu usuário:"/>
  
                         <br/>
                         <br/>
             
-                        <i class="fa-solid fa-envelopes-bulk"></i> <input  type="email" placeholder="Digite um email:"/>
+                        <i className="fa-solid fa-envelopes-bulk"></i> <input autoComplete='username' type="email" placeholder="Digite um email:"/>
             
                         <br/>
                         <br/>
                         
-                        <i class="fa-solid fa-key"></i><input required minlength="8" id="senha2" type="password" placeholder="Digite uma senha:"/>
+                        <i className="fa-solid fa-key"></i><input autoComplete='new-password' required minLength="8"  type="password" placeholder="Digite uma senha:"/>
             
                         <br/>
                         <br/>
             
-                        <i class="fa-solid fa-key"></i><input required minlength="8" id="senha3" type="password" placeholder="confirme sua senha:"/>
+                        <i className="fa-solid fa-key"></i><input autoComplete='new-password' required minLength="8" type="password" placeholder="confirme sua senha:"/>
             
                         <hr/>
-            
-                        <p><i class="fa-solid fa-stethoscope"></i>Informe os dados do animal<i class="fa-solid fa-stethoscope"></i></p>
-                        <br/>
-                
-                        <i class="fa-solid fa-cat"></i><input required minlength="5" id="txtanimal" type="text" placeholder="Digite o nome do animal:"/>
-            
-                        <br/>
-                        <br/>
-            
-                        <i class="fa-solid fa-calendar"></i> <input id="txtanianimal" type="text" Placeholder="Digite a data de nascimento do animal:"/>
-                        
-                        <br/>
-                        <br/>
-                        
-                        <i class="fa-solid fa-feather-pointed"></i><input id="txtraca" type="text" placeholder="Digite a Raça do animal"/>
-            
-                        <br/>
-                        <br/>
-            
-                        <i class="fa-solid fa-venus-mars"></i><input id="txtsexanimal" type="text" placeholder="Digite o sexo do animal:"/>
-            
-                        <hr/>
-
-
                     </label>
                 </form>
 
-                <button><i class="fa-solid fa-house-medical"></i>Enviar<i class="fa-solid fa-house-medical"></i></button>  
+                <Link className='link' to="/"><i className="fa-solid fa-arrow-left-long"></i>Voltar</Link>
+                <Link className='link' to="/perfil">Entrar</Link>  
     
-                <button><i class="fa-solid fa-arrow-left-long"></i>Voltar</button>
+                
 
             </div>
                     

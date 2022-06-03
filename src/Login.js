@@ -1,50 +1,47 @@
 import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Inicio from './Inicio';
 
 const Login = () => {
 
-    require("./Cadastro.css")
+    require("./Cadastro.css");
 
     return (  
 
         <div>
             <div className='caixa1'>
-                <h1 class="centro"><i class="fa-solid fa-paw"></i>Seja Bem-Vindo!</h1>
+                <h1 className="centro"><i className="fa-solid fa-paw"></i>Seja Bem-Vindo!</h1>
                 <p>Caso demore para ser atendido ligue:</p>
-                <p><i class="fa-brands fa-whatsapp"></i> (16) 994587682</p>
-                <p><i class="fa-solid fa-phone"></i> 01633865472</p>
+                <p><i className="fa-brands fa-whatsapp"></i> (16) 994587682</p>
+                <p><i className="fa-solid fa-phone"></i> 01633865472</p>
                 <hr/>
-                <p class="centro"><i class="fa-solid fa-heart-pulse"></i>Faça login para começar<i class="fa-solid fa-heart-pulse"></i></p>
+                <p className="centro"><i className="fa-solid fa-heart-pulse"></i>Faça login para começar<i className="fa-solid fa-heart-pulse"></i></p>
 
            
                 <form className='centro'>
                     <label>
 
-                    <i class="fa-solid fa-unlock-keyhole"></i><input required minlength="5" type="text" placeholder="Digite o seu Usuário:"/>
+                    <i className="fa-solid fa-unlock-keyhole"></i><input required minLength="5" type="text" placeholder="Digite o seu Usuário:"/>
                     <br/>
                     <br/>        
-                    <i class="fa-solid fa-unlock-keyhole"></i><input required type="email" Placeholder="Digite o seu Email:"/> 
+                    <i className="fa-solid fa-unlock-keyhole"></i><input autoComplete='username' required type="email" placeholder="Digite o seu Email:"/> 
                     <br/>
                     <br/>
-                    <i class="fa-solid fa-key"></i><input required minlength="3" type="password" Placeholder="Digite sua Senha:"/>
-                    <br/>
-                    <br/>                           
-                    <p><i class="fa-solid fa-shield-cat"></i>Salvar meu Usuário<i class="fa-solid fa-shield-dog"></i></p> <input type="checkbox"/>
+                    <i className="fa-solid fa-key"></i><input autoComplete='current-password' required minLength="3" type="password" placeholder="Digite sua Senha:"/>                                             
                     <br/>
                     <br/>
-                    <button><i class="fa-solid fa-house-medical"></i> Logar <i class="fa-solid fa-house-medical"></i></button>
+                    <Link className='link' to="/" ><i className="fa-solid fa-arrow-left"></i> Voltar </Link>
+                    <Link className='link' to="/perfil"> Entrar </Link>
                         
                     <hr/>
-
-                    <p>Entre em contato conosco:</p>
-                    <p><i class="fa-solid fa-envelope-circle-check"></i> AvocadoBichos2022@gmail.com </p>
 
                     </label>
                 </form>
 
-                <button className='buttonC'><i class="fa-solid fa-file-medical"></i>Cadastre-se:<i class="fa-solid fa-file-medical"></i></button>
+                
             </div>          
 
-            <hr/>
+            
 
         </div>
     );

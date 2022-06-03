@@ -1,0 +1,12 @@
+.rodape{
+    background: rgb(1, 37, 1);
+    margin: 0;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.texto1{
+    font-size: 5px;
+}

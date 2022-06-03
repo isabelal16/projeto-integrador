@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&family=Tiro+Devanagari+Hindi&display=swap');
+
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px;
+    margin: 10px;
+}
+
+img{
+    margin-left: 150px;
+    width: 1200px;
+    margin-top: 0;
+    
+}
+
+.painel p{
+    font-size: 30px;
+    font-family: 'Rokkitt', serif;
+    font-family: 'Tiro Devanagari Hindi', serif;
+    color: rgb(134, 134, 134);
+}
+
+.painel h1{
+    font-size: 80px;
+    font-family: 'Rokkitt', serif;
+    font-family: 'Tiro Devanagari Hindi', serif;
+}

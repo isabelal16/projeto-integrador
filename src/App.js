@@ -3,10 +3,10 @@ import { Routes, Route, Link } from "react-router-dom";
 import Cadastro from './Cadastro';
 import Inicio from './Inicio';
 import Login from './Login';
+import Perfil from './Perfil';
+
 
 function App() {
-
-  const[tela, alteraTela] = React.useState(0);
 
   return (
 
@@ -16,9 +16,8 @@ function App() {
         <Route path="/" element={<Inicio />} />
         <Route path="login" element={<Login />} />
         <Route path="cadastro" element={<Cadastro />} />
+        <Route path="/perfil" element={<Perfil/>}/>
       </Routes>
-
-
 
     </div>
 
