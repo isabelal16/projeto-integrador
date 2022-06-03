@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&family=Tiro+Devanagari+Hindi&display=swap');
 
 
-.titulo {
+.painel .titulo {
     display: flex;
     justify-content: space-between;
     padding: 80px;
     margin: 10px;
 }
 
-img{
+.painel img{
     margin-left: 150px;
     width: 1200px;
     margin-top: 0;

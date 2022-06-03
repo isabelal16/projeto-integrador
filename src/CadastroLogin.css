@@ -6,38 +6,28 @@
     text-align:center;
  
 }
+.cadastroLogin{
+    display: flex;
+}
  
-body{
+body .cadastroLogin{
  
     color:rgb(0, 0, 0);
     font-family:'Secular One', sans-serif;
     background-color:#AABC8A;
     font-size: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    width:50%;
-    border:none;
-    border-radius: 6px;
+    
 }
  
-h1{
+.cadastroLogin h1{
  
     font-family:  'Grape Nuts', cursive;
     color:rgb(0, 0, 0);
-    font-size: 80px;
+    font-size: 100px;
  
-}
- 
-.caixa1{
- 
-    background-color: #B8D6B3;
-    text-align: center;
-    border:none;
-    border-radius: 15px;
-    box-shadow: 0px 0px 20px #ccc;
-    margin-top: 70px;
 }
 
+    
 .caixa2{
  
     background-color: #B8D6B3;
@@ -46,23 +36,14 @@ h1{
     border-radius: 15px;
     box-shadow: 0px 0px 20px #ccc;
     margin: 30px;
+    height:750px;
+    width: 500px;
+    margin-left: 200px;
+    margin-top: 16%;
 }
  
-button{
- 
-   background-color: rgba(60, 85, 51, 0.87);
-   border-radius: 6px;
-   box-shadow: 0px 0px 6px #ccc;
-   margin: 5px;
-   
-}
- 
-.buttonC{
-    background-color:rgb(92, 84, 84); 
-    color:white;
-}
 
-input{
+.cadastroLogin input{
  
     padding: 6.5px;
     width: 397px;
@@ -71,13 +52,13 @@ input{
    
 }
  
-p{
+.cadastroLogin p{
  
     font-size: 15px;
  
 }
 
-.link{
+.cadastroLogin .link{
     text-decoration: none;
     background: rgba(60, 85, 51, 0.87);
     color: white;
@@ -87,3 +68,40 @@ p{
     border: black solid 2px;
     margin: 7px;
 }
+
+
+.login2 img{
+    margin-top: 5%;
+    width: 1000px;
+    
+}
+
+.Cadastro img{
+    margin-top: 0;
+
+}
+
+.login2{
+    display: flex;
+}
+
+
+.login{
+    width: 50%;
+    text-align: center;
+
+}
+ 
+.caixa1{
+ 
+    background-color: #B8D6B3;
+    text-align: center;
+    border:none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px #ccc;
+    height:500px;
+    width: 500px;
+    margin-left: 200px;
+    margin-top: 35%;
+}
+
