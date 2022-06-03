@@ -15,7 +15,7 @@ const  Rodape = () => {
             <div>
                 <h1>Contato</h1>
                 <p><i className="fa-solid fa-phone"></i> (16)3370-0934</p>
-                <p><i class="fa-solid fa-envelope"></i> contato@AvocadoBichos.com.br</p>
+                <p><i className="fa-solid fa-envelope"></i> contato@AvocadoBichos.com.br</p>
             </div>
 
             <div>
