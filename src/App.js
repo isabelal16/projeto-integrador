@@ -4,6 +4,7 @@ import Cadastro from './Cadastro';
 import Inicio from './Inicio';
 import Login from './Login';
 import Perfil from './Perfil';
+import Servicos from './Servicos';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/perfil" element={<Perfil/>}/>
+        <Route path="/servicos" element={<Servicos/>}/>
       </Routes>
 
     </div>
