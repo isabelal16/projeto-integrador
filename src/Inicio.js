@@ -10,8 +10,8 @@ const Inicio = () => {
         <div className='painel'>
             <Menu/>
             <div className='titulo'>
-                <h1 className='painel1'>Cuide do seu <br/>melhor amigo</h1> 
-                <p className='painel2'>Nossa clinica é especializada em consulta veterinária, <br/>cuidado com o seu pet e em vacinação.</p> 
+                <h1 className='painel1'>Cuide do seu <br/>melhor amigo!</h1> 
+                <p className='painel2'>Nossa clinica é especializada em consulta veterinária, <br/>cuidado com o seu pet, Vacine no tempo certo!.</p> 
             </div>
 
             <div>
