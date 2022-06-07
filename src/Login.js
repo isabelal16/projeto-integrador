@@ -1,6 +1,5 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import Inicio from './Inicio';
 
 const Login = () => {
 
@@ -47,6 +46,9 @@ const Login = () => {
             </div>
 
         </div>
+
+        
+
     );
 }
  

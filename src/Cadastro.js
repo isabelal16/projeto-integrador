@@ -61,7 +61,7 @@ const Cadastro = ( ) => {
                     </form>
 
                     <Link className='link' to="/"><i className="fa-solid fa-arrow-left-long"></i>Voltar</Link>
-                    <Link className='link' to="/perfil">Entrar</Link>  
+                    <Link className='link' to="/login">Salvar</Link>  
         
                     
 
