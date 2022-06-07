@@ -13,7 +13,7 @@ const Login = () => {
 
             <div className='login'>
                 <h1>Seja bem vindo!</h1>
-                <img src='Login.png'></img>
+                <img width={998} src='Login.png'></img>
             </div>        
 
             <div className='login3'>
