@@ -14,6 +14,13 @@
     text-decoration: none;
 
 }
+.menu .link:hover{
+    color: #ffffff;
+    margin: 20px;
+    text-decoration: none;
+
+}
+
 
 .menu h2{
     margin: 15px;
