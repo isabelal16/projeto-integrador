@@ -1,7 +1,7 @@
 .rodape{
     background: #082E01;
     margin: 0;
-    padding: 15px;
+    padding: 14px;
     color: white;
     display: flex;
     justify-content: space-around;
@@ -13,10 +13,11 @@
 }
 
 .rodape p{
-    font-size: 17px;
+    font-size: 14px;
     color: rgb(134, 134, 134);
 }
 
-.imagemrod{
+.rodape img{
     width: 110px;
+    margin-left: 0px;
 }
