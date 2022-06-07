@@ -8,7 +8,7 @@ const  Rodape = () => {
         <div className='rodape'>
 
             <div>
-                <img src='Fotorodape.jpg'/>
+                <img className='imagemrod' src='fotorodape.jpg'/>
                 <p>Cuidado, carinho e atenção <br/> para seu animal de estimacão</p>
             </div>
 

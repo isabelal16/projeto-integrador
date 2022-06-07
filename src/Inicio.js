@@ -15,7 +15,7 @@ const Inicio = () => {
             </div>
 
             <div>
-                <img width='500px' src='Fotopainel.png'/>
+                <img className='imagemP' src='Fotopainel.png'/>
             </div>
 
             <Rodape/>
