@@ -11,7 +11,11 @@ const Menu = ( ) => {
 
             <div className='logo'>
 
+
                 <img src='logo.png'></img>
+
+                <img src='logo.png'></img>
+
                 <h2>Avocados Bichos</h2>
             
             </div>
