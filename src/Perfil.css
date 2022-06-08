@@ -1,0 +1,48 @@
+.fundo{
+    background: #697a65;
+    width: 100%;
+    height: 350px;
+}
+
+.fotoU{
+    background: white;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-top: -350px;
+    margin-left: 768px;
+}
+
+.fotopet img{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+
+}
+
+.perfil h1{
+    text-align: center;
+}
+
+.perfil h3{
+    background: #697a65;
+    width: 40%;
+    border-radius: 5px;
+    color: white;
+    margin-left: 80px;
+    text-align: center;
+    margin-top: 120px;
+    font-size: 20px;
+}
+
+.add img{
+    background: #697a65;
+    border-radius:  50%;
+    float: inline-end;
+    width: 40px;
+    margin-left: 750px;
+    margin-top: -120px;
+
+}
