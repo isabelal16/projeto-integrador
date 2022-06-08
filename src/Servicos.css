@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&family=Tiro+Devanagari+Hindi&display=swap');
+
 button:hover{
     background-color: rgb(1, 37, 1);
     color: white;
@@ -11,4 +13,13 @@ button{
     justify-content: center;
     text-align:center ;
 }
+.box {
+    font-family: 'Tiro Devanagari Hindi', serif;
+    justify-content: center;
+    border: 50px 50px 50px;
+    border-radius: 40px;
+    text-align: center;
+    background-color: red;
 
+
+}
