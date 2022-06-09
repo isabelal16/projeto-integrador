@@ -11,7 +11,7 @@ const Perfil = () => {
         <div className='perfil'>
             <div className='fundo'></div>
             <div><img className='fotoU' src="perfil.png"/></div>
-            <h1>Sara Silva</h1>
+            <h1 className='textosPer'>Sara Silva</h1>
             <h3>Pets</h3>
             <div className='fotopet'> 
                 <img src='gato.png'></img> <br/>
