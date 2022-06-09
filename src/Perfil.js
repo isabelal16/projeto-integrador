@@ -10,7 +10,7 @@ const Perfil = () => {
     return (  
         <div className='perfil'>
             <div className='fundo'></div>
-            <div className='fotoU'></div>
+            <div><img className='fotoU' src="Imagem perfil.png"/></div>
             <h1>Sara Silva</h1>
             <h3>Pets</h3>
             <div className='fotopet'> 
