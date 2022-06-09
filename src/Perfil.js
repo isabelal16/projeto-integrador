@@ -3,7 +3,11 @@ import { Routes, Route, Link} from 'react-router-dom';
 import Menu from './Menu';
 import Rodape from './Rodape';
 
-const Perfil = () => {
+
+
+const Perfil = (props) => {
+
+const nome = props.nome
 
     require("./Perfil.css");
 

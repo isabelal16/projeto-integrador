@@ -10,6 +10,28 @@ const Servicos = () => {
 
         <div>
 
+            <div className='listaSer'>
+                <div className='logoServicos'>
+                    <img width={80} src='fotorodape.jpg'/>
+                    <h2>Avocados Bichos</h2>
+                </div>
+                
+                <div className="dropdown">
+                    <a className="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        Serviços 
+                    </a>
+
+                    <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a className="dropdown-item" href="#">Banho</a></li>
+                        <li><a className="dropdown-item" href="#">Tosa</a></li>
+                        <li><a className="dropdown-item" href="#">Corte das unhas</a></li>
+                        <li><a className="dropdown-item" href="#">Secagem</a></li>
+                        <li><a className="dropdown-item" href="#">Limpeza nos ouvidos</a></li>
+                        <li><a className="dropdown-item" href="#">Banhos terapêuticos</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <div className='slideTa'>
                 <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
                     <div className="carousel-indicators">
@@ -18,14 +40,14 @@ const Servicos = () => {
                     </div>
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                        <img src="https://learn.uvm.edu/nb_wordpress/wp-content/uploads/Post-Baccalaureate-Veterinarian-DVM-1-1536x1024.jpeg" className="d-block w-100" alt="..."/>
+                        <img src="serviços2.png" className="d-block w-100" alt="..."/>
                         <div className="carousel-caption d-none d-md-block">
                             <h5 className='textosSer'>Consultas</h5>
                             <p className='textosSer'>Cuide da saúde do seu pet e marque uma consulta com a gente, somos especialistas em drenagem da glândula adanal.</p>
                         </div>
                         </div>
                         <div className="carousel-item">
-                        <img src="https://coastalpetproducts.com/media/1049/complete-care-cat-banner_mobile.jpg" className="d-block w-100" alt="..."/>
+                        <img src="serviços.png" className="d-block w-100" alt="..."/>
                         <div className="carousel-caption d-none d-md-block">
                             <h5 className='textosSer'>Higiene</h5>
                             <p className='textosSer'>Deixe seu pet cheirosinho conosco, somos especializados em limpeza dos ouvidos, banho, tosa, corte nas unhas, secagem e banhos terapêuticos.</p>

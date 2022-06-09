@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { Component, useState } from 'react';
 import {  Routes, Route, Link } from 'react-router-dom';
 
-const Cadastro = ( ) => { 
-
-    require("./CadastroLogin.css");
 
 
-    return ( 
+const Cadastro = () => {
 
+        require("./CadastroLogin.css");
+
+        const [nome, setNome] = useState ('')
+
+        return(
+
+    
         <div className='Cadastro cadastroLogin'>
 
             <div className='login'>
@@ -29,7 +33,8 @@ const Cadastro = ( ) => {
                     <form className='centro'>
                         <label>
 
-                            <i className="fa-solid fa-user"></i><input required minLength="5" type="text" placeholder="Digite o nome do tutor:"/>
+                            <i className="fa-solid fa-user"></i><input required minLength="5" type="text" placeholder="Digite o nome do tutor:" 
+                            value = {nome}  onChange={(e) => setNome(e.target.value)}/>
     
                             <br/>
                             <br/>
@@ -59,11 +64,10 @@ const Cadastro = ( ) => {
                             <hr/>
                         </label>
                     </form>
+                    <h3>Nome digitado : {nome}</h3>
 
                     <Link className='link' to="/"><i className="fa-solid fa-arrow-left-long"></i>Voltar</Link>
                     <Link className='link' to="/login">Salvar</Link>  
-        
-                    
 
                 </div>
             </div>     
@@ -72,7 +76,10 @@ const Cadastro = ( ) => {
     
         </div>
 
-    );
-}
- 
+        )
+    }
+
+
+
+
 export default Cadastro;
