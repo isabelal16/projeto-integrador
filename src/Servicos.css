@@ -19,6 +19,29 @@ button{
 }
 
 .slideTa{
-    width: 90%;
-    
+    margin-top: 50px ;
+    width: 70%;
+    margin-left: 15%;
+
+}
+
+.listaSer{
+    background: #082E01;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logoServicos{
+    display: flex;
+}
+
+.logoServicos h2{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.dropdown{
+    margin: 15px;
 }
