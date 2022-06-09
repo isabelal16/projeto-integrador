@@ -1,5 +1,5 @@
 .fundo{
-    background: #697a65;
+    background: #91b372;
     width: 100%;
     height: 350px;
 }
@@ -19,9 +19,16 @@
 .fotopet img{
     width: 100px;
     height: 100px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
     margin-left: 80px;
+
+}
+
+.TextoP{
+    
+    text-align: center;
+    color:black
 
 }
 
@@ -31,10 +38,10 @@
 }
 
 .perfil h3{
-    background: #697a65;
+    background:#91b372;
     width: 40%;
     border-radius: 5px;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-left: 80px;
     text-align: center;
     margin-top: 120px;
@@ -42,11 +49,12 @@
 }
 
 .add img{
-    background: #697a65;
+    background: #6c8d65;
     border-radius:  50%;
     float: inline-end;
     width: 40px;
     margin-left: 750px;
     margin-top: -120px;
+    
 
 }
