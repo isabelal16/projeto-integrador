@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
+import Perfil from './Perfil';
 
 const Login = () => {
 
     require("./CadastroLogin.css");
-    
 
     return (  
 
@@ -51,5 +51,7 @@ const Login = () => {
 
     );
 }
+
+
  
 export default Login;
