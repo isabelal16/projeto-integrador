@@ -1,12 +1,23 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
 import Perfil from './Perfil';
+import Cadastro from './Cadastro';
 
 const Login = () => {
 
     require("./CadastroLogin.css");
 
+    const senhaCadastro = document.getElementById("inputSenha").value;
+    const senhaDigitada =""
+
+    if (senhaDigitada==senhaCadastro) {
+        alert("login efetuado com sucesso")
+    } else {
+        alert("email ou senha incorreta")
+    }
+
     return (  
+
 
         <div className='login2 cadastroLogin'>
 
@@ -26,16 +37,13 @@ const Login = () => {
                     <form className='centro'>
                         <label>
 
-                        <i className="fa-solid fa-unlock-keyhole"></i><input required minLength="5" type="text" placeholder="Digite o seu Usuário:"/>
-                        <br/>
-                        <br/>        
                         <i className="fa-solid fa-unlock-keyhole"></i><input autoComplete='username' required type="email" placeholder="Digite o seu Email:"/> 
                         <br/>
                         <br/>
-                        <i className="fa-solid fa-key"></i><input autoComplete='current-password' required minLength="3" type="password" placeholder="Digite sua Senha:"/>                                             
+                        <i className="fa-solid fa-key"></i><input id='inputSenha' autoComplete='current-password' required minLength="3" type="password" placeholder="Digite sua Senha:"/>                                             
                         <br/>
                         <br/>
-                        <Link className='link' to="/" ><i className="fa-solid fa-arrow-left"></i> Voltar </Link>
+                        <Link className='link' to="/cadastro" ><i className="fa-solid fa-arrow-left"></i> Voltar </Link>
                         <Link className='link' to="/perfil"> Entrar </Link>
                             
                         <hr/>
@@ -47,7 +55,6 @@ const Login = () => {
 
         </div>
 
-        
 
     );
 }

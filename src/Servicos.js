@@ -69,15 +69,7 @@ const Servicos = () => {
             
 
             
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+            
             
             <Rodape/>
         </div>

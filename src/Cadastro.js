@@ -1,15 +1,13 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import {  Routes, Route, Link } from 'react-router-dom';
-
+import Login from './Login';
 
 
 const Cadastro = () => {
 
-        require("./CadastroLogin.css");
+    require("./CadastroLogin.css");
 
-        const [nome, setNome] = useState ('')
-
-        return(
+    return(
 
     
         <div className='Cadastro cadastroLogin'>
@@ -28,13 +26,12 @@ const Cadastro = () => {
 
                     <hr/>
 
-                    <p className="centro"><i className="fa-solid fa-heart-pulse"></i>Informe os seus dados<i className="fa-solid fa-heart-pulse"></i></p>
+                    <p className="centro">Informe os seus dados</p>
 
                     <form className='centro'>
                         <label>
 
-                            <i className="fa-solid fa-user"></i><input required minLength="5" type="text" placeholder="Digite o nome do tutor:" 
-                            value = {nome}  onChange={(e) => setNome(e.target.value)}/>
+                            <i className="fa-solid fa-user"></i><input required minLength="5" type="text" placeholder="Digite o seu nome:" />
     
                             <br/>
                             <br/>
@@ -43,18 +40,13 @@ const Cadastro = () => {
 
                             <br/>
                             <br/>
-
-                            <i className="fa-solid fa-pen"></i><input required minLength="4" type="text" placeholder="Digite o nome para seu usuário:"/>
-    
-                            <br/>
-                            <br/>
                 
-                            <i className="fa-solid fa-envelopes-bulk"></i> <input autoComplete='username' type="email" placeholder="Digite um email:"/>
+                            <i className="fa-solid fa-envelopes-bulk"></i> <input id='emailCadastro' autoComplete='username' type="email" placeholder="Digite o seu email:"/>
                 
                             <br/>
                             <br/>
                             
-                            <i className="fa-solid fa-key"></i><input autoComplete='new-password' required minLength="8"  type="password" placeholder="Digite uma senha:"/>
+                            <i className="fa-solid fa-key"></i><input id='inputSenha' autoComplete='new-password' required minLength="8"  type="password" placeholder="Digite uma senha:"/>
                 
                             <br/>
                             <br/>
@@ -64,9 +56,9 @@ const Cadastro = () => {
                             <hr/>
                         </label>
                     </form>
-                    <h3>Nome digitado : {nome}</h3>
 
-                    <Link className='link' to="/"><i className="fa-solid fa-arrow-left-long"></i>Voltar</Link>
+
+                    <Link className='link' to="/"><i className="fa-solid fa-arrow-left"></i> Voltar</Link>
                     <Link className='link' to="/login">Salvar</Link>  
 
                 </div>
@@ -76,8 +68,8 @@ const Cadastro = () => {
     
         </div>
 
-        )
-    }
+    )
+}
 
 
 
