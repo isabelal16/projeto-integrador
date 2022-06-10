@@ -5,7 +5,7 @@ import Inicio from './Inicio';
 import Login from './Login';
 import Perfil from './Perfil';
 import Servicos from './Servicos';
-
+import Agenda from './Agenda';
 
 function App() {
 
@@ -19,6 +19,7 @@ function App() {
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/perfil" element={<Perfil/>}/>
         <Route path="/servicos" element={<Servicos/>}/>
+        <Route path="/Agenda"element={<Agenda/>}/>
       </Routes>
 
     </div>
