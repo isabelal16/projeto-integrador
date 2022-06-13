@@ -1,4 +1,5 @@
 import React from "react"; 
+import Perfil from "./Perfil";
 
 
 const Agenda = () => {

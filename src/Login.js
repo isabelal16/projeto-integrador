@@ -1,12 +1,11 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
-    require("./CadastroLogin.css");
+    require("./CadastroLogin.css"); 
 
     return (  
-
 
         <div className='login2 cadastroLogin'>
 
@@ -26,10 +25,10 @@ const Login = () => {
                     <form className='centro'>
                         <label>
 
-                        <i className="fa-solid fa-unlock-keyhole"></i><input autoComplete='username' required type="email" placeholder="Digite o seu Email:"/> 
+                        <i className="fa-solid fa-unlock-keyhole"></i><input id='emailLogin' autoComplete='username' required type="email" placeholder="Digite o seu Email:"/> 
                         <br/>
                         <br/>
-                        <i className="fa-solid fa-key"></i><input id='inputSenha' autoComplete='current-password' required minLength="3" type="password" placeholder="Digite sua Senha:"/>                                             
+                        <i className="fa-solid fa-key"></i><input id='senhaLogin' autoComplete='current-password' required minLength="3" type="password" placeholder="Digite sua Senha:"/>                                             
                         <br/>
                         <br/>
                         <Link className='link' to="/cadastro" ><i className="fa-solid fa-arrow-left"></i> Voltar </Link>
