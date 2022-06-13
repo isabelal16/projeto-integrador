@@ -41,12 +41,12 @@ const Cadastro = () => {
                             <br/>
                             <br/>
                 
-                            <i className="fa-solid fa-envelopes-bulk"></i> <input id='emailCadastro' autoComplete='username' type="email" placeholder="Digite o seu email:"/>
+                            <i className="fa-solid fa-envelopes-bulk"></i> <input autoComplete='username' type="email" placeholder="Digite o seu email:"/>
                 
                             <br/>
                             <br/>
                             
-                            <i className="fa-solid fa-key"></i><input id='inputSenha' autoComplete='new-password' required minLength="8"  type="password" placeholder="Digite uma senha:"/>
+                            <i className="fa-solid fa-key"></i><input autoComplete='new-password' required minLength="8"  type="password" placeholder="Digite uma senha:"/>
                 
                             <br/>
                             <br/>

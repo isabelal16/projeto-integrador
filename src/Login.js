@@ -1,20 +1,9 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
-import Perfil from './Perfil';
-import Cadastro from './Cadastro';
 
 const Login = () => {
 
     require("./CadastroLogin.css");
-
-    const senhaCadastro = document.getElementById("inputSenha").value;
-    const senhaDigitada =""
-
-    if (senhaDigitada==senhaCadastro) {
-        alert("login efetuado com sucesso")
-    } else {
-        alert("email ou senha incorreta")
-    }
 
     return (  
 
