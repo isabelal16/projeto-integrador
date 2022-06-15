@@ -28,6 +28,8 @@ const Servicos = () => {
                         <li><a className="dropdown-item" href="#">Secagem</a></li>
                         <li><a className="dropdown-item" href="#">Limpeza nos ouvidos</a></li>
                         <li><a className="dropdown-item" href="#">Banhos terapêuticos</a></li>
+                        <li><a className="dropdown-item" href="#">Consultas</a></li>
+                        <li><a className="dropdown-item" href="#">Vacinas</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,14 +45,14 @@ const Servicos = () => {
                         <img src="serviços2.png" className="d-block w-100" alt="..."/>
                         <div className="carousel-caption d-none d-md-block">
                             <h5 className='textosSer'>Consultas</h5>
-                            <p className='textosSer'>Cuide da saúde do seu pet e marque uma consulta com a gente, somos especialistas em drenagem da glândula adanal.</p>
+                            <p className='textosSer'>Como vai a saúde do seu pet?, marque uma consulta com a gente, somos especialistas em drenagem da glândula adanal.</p>
                         </div>
                         </div>
                         <div className="carousel-item">
                         <img src="serviços.png" className="d-block w-100" alt="..."/>
                         <div className="carousel-caption d-none d-md-block">
                             <h5 className='textosSer'>Higiene</h5>
-                            <p className='textosSer'>Deixe seu pet cheirosinho conosco, somos especializados em limpeza dos ouvidos, banho, tosa, corte nas unhas, secagem e banhos terapêuticos.</p>
+                            <p className='textosSer'>Adeus cheirinho de pelo molhado!, somos especialistas em limpeza dos ouvidos, banho, tosa, corte nas unhas, secagem e banhos terapêuticos.</p>
                         </div>
                         </div>
                         
