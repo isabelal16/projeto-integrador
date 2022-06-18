@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, Link} from 'react-router-dom';
-import Menu from './Menu';
 import Rodape from './Rodape';
+import Modal from 'react-modal';
 
-
+Modal.setAppElement('#root')
 
 const Perfil = (props) => {
 
-const nome = props.nome
+    const [modalIsOpen, setIsOpen] = useState(false)
+
+    function OpenModal (){
+        setIsOpen(true)
+    }
+
+    function CloseModal (){
+        setIsOpen(false)
+    }
+
+    const nome = props.nome
 
     require("./Perfil.css");
 
@@ -32,9 +42,19 @@ const nome = props.nome
                     </div>
             </div>
             <div/>
-            <div className='add'><img src='add.png'></img></div>
+            <div className='add' onClick={OpenModal}><img src='add.png'></img></div>
                 <Rodape/>
+
+            <Modal
+            isOpen = {modalIsOpen}
+            onRequestClose = {CloseModal}
+            >
+                <h1> Sou um modal, oi</h1>
+
+            </Modal>
         </div>
+
+       
     );
 }
  
