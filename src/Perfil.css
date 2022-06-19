@@ -58,3 +58,10 @@
     
 
 }
+
+.agenda img{
+    background: #6c8d65;
+    border-radius:  50%;
+    width: 40px;
+    float: right;
+}
