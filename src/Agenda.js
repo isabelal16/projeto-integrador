@@ -1,7 +1,38 @@
-import React from "react"; 
+import React, { useState } from "react"; 
 
 
 const Agenda = () => {
+    const [name, setName] = useState();
+    const [time, setTime] = useState();
+    const [functionaries, setFunctionaries] = useState([]);
+    const [functionary, setFunctionary] = useState();
+
+    const inputNameChanged = (e) => {
+        setName(e.target.value);
+    };
+
+    const inputTimeChanged = (e) => {
+        setTime(e.target.value);
+        // TODO: Ler do back-end a lista de funcionários disponíveis para a data e horário definidos
+        setFunctionaries([
+            {
+                id: 1,
+                name: 'adriana gomez',
+            },
+            {
+                id: 2,
+                name: 'lucas silva',
+            },
+            {
+                id: 3,
+                name: 'gabriel souza',
+            },
+            {
+                id: 4,
+                name: 'rebecca vaz',
+            },
+        ]);
+    };
      
 // const Nome = document.getElementById = Nome
 // const Date = document.getElementById = Date
@@ -13,15 +44,15 @@ const Agenda = () => {
     const salvar = (e) => {
         e.preventDefault();
 
-       const Name = document.getElementById("inputName").value;
-       const Time = document.getElementById("inputTime").value;
+       //const Name = document.getElementById("inputName").value;
+       //const Time = document.getElementById("inputTime").value;
        const Date = document.getElementById("inputDate").value;
-       const functionary = document.getElementById("inputfunctionary").value;
+       //const functionary = document.getElementById("inputfunctionary");
 
-       console.log(Name,Time,Date,functionary)
+       console.log(name,time,Date,functionary.name)
        
     }
-
+    
 
     return(
 
@@ -35,7 +66,7 @@ const Agenda = () => {
                 <div>
                 <label>
                     <p>nome o seu amigão</p>
-                    <input type="text" id="inputName" name="teste"></input>
+                    <input type="text" id="inputName" name="teste" onChange={inputNameChanged}></input>
 
                 </label> 
                 </div>
@@ -50,35 +81,32 @@ const Agenda = () => {
 
                 <div>
                     <p>que hora vai ser</p>
-                    <input type="time" id="inputTime"></input>
+                    <input type="time" id="inputTime" onChange={inputTimeChanged}></input>
 
-                <div>
-                    <input type="functionary" id="functionary"></input>
-                </div>
+                {(functionaries.length > 0) && (
+                    <div >
+                        <label>
+                        <p> qual vai ser o funcionario ?</p>
+                        {functionaries.map( functionary =>
+                            <label key={functionary.id}>
+                                <input type="radio" name="functionary" value={functionary.id} onClick={() => { setFunctionary(functionary) }} />{functionary.name}
+                            </label>
+                        )}
+                        </label>
+                    </div>
+                )}
+                
 
                 </div>
 
                 <button onClick={salvar}>salvar</button>
-                
-
-                <label>
-                    <select name="Agenda">
-                        <option value= "name">name</option>
-                        <option value= "Date">Date</option>
-                        <option value= "time">time</option>
-                        <option value= "functionary">functionary</option>
-                    </select>
-                </label>
-
-
             </form>
 
             <ul>
             
                 <li>
 
-                    <p> Cachorro rex </p>
-                    <p>09/06/2022 <br/> 15:22</p>
+                
 
                 </li>
             
