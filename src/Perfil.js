@@ -55,9 +55,12 @@ const Perfil = (props) => {
 
     const nome = props.nome
 
+
+
     require("./Perfil.css");
 
     return (  
+
         <div className='perfil' onClick={FecharModal3}>
             <div className='fundo'></div>
             <div><img className='fotoU' src="perfil.png"/></div>
@@ -75,8 +78,11 @@ const Perfil = (props) => {
                 <img src="outros.png"/>
                     <div className='TextoP'>
                          <p> Outra Diversidade de animais </p>
-                    </div>
-            </div>
+                   
+
+            <div className='add'><img src='add.png' ></img></div>
+            
+
             <div/>
             <div className='add' onClick={OpenModal}><img src='add.png'></img></div>
             <div className='agenda'>
@@ -118,7 +124,6 @@ const Perfil = (props) => {
             isOpen = {abrirModal3}
             onRequestClose = {FecharModal3}
             >
-
                 {/*Modal que seria mostrado quando usuário fizesse login(SUJESTÃO)*/}
                 <h1>Seja bem vindo ao seu perfil!</h1>
                 <p>Agende serviços</p>
@@ -133,6 +138,17 @@ const Perfil = (props) => {
         
 
        
+
+         
+       
+        </div>
+        <div/>
+
+        </div>
+
+
+        
+
     );
 }
  
