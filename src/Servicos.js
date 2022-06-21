@@ -22,12 +22,7 @@ const Servicos = () => {
                     </a>
 
                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a className="dropdown-item" href="#">Banho</a></li>
-                        <li><a className="dropdown-item" href="#">Tosa</a></li>
-                        <li><a className="dropdown-item" href="#">Corte das unhas</a></li>
-                        <li><a className="dropdown-item" href="#">Secagem</a></li>
-                        <li><a className="dropdown-item" href="#">Limpeza nos ouvidos</a></li>
-                        <li><a className="dropdown-item" href="#">Banhos terapêuticos</a></li>
+                        <li><a className="dropdown-item" href="#">Banho e Tosa</a></li>
                         <li><a className="dropdown-item" href="#">Consultas</a></li>
                         <li><a className="dropdown-item" href="#">Vacinas</a></li>
                     </ul>
