@@ -3,32 +3,32 @@ import React, { useState } from 'react';
 
 //Criar uma Route Private (para a maioria das telas, já que só usuários e administrador poderão ter acesso a por exemplo perfil, agenda, etc)
 const Admin = () => {
+
+    require ("./Admin.css")
     return ( 
-        <div>
+        <div className='adm'>
 
-            <h1>Administração</h1>
+            <img src='logo.png'/><br/>
+            <br/>
+            <br/>
 
-            <h2>Profissionais</h2>
+            <h4>Profissionais</h4><br/>
 
-            <p>Alex</p>
+            <p>Alex</p><br/>
 
-            <p>Samantha</p>
+            <p>Samantha</p><br/>
 
-            <img></img>
-
-            <p>Adm</p>
-
-            <p>Agenda</p>
+            <h4>Agenda</h4><br/>
             
-            <p>Tosador</p>
+            <p>Tosador</p><br/>
 
-            <p>Veterinário</p>
+            <p>Veterinário</p><br/>
 
-            <p>Enfermaria</p>
+            <p>Enfermaria</p><br/>
 
-            <p>Consultas</p>
+            <p>Consultas</p><br/>
 
-            <p>Clientes</p>
+            <h4>Clientes</h4><br/>
 
         </div>
      );

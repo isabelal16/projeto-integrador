@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
+import Admin from './Admin';
 
-
+require("./Horarios.css")
 //Criar uma Route Private (para a maioria das telas, já que só usuários e administrador poderão ter acesso a por exemplo perfil, agenda, etc)
 const Horarios = () => {
     return ( 
-        <div>
+        <div className='hor'>
+
+
 
             <h1>Horários Tosador</h1>
 
             <p>Isis</p>
 
+            <div className='horarios'>
             <p>Serviço</p>
 
             <p>Dia</p>
@@ -21,6 +25,8 @@ const Horarios = () => {
             <p>Pet</p>
 
             <p>Tutor</p>
+
+            </div>
 
             
             <p>Alex</p>
