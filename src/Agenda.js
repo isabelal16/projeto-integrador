@@ -1,4 +1,7 @@
 import React, { useState } from "react"; 
+import React from "react"; 
+import Perfil from "./Perfil";
+
 
 
 const Agenda = () => {
@@ -13,7 +16,6 @@ const Agenda = () => {
 
     const inputTimeChanged = (e) => {
         setTime(e.target.value);
-        // TODO: Ler do back-end a lista de funcionários disponíveis para a data e horário definidos
         setFunctionaries([
             {
                 id: 1,
@@ -33,21 +35,10 @@ const Agenda = () => {
             },
         ]);
     };
-     
-// const Nome = document.getElementById = Nome
-// const Date = document.getElementById = Date
-// const Time = document.getElementById = Time
-
-// const  Data = ()  => <li> <p>{"Nome"}</p>  <p>{"Date"}</p> <p>{"Time"}</p> </li>
-
-//document.get(ul).innerHTML = Agenda;
     const salvar = (e) => {
         e.preventDefault();
 
-       //const Name = document.getElementById("inputName").value;
-       //const Time = document.getElementById("inputTime").value;
        const Date = document.getElementById("inputDate").value;
-       //const functionary = document.getElementById("inputfunctionary");
 
        console.log(name,time,Date,functionary.name)
        
