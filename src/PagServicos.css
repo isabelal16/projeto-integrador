@@ -1,0 +1,30 @@
+.pagservico img{
+    width: 1400px;
+}
+
+.textimg{
+    display: flex;
+    margin-top: 50px;
+}
+
+.pagservico p{
+    font-size: 30px;
+    margin-top: 80px;
+}
+
+.pagservico h1{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.profissionais img{
+    width: 150px;
+    margin-left: -100px;
+    
+}
+
+.profissionais{
+    display: flex;
+    justify-content: space-evenly;
+    
+}

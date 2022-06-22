@@ -63,7 +63,7 @@ const Horarios = () => {
 
             <img></img> <br/>
 
-            <p>Ddos Tutor</p>
+            <p>Dados Tutor</p>
 
             <p>Nome:</p>
 
