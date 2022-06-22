@@ -24,7 +24,7 @@ const Servicos = () => {
                     </a>
 
                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><Link to = "/pagservicos"><a className="dropdown-item" href="#">Banho e Tosa</a></Link></li>
+                        <li><Link to="/pagservicos"><a className="dropdown-item" href="#">Banho e Tosa</a></Link></li>
                         <li><a className="dropdown-item" href="#">Consultas</a></li>
                         <li><a className="dropdown-item" href="#">Vacinas</a></li>
                     </ul>
