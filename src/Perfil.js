@@ -57,17 +57,7 @@ const Perfil = (props) => {
         <div className='perfil'>
             <div className='fundo'></div>
             <div> <img className='fotoU' src="perfil.png"/> </div>
-            <h1 className='textosPer'>Sara Silva</h1>
-
-            <h3>Pets</h3>
-
-            <div className='fotopet textoP'> 
-                <img src='gato.png' onClick={AbrirModal}></img> <br/>                     
-                <img src='doguinho.png'></img>
-                <img src="outros.png"/>
-            </div>   
-
-            <div className='add'><img src='add.png'/></div>
+            <h1 className='textosPer'>Sara Silva</h1>   
 
             <div className='alinhamento'>
                     <div className='Pets'>
