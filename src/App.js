@@ -9,6 +9,8 @@ import Agenda from './Agenda';
 import Clientes from './Clientes';
 import Admin from './Admin';
 import Horarios from './Horarios';
+import Profissionais from './Profissionais';
+import PagServicos from './PagServicos';
 
 function App() {
 
@@ -26,6 +28,8 @@ function App() {
         <Route path="/clientes" element={<Clientes/>}/>
         <Route path="/admin" element={<Admin/>}/>
         <Route path="/horarios" element={<Horarios/>}/>
+        <Route path="/profissionais" element={<Profissionais/>}/>
+        <Route path="/pagservicos" element={<PagServicos/>}/>
       </Routes>
 
     </div>
