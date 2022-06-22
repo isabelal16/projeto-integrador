@@ -1,8 +1,5 @@
 import React, { useState } from "react"; 
-import React from "react"; 
 import Perfil from "./Perfil";
-
-
 
 const Agenda = () => {
     const [name, setName] = useState();
