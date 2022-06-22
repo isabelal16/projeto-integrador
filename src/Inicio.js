@@ -21,7 +21,6 @@ const Inicio = () => {
             </div>
 
             <Rodape/>
-            <Link className='link' to="/clientes">Clientes</Link>
         </div>
     );
 }

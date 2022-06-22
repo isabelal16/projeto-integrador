@@ -20,17 +20,13 @@
     margin-top: 40px;
     margin-bottom: 10px;
     margin-left: 80px;
-    
-
 }
 
-.fotopet p{
-    margin-top: 80px;
-    margin-left: 25px;
-}
 
-.texto{
-display: flex;
+.TextoP{
+    margin-left: 200px;
+    margin-bottom: 40px;
+    margin-top: -60px;
 }
 
 .textosPer{
@@ -54,18 +50,21 @@ display: flex;
     border-radius:  50%;
     float: inline-end;
     width: 40px;
-    margin-left: 750px;
-    margin-top: -120px;
-    
+    height: 40px;
+    margin-left: 550px;
+    margin-top: -200px;
 
 }
-
 
 .agenda img{
     background: #6c8d65;
     border-radius:  50%;
-    width: 40px;
+    width: 46px;
+    height: 46px;
     float: right;
+    margin-top: -120px;
+    margin-right: 80px;
+    
 }
 
 .agenda2{
@@ -84,11 +83,29 @@ display: flex;
     float: inline-end;
 }
 
-.modal{
+.Modal{
     background: #6c8d65;
     width: 400px;
     height: 600px;
     text-align: center;
-    margin-left: 40%;
+    margin-left: 50%;
 
+}
+
+.alinhamento{
+    display: flex;
+}
+
+<<<<<<< Updated upstream
+}
+
+.petsCadastro{
+    display: none;
+=======
+.Pets{
+    width: 50%;
+    margin-left: 100px;
+    border: #6c8d65 solid 2px;
+    border-radius: 10px;
+>>>>>>> Stashed changes
 }

@@ -43,51 +43,100 @@ const Perfil = (props) => {
     }
 
 
-    const [abrirModal3, modalAberto3] = useState(true)
-
-    function AbrirModal3 (){
-        modalAberto3 (true)
-    }
-
-    function FecharModal3 (){
-        modalAberto3 (false)
-    }
-
     const nome = props.nome
 
 
 
     require("./Perfil.css");
 
+    
+    const [animais, alteraAnimais] = React.useState([]);
+
     return (  
 
-        <div className='perfil' onClick={FecharModal3}>
+        <div className='perfil'>
             <div className='fundo'></div>
             <div><img className='fotoU' src="perfil.png"/></div>
             <h1 className='textosPer'>Sara Silva</h1>
+<<<<<<< Updated upstream
             <h3>Pets</h3>
-            <div className='fotopet'> 
-                <img src='gato.png' onClick={AbrirModal}></img> <br/>
-                     <div className='TextoP'>
-                        <p> Gatos</p>
-                     </div>
-                <img src='doguinho.png'></img>
-                     <div className='TextoP'>
-                         <p> Cachorros</p>
-                     </div>
-                <img src="outros.png"/>
-                    <div className='TextoP'>
-                         <p> Outra Diversidade de animais </p>
-                   
+            <div className='petsCadastro'>
 
-            <div className='add'><img src='add.png' ></img></div>
+                <br/>
+                <br/>
+                <h1>Cadastro de Pets</h1>
+
+                {
+                    animais == 0 ? <p> Carregando</p> : 
+                    <div>
+                        {animais.map (u => {
+                            return(
+                                <>  <br/>
+
+                                    <hr/>
+                                    <p>Nome: {u.nome}</p>
+                                    <p>Raça: {u.raça}</p>
+                                    <p>Porte: {u.porte}</p>                                                               
+                                    <hr/>
+
+                                </>
+                            )
+                        })}
+                    </div>
+                }
+
+            </div>
+            <div className='fotopet'> 
+                <img src='gato.png' onClick={AbrirModal}></img> <br/>                     
+                <img src='doguinho.png'></img>
+                <img src="outros.png"/>
+                    <div className='TextoP'>                   
+                    <div className='add'><img src='add.png' ></img></div>
+=======
+
+            <div className='alinhamento'>
+                    <div className='Pets'>
+                        <h3>Pets</h3>
+                        <div className='fotopet'> 
+                            <img src='gato.png' onClick={AbrirModal}></img> <br/>
+                            
+                            <div className='TextoP'>
+                                <p> Gatos</p>
+                            </div>
+
+                            <img src='doguinho.png'></img>
+                            <div className='TextoP'>
+                                <p> Cachorros</p>
+                            </div>
+
+                            <img src="outros.png"/>
+                                <div className='TextoP'>
+                                    <p> Outra Diversidade de animais </p>
+                                </div>
+                        </div>
+                    </div>
+               
+
+                <div className='Pets'>
+                    <h3>Agenda</h3>
+                  <p>Pet:</p>  
+                  <p>Data:</p>
+                  <p>Horário:</p>
+                  <p>Serviço:</p>
+                        
+                        
+                </div>
+            </div>
+>>>>>>> Stashed changes
             
 
-            <div/>
             <div className='add' onClick={OpenModal}><img src='add.png'></img></div>
             <div className='agenda'>
             <img src='agenda.png' onClick={AbrirModal2}/>
             </div>
+            <br/>
+            <br/>
+            <br/>
                 <Rodape/>
 
             <Modal
@@ -98,10 +147,8 @@ const Perfil = (props) => {
                 <h1> Adicionar pet </h1>
                 <p>Nome:</p><input></input>
                 <p>Raça:</p><input></input>
-                <p>Cor:</p><input></input>
                 <p>Porte:</p><input></input>
-                <p>Imagem:</p><input></input>
-
+                
             </Modal>
 
             <Modal
@@ -120,31 +167,15 @@ const Perfil = (props) => {
                 <Agenda/>
             </Modal>
 
-            <Modal
-            isOpen = {abrirModal3}
-            onRequestClose = {FecharModal3}
-            >
-                {/*Modal que seria mostrado quando usuário fizesse login(SUJESTÃO)*/}
-                <h1>Seja bem vindo ao seu perfil!</h1>
-                <p>Agende serviços</p>
-                <p>Cadastre seus pets</p>
-                <p>Se organize e tenha acesso a sua agenda</p>
-                <p>Aproveite os nossos serviços da melhor forma, estamos aqui para o seu bem estar e o do seu querido pet!</p>
-                <button onClick={FecharModal3}>Fechar</button>
-            </Modal>
-       
-        </div>
+      
+
+                </div>
+                
+        
+        
+     
 
         
-
-       
-
-         
-       
-        </div>
-        <div/>
-
-        </div>
 
 
         

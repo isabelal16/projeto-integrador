@@ -9,18 +9,19 @@ const Profissionais = (props) => {
     const profissionais = [
 
         {
+            nome: "Alex",
+            descricao: "Alex é legal",
+            especialidade: "Tosador",
+        },
+        
+        {
             nome: "Samantha",
             descricao: "Samantha é legal",
             especialidade: "Tosadora",
         },
 
         
-        {
-            nome: "Alex",
-            descricao: "Alex é legal",
-            especialidade: "Tosador",
-        },
-        
+       
     ]
 
     return( 
