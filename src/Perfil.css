@@ -92,3 +92,7 @@ display: flex;
     margin-left: 40%;
 
 }
+
+.petsCadastro{
+    display: none;
+}

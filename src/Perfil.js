@@ -59,6 +59,9 @@ const Perfil = (props) => {
 
     require("./Perfil.css");
 
+    
+    const [animais, alteraAnimais] = React.useState([]);
+
     return (  
 
         <div className='perfil' onClick={FecharModal3}>
@@ -66,21 +69,38 @@ const Perfil = (props) => {
             <div><img className='fotoU' src="perfil.png"/></div>
             <h1 className='textosPer'>Sara Silva</h1>
             <h3>Pets</h3>
-            <div className='fotopet'> 
-                <img src='gato.png' onClick={AbrirModal}></img> <br/>
-                     <div className='TextoP'>
-                        <p> Gatos</p>
-                     </div>
-                <img src='doguinho.png'></img>
-                     <div className='TextoP'>
-                         <p> Cachorros</p>
-                     </div>
-                <img src="outros.png"/>
-                    <div className='TextoP'>
-                         <p> Outra Diversidade de animais </p>
-                   
+            <div className='petsCadastro'>
 
-            <div className='add'><img src='add.png' ></img></div>
+                <br/>
+                <br/>
+                <h1>Cadastro de Pets</h1>
+
+                {
+                    animais == 0 ? <p> Carregando</p> : 
+                    <div>
+                        {animais.map (u => {
+                            return(
+                                <>  <br/>
+
+                                    <hr/>
+                                    <p>Nome: {u.nome}</p>
+                                    <p>Raça: {u.raça}</p>
+                                    <p>Porte: {u.porte}</p>                                                               
+                                    <hr/>
+
+                                </>
+                            )
+                        })}
+                    </div>
+                }
+
+            </div>
+            <div className='fotopet'> 
+                <img src='gato.png' onClick={AbrirModal}></img> <br/>                     
+                <img src='doguinho.png'></img>
+                <img src="outros.png"/>
+                    <div className='TextoP'>                   
+                    <div className='add'><img src='add.png' ></img></div>
             
 
             <div/>
@@ -98,10 +118,8 @@ const Perfil = (props) => {
                 <h1> Adicionar pet </h1>
                 <p>Nome:</p><input></input>
                 <p>Raça:</p><input></input>
-                <p>Cor:</p><input></input>
                 <p>Porte:</p><input></input>
-                <p>Imagem:</p><input></input>
-
+                
             </Modal>
 
             <Modal
