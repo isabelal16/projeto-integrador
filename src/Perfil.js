@@ -101,17 +101,23 @@ const Perfil = (props) => {
                 <br/>
                 <br/>
                 <br/>
-                    <Rodape/>
+                <Rodape/>
 
-                <Modal
+                <Modal 
                 isOpen = {modalIsOpen}
                 onRequestClose = {CloseModal}
                 >
                     
                     <h1> Adicionar pet </h1>
-                    <p>Nome:</p><input></input>
-                    <p>Raça:</p><input></input>
-                    <p>Porte:</p><input></input>
+                    <p>Nome do animal:</p><input className='inputPerfil'></input>
+                    <p>Espécie:</p><input className='inputPerfil'></input>
+                    <p>Raça:</p><input className='inputPerfil'></input>
+                    <p>Idade:</p><input className='inputPerfil'></input>
+                    <p>Porte:</p><input className='inputPerfil'></input>
+                    <p>Obs:</p><input className='inputPerfil' placeholder='O animal é alérgico a algo?'></input>
+                     <br/><br/>
+                    <button onClick={CloseModal}>Voltar</button>
+                    <button>Salvar</button>
                     
                 </Modal>
 

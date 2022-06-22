@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import Perfil from "./Perfil";
 
 const Agenda = () => {
+
+    const [modalIsOpen, setIsOpen] = useState(false)
+
+    function CloseModal (){
+        setIsOpen(false)
+    }
+
+
     const [name, setName] = useState();
     const [time, setTime] = useState();
     const[date,setdate] = useState();
@@ -89,7 +97,9 @@ const Agenda = () => {
 
                 </div>
 
+                <button onClick={CloseModal}>Voltar</button>
                 <button onClick={salvar}>salvar</button>
+                
             </form>
 
             <ul>
