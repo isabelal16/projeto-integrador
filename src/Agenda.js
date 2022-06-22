@@ -4,12 +4,14 @@ import Perfil from "./Perfil";
 const Agenda = () => {
     const [name, setName] = useState();
     const [time, setTime] = useState();
+    const[date,setdate] = useState();
     const [functionaries, setFunctionaries] = useState([]);
     const [functionary, setFunctionary] = useState();
 
     const inputNameChanged = (e) => {
         setName(e.target.value);
     };
+
 
     const inputTimeChanged = (e) => {
         setTime(e.target.value);
@@ -35,12 +37,13 @@ const Agenda = () => {
     const salvar = (e) => {
         e.preventDefault();
 
-       const Date = document.getElementById("inputDate").value;
+       const dataformatada = date.target.value
 
-       console.log(name,time,Date,functionary.name)
+       console.log(name,time,dataformatada,functionary.name)
        
     }
     
+        require("./Agenda.css")
 
     return(
 
@@ -54,7 +57,7 @@ const Agenda = () => {
                 <div>
                 <label>
                     <p>nome o seu amigão</p>
-                    <input type="text" id="inputName" name="teste" onChange={inputNameChanged}></input>
+                    <input type="text" id="inputname" name="teste" onChange={inputNameChanged}></input>
 
                 </label> 
                 </div>
@@ -62,26 +65,25 @@ const Agenda = () => {
                 <div>
                     <label>
                         <p>qual vai ser o dia</p>
-                        <input type="date" id="inputDate"></input>
-
+                        <input type="date" id="inputdate"onChange={setdate}></input>
                     </label>
                 </div>
 
                 <div>
                     <p>que hora vai ser</p>
-                    <input type="time" id="inputTime" onChange={inputTimeChanged}></input>
-
-                {(functionaries.length > 0) && (
-                    <div >
-                        <label>
+                    <input type="time" id="inputtime" onChange={inputTimeChanged}></input>
+                    {(functionaries.length > 0) && (
+                <div>
+                    <label className="funcionario1">
                         <p> qual vai ser o funcionario ?</p>
                         {functionaries.map( functionary =>
-                            <label key={functionary.id}>
+
+                            <label className="funcionario" key={functionary.id}>
                                 <input type="radio" name="functionary" value={functionary.id} onClick={() => { setFunctionary(functionary) }} />{functionary.name}
                             </label>
                         )}
-                        </label>
-                    </div>
+                    </label>
+                </div>
                 )}
                 
 

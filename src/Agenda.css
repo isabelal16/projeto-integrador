@@ -1,0 +1,14 @@
+.nomepet{
+    color: rgb(223, 0, 0);
+    display: flex;
+    text-align: left;
+    border-color: 1;
+}
+.funcionario1{
+    color: red;
+    height: 400px;
+}
+.funcionario{
+    height: 30px;
+    display: flex;
+}
