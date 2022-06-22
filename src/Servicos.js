@@ -1,10 +1,12 @@
-import React from 'react';
+import React , {useState}from 'react';
 import { Routes, Route, Link } from "react-router-dom";
 import Rodape from './Rodape';
 
 const Servicos = () => {
 
     require("./Servicos.css")
+
+    const [count, setCount] = useState(0);
 
     return (  
 
@@ -22,12 +24,7 @@ const Servicos = () => {
                     </a>
 
                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a className="dropdown-item" href="#">Banho</a></li>
-                        <li><a className="dropdown-item" href="#">Tosa</a></li>
-                        <li><a className="dropdown-item" href="#">Corte das unhas</a></li>
-                        <li><a className="dropdown-item" href="#">Secagem</a></li>
-                        <li><a className="dropdown-item" href="#">Limpeza nos ouvidos</a></li>
-                        <li><a className="dropdown-item" href="#">Banhos terapêuticos</a></li>
+                        <li><Link to = "/pagservicos"><a className="dropdown-item" href="#">Banho e Tosa</a></Link></li>
                         <li><a className="dropdown-item" href="#">Consultas</a></li>
                         <li><a className="dropdown-item" href="#">Vacinas</a></li>
                     </ul>
@@ -70,7 +67,9 @@ const Servicos = () => {
 
             
 
-            
+           <Link to="/profissionais" onClick={() => setCount(count + 0)}> Samantha </Link>
+           <Link to="/profissionais" onClick={() => setCount(count + 1)}> Alex </Link>
+            <p>{count}</p>
             
             
             <Rodape/>

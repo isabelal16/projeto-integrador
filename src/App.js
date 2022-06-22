@@ -6,6 +6,11 @@ import Login from './Login';
 import Perfil from './Perfil';
 import Servicos from './Servicos';
 import Agenda from './Agenda';
+import Clientes from './Clientes';
+import Admin from './Admin';
+import Horarios from './Horarios';
+import Profissionais from './Profissionais';
+import PagServicos from './PagServicos';
 
 function App() {
 
@@ -20,6 +25,11 @@ function App() {
         <Route path="/perfil" element={<Perfil/>}/>
         <Route path="/servicos" element={<Servicos/>}/>
         <Route path="/agenda"element={<Agenda/>}/>
+        <Route path="/clientes" element={<Clientes/>}/>
+        <Route path="/admin" element={<Admin/>}/>
+        <Route path="/horarios" element={<Horarios/>}/>
+        <Route path="/profissionais" element={<Profissionais/>}/>
+        <Route path="/pagservicos" element={<PagServicos/>}/>
       </Routes>
 
     </div>

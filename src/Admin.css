@@ -1,0 +1,19 @@
+.adm{
+    height: 100%;
+    background: #91b372;
+    width: 200px;
+}
+
+.adm img{
+    border-radius: 50%;
+    width: 120px;
+    margin-left: 30px;
+}
+
+.adm p{
+    margin-left: 40px;
+}
+
+.adm h4{
+    margin-left: 20px;
+}

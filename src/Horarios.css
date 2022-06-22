@@ -1,0 +1,10 @@
+.horarios{
+    display: flex;
+    justify-content: center;
+    width: 700px;
+}
+
+.horarios p{
+    margin-left: 30px;
+}
+

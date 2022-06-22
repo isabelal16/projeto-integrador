@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Clientes from './Clientes';
 import Menu from './Menu';
 import Rodape from './Rodape';
 
@@ -19,6 +21,7 @@ const Inicio = () => {
             </div>
 
             <Rodape/>
+            <Link className='link' to="/clientes">Clientes</Link>
         </div>
     );
 }
