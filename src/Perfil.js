@@ -56,43 +56,18 @@ const Perfil = (props) => {
 
         <div className='perfil'>
             <div className='fundo'></div>
-            <div><img className='fotoU' src="perfil.png"/></div>
+            <div> <img className='fotoU' src="perfil.png"/> </div>
             <h1 className='textosPer'>Sara Silva</h1>
-<<<<<<< Updated upstream
+
             <h3>Pets</h3>
-            <div className='petsCadastro'>
 
-                <br/>
-                <br/>
-                <h1>Cadastro de Pets</h1>
-
-                {
-                    animais == 0 ? <p> Carregando</p> : 
-                    <div>
-                        {animais.map (u => {
-                            return(
-                                <>  <br/>
-
-                                    <hr/>
-                                    <p>Nome: {u.nome}</p>
-                                    <p>Raça: {u.raça}</p>
-                                    <p>Porte: {u.porte}</p>                                                               
-                                    <hr/>
-
-                                </>
-                            )
-                        })}
-                    </div>
-                }
-
-            </div>
-            <div className='fotopet'> 
+            <div className='fotopet textoP'> 
                 <img src='gato.png' onClick={AbrirModal}></img> <br/>                     
                 <img src='doguinho.png'></img>
                 <img src="outros.png"/>
-                    <div className='TextoP'>                   
-                    <div className='add'><img src='add.png' ></img></div>
-=======
+            </div>   
+
+            <div className='add'><img src='add.png'/></div>
 
             <div className='alinhamento'>
                     <div className='Pets'>
@@ -127,49 +102,48 @@ const Perfil = (props) => {
                         
                 </div>
             </div>
->>>>>>> Stashed changes
             
 
             <div className='add' onClick={OpenModal}><img src='add.png'></img></div>
             <div className='agenda'>
             <img src='agenda.png' onClick={AbrirModal2}/>
             </div>
-            <br/>
-            <br/>
-            <br/>
-                <Rodape/>
+                <br/>
+                <br/>
+                <br/>
+                    <Rodape/>
 
-            <Modal
-            isOpen = {modalIsOpen}
-            onRequestClose = {CloseModal}
-            >
-                
-                <h1> Adicionar pet </h1>
-                <p>Nome:</p><input></input>
-                <p>Raça:</p><input></input>
-                <p>Porte:</p><input></input>
-                
-            </Modal>
+                <Modal
+                isOpen = {modalIsOpen}
+                onRequestClose = {CloseModal}
+                >
+                    
+                    <h1> Adicionar pet </h1>
+                    <p>Nome:</p><input></input>
+                    <p>Raça:</p><input></input>
+                    <p>Porte:</p><input></input>
+                    
+                </Modal>
 
-            <Modal
-            isOpen = {abrirModal}
-            onRequestClose = {FecharModal}
-            >
-                <h1>Informações do pet</h1>
-            </Modal>
+                <Modal
+                isOpen = {abrirModal}
+                onRequestClose = {FecharModal}
+                >
+                    <h1>Informações do pet</h1>
+                </Modal>
 
 
-            <Modal
-            isOpen = {abrirModal2}
-            onRequestClose = {FecharModal2}
-            >
-                <h1>Agenda</h1>
-                <Agenda/>
-            </Modal>
-
+                <Modal
+                isOpen = {abrirModal2}
+                onRequestClose = {FecharModal2}
+                >
+                    <h1>Agenda</h1>
+                    <Agenda/>
+                </Modal>
+        </div>
       
 
-                </div>
+        
                 
         
         
@@ -181,6 +155,6 @@ const Perfil = (props) => {
         
 
     );
-}
+};
  
 export default Perfil;
