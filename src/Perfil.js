@@ -6,56 +6,6 @@ import Agenda from './Agenda';
 
 Modal.setAppElement('#root')
 
-const Conexao = () => {
-
-    const [animais, alteraAnimais] = React.useState([]);
-    const axios = require("axios").default;
-
-    React.useEffect( () => {
-        axios.get('http://localhost:3000/perfil/')
-        .then(function (response) {
-                
-        const dados = response.data;
-        alteraAnimais (dados)
-        })
-        .catch(function (error) {
-        console.log(error);
-        })
-    }, [])
-    
-        return (  
-    
-            <div>
-    
-                <br/>
-                <br/>
-                <h1>Informações do Pet</h1>
-    
-                {
-                    animais == 0 ? <p>carregando</p> :
-                    <div>
-                        {animais.map (u => {
-                            return(
-                                <>  <br/>
-    
-                                    <hr/>
-                                    <p>Nome: {u.nome}</p>
-                                    <p>Espécie: {u.especie}</p>
-                                    <p>Raça: {u.raça}</p>
-                                    <p>Porte: {u.porte}</p>                                                               
-                                    <hr/>
-    
-                                </>
-                            )
-                        })}
-                    </div>
-                }
-    
-            </div>
-        );
-}
-
-
 const Perfil = (props) => {
 
     //MODAIS
@@ -95,6 +45,22 @@ const Perfil = (props) => {
 
     require("./Perfil.css");
 
+    const [animais, alteraAnimais] = React.useState([]);
+    const axios = require("axios").default;
+
+    React.useEffect( () => {
+        axios.get('http://localhost:3001')
+        .then(function (response) {
+                
+        const dados = response.data;
+        console.log (dados)
+        alteraAnimais (dados)
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+    }, [])
+
     return (  
 
         <div className='perfil'>
@@ -105,23 +71,37 @@ const Perfil = (props) => {
             <div className='alinhamento'>
                     <div className='Pets'>
                         <h3>Pets</h3>
-                        <div className='fotopet'> 
-                            <img src='gato.png' onClick={AbrirModal}></img> <br/>
-                            
-                            <div className='perfilP'>
-                                <p> Gatos</p>
-                            </div>
 
-                            <img src='doguinho.png'></img>
-                            <div className='perfilP'>
-                                <p> Cachorros</p>
-                            </div>
-
-                            <img src="outros.png"/>
-                                <div className='perfilP'>
-                                    <p> Outra Diversidade de animais </p>
+                        <div>
+    
+                            <br/>
+                            <br/>
+                            <h1>Informações dos Pets</h1>
+                
+                            {
+                                animais == 0 ? <p>carregando</p> :
+                                <div>
+                                    {animais.map (u => {
+                                        return(
+                                            <>  <br/>
+                
+                                                <hr/>
+                                                <p>Nome: {u.nome}</p>
+                                                <p>Espécie: {u.especie}</p>
+                                                <p>Raça: {u.raca}</p>
+                                                <p>Porte: {u.porte}</p>                                                               
+                                                <hr/>
+                
+                                            </>
+                                        )
+                                    })}
                                 </div>
+                            }
+    
                         </div>
+
+
+                        
                     </div>
                
 
@@ -137,7 +117,7 @@ const Perfil = (props) => {
             </div>
             
 
-            <div className='add' onClick={OpenModal}><img src='add.png'></img></div>
+            
             <div className='agenda' ><img onClick={AbrirModal2} src='agenda.png'  /></div>
                 <br/>
                 <br/>
