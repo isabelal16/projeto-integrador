@@ -6,9 +6,57 @@ import Agenda from './Agenda';
 
 Modal.setAppElement('#root')
 
+const Conexao = () => {
+
+    const [animais, alteraAnimais] = React.useState([]);
+    const axios = require("axios").default;
+
+    React.useEffect( () => {
+        axios.get('http://localhost:3000/perfil/')
+        .then(function (response) {
+                
+        const dados = response.data;
+        alteraAnimais (dados)
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+    }, [])
+    
+        return (  
+    
+            <div>
+    
+                <br/>
+                <br/>
+                <h1>Informações do Pet</h1>
+    
+                {
+                    animais == 0 ? <p>carregando</p> :
+                    <div>
+                        {animais.map (u => {
+                            return(
+                                <>  <br/>
+    
+                                    <hr/>
+                                    <p>Nome: {u.nome}</p>
+                                    <p>Espécie: {u.especie}</p>
+                                    <p>Raça: {u.raça}</p>
+                                    <p>Porte: {u.porte}</p>                                                               
+                                    <hr/>
+    
+                                </>
+                            )
+                        })}
+                    </div>
+                }
+    
+            </div>
+        );
+}
+
+
 const Perfil = (props) => {
-
-
 
     //MODAIS
 
@@ -45,13 +93,7 @@ const Perfil = (props) => {
 
     const nome = props.nome
 
-
-
     require("./Perfil.css");
-
-    
-    const [animais, alteraAnimais] = React.useState([]);
-    const axios = require('axios').default;
 
     return (  
 
@@ -66,17 +108,17 @@ const Perfil = (props) => {
                         <div className='fotopet'> 
                             <img src='gato.png' onClick={AbrirModal}></img> <br/>
                             
-                            <div className='TextoP'>
+                            <div className='perfilP'>
                                 <p> Gatos</p>
                             </div>
 
                             <img src='doguinho.png'></img>
-                            <div className='TextoP'>
+                            <div className='perfilP'>
                                 <p> Cachorros</p>
                             </div>
 
                             <img src="outros.png"/>
-                                <div className='TextoP'>
+                                <div className='perfilP'>
                                     <p> Outra Diversidade de animais </p>
                                 </div>
                         </div>
@@ -111,43 +153,20 @@ const Perfil = (props) => {
                     <p>Nome do animal:</p><input className='inputPerfil'></input>
                     <p>Espécie:</p><input className='inputPerfil'></input>
                     <p>Raça:</p><input className='inputPerfil'></input>
-                    <p>Idade:</p><input className='inputPerfil'></input>
                     <p>Porte:</p><input className='inputPerfil'></input>
                      <br/><br/>
                     <button onClick={CloseModal}>Voltar</button>
                     <button onClick={AbrirModal}>Salvar</button>
+                    
+                </Modal>
 
-                    {
-                        animais >= 1 ? <div>
-                            {animais.map (u => {
-                                return(    
-                                    <>  <br/>
-
-                                        <hr/>
-                                        <p>Nome: {u.nome}</p>
-                                        <p>Espécie: {u.especie}</p>
-                                        <p>Raça: {u.raça}</p>
-                                        <p>Idade: {u.idade}</p>
-                                        <p>Porte: {u.porte}</p>                                                               
-                                        <hr/>
-
-                                    </>
-                                )
-                      
-                            })}
-
-                        </div> : <Modal
+                <Modal
                 isOpen = {abrirModal}
                 onRequestClose = {FecharModal}
                 >
                     <h1>Informações do pet</h1>
+                    <button onClick={CloseModal}>Finalizar</button>                    
                 </Modal>
-                        
-                    }
-                    
-                </Modal>
-
-                
 
 
                 <Modal

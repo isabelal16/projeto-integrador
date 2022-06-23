@@ -46,8 +46,7 @@ const PagServicos = () => {
         <p>{servicos[0].descricao}</p></div>
         <h1>Profissionais</h1>
         <div className='profissionais'>
-        <Link to="/profissionais" onClick={() => setCount(count + 0)}><img src="profissional.png"/></Link>
-        <Link to="/profissionais" onClick={() => setCount(count + 1)}><img src="profissional1.png" /></Link>
+        <Link to="/profissionais" onClick={() => setCount(count + 0)}><img src="Alex.png"/></Link>
         </div>
         </div>
 
