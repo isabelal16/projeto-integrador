@@ -96,9 +96,7 @@ const Perfil = (props) => {
             
 
             <div className='add' onClick={OpenModal}><img src='add.png'></img></div>
-            <div className='agenda'>
-            <img src='agenda.png' onClick={AbrirModal2}/>
-            </div>
+            <div className='agenda' ><img onClick={AbrirModal2} src='agenda.png'  /></div>
                 <br/>
                 <br/>
                 <br/>
