@@ -136,28 +136,18 @@ const Perfil = (props) => {
                       
                             })}
 
-                        </div> : React.useEffect( () => {
-                            axios.get('abrirModal')
-                            .then(function (response) {
-                                
-                            const dados = response.data;
-                            alteraAnimais (dados)
-                            })
-                            .catch(function (error) {
-                            console.log(error);
-                            })
-                        }, [])
-                        
-                    }
-                    
-                </Modal>
-
-                <Modal
+                        </div> : <Modal
                 isOpen = {abrirModal}
                 onRequestClose = {FecharModal}
                 >
                     <h1>Informações do pet</h1>
                 </Modal>
+                        
+                    }
+                    
+                </Modal>
+
+                
 
 
                 <Modal
