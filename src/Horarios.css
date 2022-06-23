@@ -2,6 +2,22 @@
     display: flex;
     justify-content: center;
     width: 700px;
+    margin-left: 350px;
+    font-size: 20px;
+    
+}
+
+.horarios h3{
+
+}
+
+.hor{
+    text-align: center;
+
+}
+
+.hor h1{
+    margin-top: -700px;
 }
 
 .horarios p{

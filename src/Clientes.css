@@ -1,4 +1,18 @@
-.inputc{
-    background: #91b372;;
+.inputc input{
+    width: 60%;
+    margin-left: 20%;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: #B5D3AF 2px solid;
     
 }
+
+.clientes h1{
+    text-align: center;
+    margin-top: -700px;
+}
+
+.clientes2{
+    display: flex;
+}
+
