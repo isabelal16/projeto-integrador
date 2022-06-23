@@ -127,7 +127,6 @@ const Perfil = (props) => {
                                         <p>Nome: {u.nome}</p>
                                         <p>Espécie: {u.especie}</p>
                                         <p>Raça: {u.raça}</p>
-                                        <p>Idade: {u.idade}</p>
                                         <p>Porte: {u.porte}</p>                                                               
                                         <hr/>
 
