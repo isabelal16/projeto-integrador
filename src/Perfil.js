@@ -51,6 +51,7 @@ const Perfil = (props) => {
 
     
     const [animais, alteraAnimais] = React.useState([]);
+    const axios = require('axios').default;
 
     return (  
 
@@ -114,10 +115,42 @@ const Perfil = (props) => {
                     <p>Raça:</p><input className='inputPerfil'></input>
                     <p>Idade:</p><input className='inputPerfil'></input>
                     <p>Porte:</p><input className='inputPerfil'></input>
-                    <p>Obs:</p><input className='inputPerfil' placeholder='O animal é alérgico a algo?'></input>
                      <br/><br/>
                     <button onClick={CloseModal}>Voltar</button>
-                    <button>Salvar</button>
+                    <button onClick={AbrirModal}>Salvar</button>
+
+                    {
+                        animais >= 1 ? <div>
+                            {animais.map (u => {
+                                return(    
+                                    <>  <br/>
+
+                                        <hr/>
+                                        <p>Nome: {u.nome}</p>
+                                        <p>Espécie: {u.especie}</p>
+                                        <p>Raça: {u.raça}</p>
+                                        <p>Idade: {u.idade}</p>
+                                        <p>Porte: {u.porte}</p>                                                               
+                                        <hr/>
+
+                                    </>
+                                )
+                      
+                            })}
+
+                        </div> : React.useEffect( () => {
+                            axios.get('abrirModal')
+                            .then(function (response) {
+                                
+                            const dados = response.data;
+                            alteraAnimais (dados)
+                            })
+                            .catch(function (error) {
+                            console.log(error);
+                            })
+                        }, [])
+                        
+                    }
                     
                 </Modal>
 
@@ -136,6 +169,14 @@ const Perfil = (props) => {
                     <h1>Agenda</h1>
                     <Agenda/>
                 </Modal>
+
+
+                <div>
+
+
+
+                </div>
+
         </div>
       
 
