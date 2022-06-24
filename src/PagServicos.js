@@ -1,12 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Menu from './Menu';
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useLocation} from "react-router-dom";
 
-const PagServicos = () => {
+const PagServicos = (props) => {
 
-    
+    const location = useLocation()
+    const x = location.state.x
 
-    const [count, setCount] = useState(0);
 
     const servicos = [
 
@@ -23,17 +23,16 @@ const PagServicos = () => {
         },
 
         {
-            servico: "Vacina",
-            descricao: "É só uma picadinha!. As vacinas são aplicadas para dar ao seu pet maior tempo de vida, auxiliar na saúde do seu pet e até mesmo na sua, te previnindo de algumas Zoonozes.",
+            servico: "Consulta",
+            descricao: "Aqui neste espaço, seu animalzinho será atendido particularmente por um profissional da clínica. Ele realizará procedimentos que ajudaram com sua saúde, e indicará tratamentos necessários para um bem estar maior ao seu animalzinho. Aqui também será onde seu pet será encaminhado para cirurgias caso necessário. Os atendimentos são 24horas.",
             img:"Banho.png"
         },
 
         {
-            servico: "Consulta",
-            descricao: "Aqui neste espaço, seu animalzinho será atendido particularmente por um profissional da clínica. Ele realizará procedimentos que ajudaram com sua saúde, e indicará tratamentos necessários para um bem estar maior ao seu animalzinho. Aqui também será onde seu pet será encaminhado para cirurgias caso necessário. Os atendimentos são 24horas.",
+            servico: "Vacina",
+            descricao: "É só uma picadinha!. As vacinas são aplicadas para dar ao seu pet maior tempo de vida, auxiliar na saúde do seu pet e até mesmo na sua, te previnindo de algumas Zoonozes.",
             img:"Banho.png"
         }
-       
     ]
     require("./PagServicos.css");
 
@@ -41,12 +40,13 @@ const PagServicos = () => {
         
         <div className='pagservico'>
             <Menu/>
-        <h1>{servicos[0].servico}</h1>
-        <div className='textimg'><img src={servicos[0].img}/>
-        <p>{servicos[0].descricao}</p></div>
+        <h1>{servicos[x].servico}</h1>
+        <div className='textimg'><img src={servicos[x].img}/>
+        <p>{servicos[x].descricao}</p></div>
         <h1>Profissionais</h1>
+        <p>{x}</p>
         <div className='profissionais'>
-        <Link to="/profissionais" onClick={() => setCount(count + 0)}><img src="Alex.png"/></Link>
+        <Link to="/profissionais"><img src="Alex.png"/></Link>
         </div>
         </div>
 

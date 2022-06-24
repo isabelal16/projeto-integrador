@@ -4,8 +4,7 @@ import React  from 'react';
 
 const Profissionais = (props) => {
 
-    const count = props.count;
-
+   
 
     const profissionais = [
 
