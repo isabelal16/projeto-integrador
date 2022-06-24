@@ -11,7 +11,7 @@ const Menu = ( ) => {
         <div className="menu">
 
             <div className='logo'>
-                 <img src='logo.png' ></img>
+            <Link to = "/" ><img src='logo.png' ></img></Link>
                 <h2>Avocados Bichos</h2>           
             </div>
 

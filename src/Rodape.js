@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route, Link, useLocation} from "react-router-dom";
 
 require ('./Rodape.css')
 const  Rodape = () => {
@@ -8,7 +9,7 @@ const  Rodape = () => {
         <div className='rodape'>
 
             <div>
-                <img className='imagemrod' src='fotorodape.jpg'/>
+            <Link to = "/"><img className='imagemrod' src='fotorodape.jpg'/></Link>
                 <p>Cuidado, carinho e atenção <br/> para seu animal de estimacão</p>
             </div>
 
