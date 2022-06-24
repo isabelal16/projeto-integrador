@@ -58,7 +58,6 @@ const Perfil = (props) => {
             <div className='fundo'></div>
             <div><img className='fotoU' src="perfil.png"/></div>
             <h1 className='textosPer'>Sara Silva</h1>
-<<<<<<< Updated upstream
             <h3>Pets</h3>
             <div className='petsCadastro'>
 
@@ -92,42 +91,6 @@ const Perfil = (props) => {
                 <img src="outros.png"/>
                     <div className='TextoP'>                   
                     <div className='add'><img src='add.png' ></img></div>
-=======
-
-            <div className='alinhamento'>
-                    <div className='Pets'>
-                        <h3>Pets</h3>
-                        <div className='fotopet'> 
-                            <img src='gato.png' onClick={AbrirModal}></img> <br/>
-                            
-                            <div className='TextoP'>
-                                <p> Gatos</p>
-                            </div>
-
-                            <img src='doguinho.png'></img>
-                            <div className='TextoP'>
-                                <p> Cachorros</p>
-                            </div>
-
-                            <img src="outros.png"/>
-                                <div className='TextoP'>
-                                    <p> Outra Diversidade de animais </p>
-                                </div>
-                        </div>
-                    </div>
-               
-
-                <div className='Pets'>
-                    <h3>Agenda</h3>
-                  <p>Pet:</p>  
-                  <p>Data:</p>
-                  <p>Horário:</p>
-                  <p>Serviço:</p>
-                        
-                        
-                </div>
-            </div>
->>>>>>> Stashed changes
             
 
             <div className='add' onClick={OpenModal}><img src='add.png'></img></div>

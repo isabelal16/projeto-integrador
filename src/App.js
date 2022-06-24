@@ -10,7 +10,8 @@ import Clientes from './Clientes';
 import Admin from './Admin';
 import Horarios from './Horarios';
 import Profissionais from './Profissionais';
-import PagServicos from './PagServicos';
+import PagServicos from './PagServicos'
+
 
 function App() {
 
