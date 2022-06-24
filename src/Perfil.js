@@ -67,11 +67,11 @@ const Perfil = (props) => {
             <div className='fundo'></div>
             <div><img className='fotoU' src="perfil.png"/></div>
             <h1 className='textosPer'>Sara Silva</h1>
-            <div className='petsCadastro'>
 
-                <br/>
-                <br/>
-                <h1>Cadastro de Pets</h1>
+            <div className='alinhamento'>
+                    <div className='Pets'>
+                        <h3>Pets</h3>
+                        <h1>Cadastro de Pets</h1>
 
                 {
                     animais == 0 ? <p> Carregando</p> : 
@@ -83,7 +83,7 @@ const Perfil = (props) => {
                                     <hr/>
                                     <p>Nome: {u.nome}</p>
                                     <p>Espécie: {u.especie}</p>
-                                    <p>Raça: {u.raça}</p>
+                                    <p>Raça: {u.raca}</p>
                                     <p>Porte: {u.porte}</p>                                                               
                                     <hr/>
 
@@ -92,28 +92,6 @@ const Perfil = (props) => {
                         })}
                     </div>
                 }
-
-            </div>
-            <div className='alinhamento'>
-                    <div className='Pets'>
-                        <h3>Pets</h3>
-                        <div className='fotopet'> 
-                            <img src='gato.png' onClick={AbrirModal}></img> <br/>
-                            
-                            <div className='TextoP'>
-                                <p> Gatos</p>
-                            </div>
-
-                            <img src='doguinho.png'></img>
-                            <div className='TextoP'>
-                                <p> Cachorros</p>
-                            </div>
-
-                            <img src="outros.png"/>
-                                <div className='TextoP'>
-                                    <p> Outra Diversidade de animais </p>
-                                </div>
-                        </div>
                     </div>
                
 
