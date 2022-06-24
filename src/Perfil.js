@@ -8,8 +8,6 @@ Modal.setAppElement('#root')
 
 const Perfil = (props) => {
 
-
-
     //MODAIS
 
     const [modalIsOpen, setIsOpen] = useState(false)
@@ -45,12 +43,23 @@ const Perfil = (props) => {
 
     const nome = props.nome
 
-
-
     require("./Perfil.css");
 
-    
     const [animais, alteraAnimais] = React.useState([]);
+    const axios = require("axios").default;
+
+    React.useEffect( () => {
+        axios.get('http://localhost:3001')
+        .then(function (response) {
+                
+        const dados = response.data;
+        console.log (dados)
+        alteraAnimais (dados)
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+    }, [])
 
     return (  
 
@@ -94,45 +103,56 @@ const Perfil = (props) => {
             
 
             <div className='add' onClick={OpenModal}><img src='add.png'></img></div>
-            <div className='agenda'>
-            <img src='agenda.png' onClick={AbrirModal2}/>
-            </div>
-            <br/>
-            <br/>
-            <br/>
+            <div className='agenda' ><img onClick={AbrirModal2} src='agenda.png'  /></div>
+                <br/>
+                <br/>
+                <br/>
                 <Rodape/>
 
-            <Modal
-            isOpen = {modalIsOpen}
-            onRequestClose = {CloseModal}
-            >
-                
-                <h1> Adicionar pet </h1>
-                <p>Nome:</p><input></input>
-                <p>Raça:</p><input></input>
-                <p>Porte:</p><input></input>
-                
-            </Modal>
+                <Modal 
+                isOpen = {modalIsOpen}
+                onRequestClose = {CloseModal}
+                >
+                    
+                    <h1> Adicionar pet </h1>
+                    <p>Nome do animal:</p><input className='inputPerfil'></input>
+                    <p>Espécie:</p><input className='inputPerfil'></input>
+                    <p>Raça:</p><input className='inputPerfil'></input>
+                    <p>Porte:</p><input className='inputPerfil'></input>
+                     <br/><br/>
+                    <button onClick={CloseModal}>Voltar</button>
+                    <button onClick={AbrirModal}>Salvar</button>
+                    
+                </Modal>
 
-            <Modal
-            isOpen = {abrirModal}
-            onRequestClose = {FecharModal}
-            >
-                <h1>Informações do pet</h1>
-            </Modal>
+                <Modal
+                isOpen = {abrirModal}
+                onRequestClose = {FecharModal}
+                >
+                    <h1>Informações do pet</h1>
+                    <button onClick={CloseModal}>Finalizar</button>                    
+                </Modal>
 
 
-            <Modal
-            isOpen = {abrirModal2}
-            onRequestClose = {FecharModal2}
-            >
-                <h1>Agenda</h1>
-                <Agenda/>
-            </Modal>
+                <Modal
+                isOpen = {abrirModal2}
+                onRequestClose = {FecharModal2}
+                >
+                    <h1>Agenda</h1>
+                    <Agenda/>
+                </Modal>
 
-      
+
+                <div>
+
+
 
                 </div>
+
+        </div>
+      
+
+        
                 
         
         
@@ -144,6 +164,6 @@ const Perfil = (props) => {
         
 
     );
-}
+};
  
 export default Perfil;

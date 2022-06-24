@@ -4,25 +4,20 @@ import React  from 'react';
 
 const Profissionais = (props) => {
 
-    const count = props.count;
+   
 
     const profissionais = [
 
-        {
-            nome: "Alex",
-            descricao: "Alex é legal",
-            especialidade: "Tosador",
-        },
         
-        {
-            nome: "Samantha",
-            descricao: "Samantha é legal",
-            especialidade: "Tosadora",
-        },
 
-        
+        {
+            nome: "Alex Silva",
+            descricao: "Alex, juntamente com uma equipe de 4 integrantes, são responsáveis pelo Banho e a Tosa do seu querido amigo.",
+            especialidade: "Banho e Tosa",
+        },
        
     ]
+
 
     return( 
 
@@ -36,6 +31,8 @@ const Profissionais = (props) => {
             
 
         </div>
+
+    
     );
 }
 

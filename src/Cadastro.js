@@ -9,6 +9,7 @@ const Cadastro = () => {
 
     return(
 
+        
     
         <div className='Cadastro cadastroLogin'>
 
@@ -31,28 +32,41 @@ const Cadastro = () => {
                     <form className='centro'>
                         <label>
 
-                            <i className="fa-solid fa-user"></i><input required minLength="5" type="text" placeholder="Digite o seu nome:" />
+                            <i className="fa-solid fa-user"></i><input required minLength="5" name ='nome' type="text" placeholder="Nome" />
     
                             <br/>
                             <br/>
 
-                            <i className="fa-solid fa-calendar-days"></i><input type="text" placeholder="Digite a sua data de nascimento:"/>
+                            <i className="fa-solid fa-envelopes-bulk"></i> <input autoComplete='username' name ='email' type="email" placeholder="Email"/>
 
                             <br/>
                             <br/>
-                
-                            <i className="fa-solid fa-envelopes-bulk"></i> <input autoComplete='username' type="email" placeholder="Digite o seu email:"/>
-                
+
+                            <input type="text" name ='cpf' placeholder="CPF"/>
+
                             <br/>
                             <br/>
+
+                            <input type="text" name = 'telefone'  placeholder="Telefone"/>
+
+                            <br/>
+                            <br/>
+
+                            <input type="text" name = 'endereco'  placeholder="Endereço"/>
+
+                            <br/>
+                            <br/>
+
                             
-                            <i className="fa-solid fa-key"></i><input id='senhaCadastro1' autoComplete='new-password' required minLength="8"  type="password" placeholder="Digite uma senha:"/>
+                            
+                            <i className="fa-solid fa-key"></i><input id='senhaCadastro1' autoComplete='new-password' required minLength="8" name ='senha' type="password" placeholder="Criar senha:"/>
                 
                             <br/>
                             <br/>
                 
-                            <i className="fa-solid fa-key"></i><input id='senhaCadastro2' autoComplete='new-password' required minLength="8" type="password" placeholder="confirme sua senha:"/>
-                
+                            <i className="fa-solid fa-key"></i><input id='senhaCadastro2' autoComplete='new-password' required minLength="8" name ='senha2' type="password" placeholder="Confirme sua senha:"/>
+
+                           
                             <hr/>
                         </label>
                     </form>

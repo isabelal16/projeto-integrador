@@ -23,7 +23,7 @@
 }
 
 
-.TextoP{
+.perfilP{
     margin-left: 200px;
     margin-bottom: 40px;
     margin-top: -60px;
@@ -96,16 +96,18 @@
     display: flex;
 }
 
-<<<<<<< Updated upstream
-}
-
 .petsCadastro{
     display: none;
-=======
+}
+
 .Pets{
     width: 50%;
     margin-left: 100px;
     border: #6c8d65 solid 2px;
     border-radius: 10px;
->>>>>>> Stashed changes
+
+}
+
+.inputPerfil{
+    width: 20%;
 }
