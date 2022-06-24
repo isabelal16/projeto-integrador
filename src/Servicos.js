@@ -19,7 +19,7 @@ const Servicos = (props) => {
 
             <div className='listaSer'>
                 <div className='logoServicos'>
-                    <img width={80} src='fotorodape.jpg'/>
+                <Link to = "/"> <img width={80} src='fotorodape.jpg' /></Link>
                     <h2>Avocados Bichos</h2>
                 </div>
                 
@@ -69,13 +69,6 @@ const Servicos = (props) => {
                     </button>
                 </div>
             </div>
-
-            
-
-           <Link to="/profissionais" onClick={() => setCount(count + 0)}> Samantha </Link>
-           <Link to="/profissionais" onClick={() => setCount(count + 1)}> Alex </Link>
-            <p></p>
-            
             
             <Rodape/>
         </div>

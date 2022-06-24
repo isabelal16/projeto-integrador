@@ -5,6 +5,39 @@ const Login = () => {
 
     require("./CadastroLogin.css"); 
 
+    const Logar = (e) => {
+
+        console.log ("teste") 
+
+        e.preventDefault();
+
+        const email = document.querySelector("input[name='email']").value;
+        const senha = document.querySelector("input[name='senha']").value;
+
+        const obj = {
+            email: email, 
+            senha: senha
+        }
+
+        const axios = require("axios").default;
+
+        axios.post('http://localhost:3001/login', obj)
+        .then(function (response) {
+
+                if (response.data == 0) {
+                    alert("Email ou Senha incorretos")
+                    return
+                } 
+            
+                //use navigat do react router 
+
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+
+    }
+
     return (  
 
         <div className='login2 cadastroLogin'>
@@ -22,17 +55,17 @@ const Login = () => {
                     <p className="centro">Faça login para começar</p>
 
             
-                    <form className='centro'>
+                    <form onSubmit={(e) => Logar(e)} className='centro'>
                         <label>
 
-                        <i className="fa-solid fa-unlock-keyhole"></i><input id='emailLogin' autoComplete='username' required type="email" placeholder="Email"/> 
+                        <i className="fa-solid fa-unlock-keyhole"></i><input name="email" autoComplete='username' required type="email" placeholder="Email"/> 
                         <br/>
                         <br/>
-                        <i className="fa-solid fa-key"></i><input id='senhaLogin' autoComplete='current-password' required minLength="3" type="password" placeholder="Senha"/>                                             
+                        <i className="fa-solid fa-key"></i><input name="senha" autoComplete='current-password' required minLength="3" type="password" placeholder="Senha"/>                                             
                         <br/>
                         <br/>
-                        <Link className='link' to="/cadastro" ><i className="fa-solid fa-arrow-left"></i> Voltar </Link>
-                        <Link className='link' to="/perfil"> Entrar </Link>
+                        <button className='link' ><i className="fa-solid fa-arrow-left"></i> Voltar </button>
+                        <button className='link'> Entrar </button>
                             
                         <hr/>
 

@@ -12,6 +12,7 @@ const Agenda = () => {
 
 
     const [name, setName] = useState();
+    const servico = useState();
     const [time, setTime] = useState();
     const[date,setdate] = useState();
     const [functionaries, setFunctionaries] = useState([]);
@@ -52,7 +53,7 @@ const Agenda = () => {
 
        const dataformatada = date.target.value
 
-       console.log(name,time,dataformatada,functionary.name)
+       console.log(name,servico,time,dataformatada,functionary)
        
     }
     
@@ -80,7 +81,7 @@ const Agenda = () => {
 
         const axios = require("axios").default;
 
-        axios.post('http://localhost:3001/usuario', obj)
+        axios.post('http://localhost:3001/agenda', obj)
         .then(function (response) {
              
             console.log (response) 
@@ -112,10 +113,10 @@ const Agenda = () => {
                         <p className="nomepet"> Escolha o serviço que irá utilizar... </p>
 
                         <select name="servico">
-                        <option value="banho">Banho</option>
-                        <option value="tosa">Tosa</option>
-                        <option value="vacinacao">Vacinação</option>
-                        <option value="consulta">Consulta</option>
+                        <option>Banho</option>
+                        <option>Tosa</option>
+                        <option>Vacinação</option>
+                        <option>Consulta</option>
                         </select>
 
                     </label>

@@ -1,14 +1,22 @@
+
+
 .horarios{
     display: flex;
     justify-content: center;
-    width: 700px;
-    margin-left: 350px;
-    font-size: 20px;
+    margin-left: 400px;
+    margin-right: 100px;
+    background: rgb(240, 237, 237);
+    height: auto;
+    text-align: center;
+
     
 }
 
-.horarios h3{
-
+table{
+    margin-left: 400px;
+    font-size: 25px;
+    background:rgb(226, 226, 226);;
+    width: 60%;
 }
 
 .hor{
@@ -17,10 +25,10 @@
 }
 
 .hor h1{
-    margin-top: -700px;
+    margin-top: -950px;
 }
 
 .horarios p{
-    margin-left: 30px;
+    margin-left: 200px;
 }
 
