@@ -12,7 +12,7 @@ const Login = () => {
 
             <div className='login'>
                 <h1>Seja bem vindo!</h1>
-                <img width={998} src='Login.png'></img>
+                <img className='imgFundoLogin' src='Login.png'></img>
             </div>        
 
             <div className='login3'>

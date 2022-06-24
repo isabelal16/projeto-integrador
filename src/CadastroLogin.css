@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Grape+Nuts&family=Raleway&family=Secular+One&display=swap');
 
+body {
+    height: 100vh;
+    padding: 0;
+    background-color:#AABC8A;
+  }
 .centro{
  
     text-align:center;
@@ -103,4 +108,74 @@ body .cadastroLogin{
     margin-left: 200px;
     margin-top: 35%;
 }
+.imgFundoLogin{
+    width: calc(80vh);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+@media only screen and (max-width: 1400px) {
+    body {
+        max-width: 100%;
+    }
+    .imgFundoLogin{
+        width: calc(100vh/1.5);
+    }
+    .caixa2{
+        margin: 30px;
+      }
+      .cadastroLogin .link{
+        text-decoration: none;
+        background: rgba(60, 85, 51, 0.87);
+        color: white;
+        border-radius: 6px;
+        box-shadow: 0px 0px 6px #ccc;
+        padding: 0px, 30px;
+        border: black solid 2px;
+        margin: 7px;
+    }
+    .caixa1{
+ 
+        background-color: #B8D6B3;
+        text-align: center;
+        border:none;
+        border-radius: 15px;
+        box-shadow: 0px 0px 20px #ccc;
+        height:500px;
+        width: 500px;
+        margin-left: 2px;
+        margin-top: 35%;
+
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .login{
+        width: 50%;
+        text-align: center;
+    
+    }
+    .cadastroLogin .link{
+        text-decoration: none;
+        background: rgba(60, 85, 51, 0.87);
+        color: white;
+        border-radius: 6px;
+        box-shadow: 0px 0px 6px #ccc;
+        padding: 0px, 30px;
+        border: black solid 2px;
+        margin: 50px;
+    }
+    .imgFundoLogin{
+        width: 500px;
+        margin-top: 50px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 100;
+        
+    
+    }
+  }
+
 
