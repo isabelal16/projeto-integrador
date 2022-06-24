@@ -1,11 +1,47 @@
 import React, { useState } from 'react';
 import {  Routes, Route, Link } from 'react-router-dom';
-import Login from './Login';
-
+import Inicio from './Inicio';
+import Perfil from './Perfil';
 
 const Cadastro = () => {
 
     require("./CadastroLogin.css");
+
+    const Cadastra = (e) => {
+
+        console.log ("teste") 
+
+        e.preventDefault();
+
+        const nome = document.querySelector("input[name='nome']").value;
+        const email = document.querySelector("input[name='email']").value;
+        const cpf = document.querySelector("input[name='cpf']").value;
+        const telefone = document.querySelector("input[name='telefone']").value;
+        const endereco = document.querySelector("input[name='endereco']").value;
+        const senha = document.querySelector("input[name='senha']").value;
+
+        const obj = {
+            nome: nome, 
+            email: email, 
+            cpf: cpf,
+            telefone: telefone, 
+            endereco: endereco,
+            senha: senha
+        }
+
+        const axios = require("axios").default;
+
+        axios.post('http://localhost:3001/usuario', obj)
+        .then(function (response) {
+             
+            console.log (response) 
+
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+
+    }
 
     return(
 
@@ -29,7 +65,7 @@ const Cadastro = () => {
 
                     <p className="centro">Informe os seus dados</p>
 
-                    <form className='centro'>
+                    <form onSubmit={(e) => Cadastra(e) } className='centro'>
                         <label>
 
                             <i className="fa-solid fa-user"></i><input required minLength="5" name ='nome' type="text" placeholder="Nome" />
@@ -42,38 +78,39 @@ const Cadastro = () => {
                             <br/>
                             <br/>
 
-                            <input type="text" name ='cpf' placeholder="CPF"/>
+                            <i class="fa-solid fa-id-card"></i> <input type="text" name ='cpf' placeholder="CPF"/>
 
                             <br/>
                             <br/>
 
-                            <input type="text" name = 'telefone'  placeholder="Telefone"/>
+                            <i class="fa-solid fa-phone"></i> <input type="text" name = 'telefone'  placeholder="Telefone"/>
 
                             <br/>
                             <br/>
 
-                            <input type="text" name = 'endereco'  placeholder="Endereço"/>
+                            <i class="fa-solid fa-location-dot"></i> <input type="text" name = 'endereco'  placeholder="Endereço"/>
 
                             <br/>
                             <br/>
 
                             
                             
-                            <i className="fa-solid fa-key"></i><input id='senhaCadastro1' autoComplete='new-password' required minLength="8" name ='senha' type="password" placeholder="Criar senha:"/>
+                            <i className="fa-solid fa-key"> </i><input id='senhaCadastro1' autoComplete='new-password' required minLength="8" name ='senha' type="password" placeholder="Criar senha:"/>
                 
                             <br/>
                             <br/>
                 
-                            <i className="fa-solid fa-key"></i><input id='senhaCadastro2' autoComplete='new-password' required minLength="8" name ='senha2' type="password" placeholder="Confirme sua senha:"/>
+                            <i className="fa-solid fa-key"> </i><input id='senhaCadastro2' autoComplete='new-password' required minLength="8" name ='senha2' type="password" placeholder="Confirme sua senha:"/>
 
-                           
+                            
+                            <button className='link'>Salvar</button> 
                             <hr/>
                         </label>
                     </form>
 
 
-                    <Link className='link' to="/"><i className="fa-solid fa-arrow-left"></i> Voltar</Link>
-                    <Link className='link' to="/login">Salvar</Link>  
+                    
+                    <button className='link'><i className="fa-solid fa-arrow-left"></i> Voltar</button>
 
                 </div>
             </div>     
@@ -84,8 +121,5 @@ const Cadastro = () => {
 
     )
 }
-
-
-
 
 export default Cadastro;

@@ -67,12 +67,11 @@ const Perfil = (props) => {
             <div className='fundo'></div>
             <div><img className='fotoU' src="perfil.png"/></div>
             <h1 className='textosPer'>Sara Silva</h1>
-            <h3>Pets</h3>
-            <div className='petsCadastro'>
 
-                <br/>
-                <br/>
-                <h1>Cadastro de Pets</h1>
+            <div className='alinhamento'>
+                    <div className='Pets'>
+                        <h3>Pets</h3>
+                        <h1>Cadastro de Pets</h1>
 
                 {
                     animais == 0 ? <p> Carregando</p> : 
@@ -83,7 +82,8 @@ const Perfil = (props) => {
 
                                     <hr/>
                                     <p>Nome: {u.nome}</p>
-                                    <p>Raça: {u.raça}</p>
+                                    <p>Espécie: {u.especie}</p>
+                                    <p>Raça: {u.raca}</p>
                                     <p>Porte: {u.porte}</p>                                                               
                                     <hr/>
 
@@ -92,14 +92,19 @@ const Perfil = (props) => {
                         })}
                     </div>
                 }
+                    </div>
+               
 
+                <div className='Pets'>
+                    <h3>Agenda</h3>
+                  <p>Pet:</p>  
+                  <p>Data:</p>
+                  <p>Horário:</p>
+                  <p>Serviço:</p>
+                        
+                        
+                </div>
             </div>
-            <div className='fotopet'/> 
-                <img src='gato.png' onClick={AbrirModal}></img> <br/>                     
-                <img src='doguinho.png'></img>
-                <img src="outros.png"/>
-                    <div className='TextoP'/>                   
-                    <div className='add'><img src='add.png' ></img></div>
             
 
             <div className='add' onClick={OpenModal}><img src='add.png'></img></div>

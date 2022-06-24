@@ -30,6 +30,7 @@ body{
     margin-top: 10%;
     font-size: 30px;
 }
+
 .caixa{
     background-color: #B8D6B3;
     text-align: center;
@@ -42,6 +43,7 @@ body{
     margin-top: 2%;
     margin-bottom: 2%;
 }
+
 .profissional{
 
 
@@ -64,6 +66,7 @@ body{
     display: flex;
    
 }
+
 .botao1{
 
 background-color:#6c8d65;
@@ -73,8 +76,8 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 border-radius: 10px;
 margin-left: 10px;
 margin-top: 5%;
-
 }
+
 .botao2{
 
     background-color: #6c8d65;
@@ -86,3 +89,4 @@ margin-top: 5%;
     margin-top: 5%;
 
 }
+

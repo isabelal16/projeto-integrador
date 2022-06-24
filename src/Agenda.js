@@ -41,6 +41,10 @@ const Agenda = () => {
                 id: 4,
                 name: 'Maria Rita',
             },
+            {
+                id: 5,
+                name: 'Sem Preferência',
+            }
         ]);
     };
     const salvar = (e) => {
@@ -52,7 +56,42 @@ const Agenda = () => {
        
     }
     
-        require("./Agenda.css")
+    require("./Agenda.css")
+
+    const Agendamento = (e) => {
+
+        console.log ("teste") 
+
+        e.preventDefault();
+
+        const pet = document.querySelector("input[name='pet']").value;
+        const servico = document.querySelector("input[name='servico']").value;
+        const data = document.querySelector("input[name='data']").value;
+        const hora = document.querySelector("input[name='hora']").value;
+        const functionary = document.querySelector("input[name='functionary']").value;
+
+        const obj = {
+            pet: pet, 
+            servico: servico, 
+            data: data,
+            hora: hora, 
+            functionary: functionary
+        }
+
+        const axios = require("axios").default;
+
+        axios.post('http://localhost:3001/usuario', obj)
+        .then(function (response) {
+             
+            console.log (response) 
+
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+
+    }
+
 
     return(
 
@@ -61,53 +100,58 @@ const Agenda = () => {
 
         <div className="caixa">
 
-            <form>
-
-                <div>
-                <label>
-                    <p className="nomepet"><i class="fa-solid fa-paw"></i> Digite aqui o nome do seu amigão <i class="fa-solid fa-paw"></i></p>
-                    <input type="text" id="inputname" name="teste" onChange={inputNameChanged}></input>
-
-                </label> 
-                </div>
+            <form onSubmit={(e) => Agendamento(e) }>
 
                 <div>
                     <label>
-                        <p className="dia"><i class="fa-solid fa-calendar-check"></i> Qual vai ser o dia? <i class="fa-solid fa-calendar-check"></i></p>
-                        <input type="date" id="inputdate"onChange={setdate}></input>
+                        <p className="nomepet"><i class="fa-solid fa-paw"></i> Digite o nome do seu amigão... </p>
+                        <input type="text" name="pet" onChange={inputNameChanged}></input>
+
+                    </label> 
+                    <label>
+                        <p className="nomepet"> Escolha o serviço que irá utilizar... </p>
+
+                        <select name="servico">
+                        <option value="banho">Banho</option>
+                        <option value="tosa">Tosa</option>
+                        <option value="vacinacao">Vacinação</option>
+                        <option value="consulta">Consulta</option>
+                        </select>
+
                     </label>
-                </div>
+                    </div>
 
-                <div>
-                    <p className="hora"><i class="fa-solid fa-clock"></i> Qual horário? <i class="fa-solid fa-clock"></i></p>
-                    <input type="time" id="inputtime" onChange={inputTimeChanged}></input>
-                    {(functionaries.length > 0) && (
-                <div>
-                    <label className="funcionario1">
-                        <p className="profissional"><i class="fa-solid fa-user-doctor"></i> Qual o profissional? <i class="fa-solid fa-user-doctor"></i></p>
-                        {functionaries.map( functionary =>
-
-                            <label className="funcionario" key={functionary.id}>
-                                <input type="radio" name="functionary" value={functionary.id} onClick={() => { setFunctionary(functionary) }} />{functionary.name}
+                        <div>
+                            <label>
+                                <p className="dia"><i class="fa-solid fa-calendar-check"></i> Escolha o dia... </p>
+                                <input name="data" type="date" id="inputdate"onChange={setdate}></input>
                             </label>
-                        )}
-                    </label>
-                </div>
-                )}
+                        </div>
+
+                        <div>
+                            <p className="hora"><i class="fa-solid fa-clock"></i> Escolha um horário... </p>
+                            <input name="hora" type="time" id="inputtime" onChange={inputTimeChanged}></input>
+                            {(functionaries.length > 0) && (
+                        <div>
+                        <label className="funcionario1">
+                            <p className="profissional"><i class="fa-solid fa-user-doctor"></i> Escolha o Profissional... </p>
+                            {functionaries.map( functionary =>
+
+                                <label className="funcionario" key={functionary.id}>
+                                    <input type="radio" name="functionary" value={functionary.id} onClick={() => { setFunctionary(functionary) }} />{functionary.name}
+                                </label>
+                                )}
+                        </label>
+                    </div>
+                    )}
                 
 
                 </div>
 
                 <button className="botao1" onClick={CloseModal}><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
-                <button className="botao2" onClick={salvar}><i class="fa-solid fa-check"></i> salvar</button>
+                <button className="botao2" ><i class="fa-solid fa-check"></i> salvar</button>
                 
             </form>
-
-            </div>
-
-            <div>
-
-           <Rodape/>
 
             </div>
             
