@@ -94,11 +94,11 @@ const Perfil = (props) => {
                 }
 
             </div>
-            <div className='fotopet'> 
+            <div className='fotopet'/> 
                 <img src='gato.png' onClick={AbrirModal}></img> <br/>                     
                 <img src='doguinho.png'></img>
                 <img src="outros.png"/>
-                    <div className='TextoP'>                   
+                    <div className='TextoP'/>                   
                     <div className='add'><img src='add.png' ></img></div>
             
 
