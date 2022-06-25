@@ -8,6 +8,16 @@ Modal.setAppElement('#root')
 
 const Perfil = (props) => {
 
+const [num, setNum] = useState(0);
+
+  function randomNumberInRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  const handleClick = () => {
+    setNum(randomNumberInRange(0, 6));
+  };
+
     //MODAIS
 
     const [modalIsOpen, setIsOpen] = useState(false)
@@ -61,17 +71,69 @@ const Perfil = (props) => {
         })
     }, [])
 
+    const fotouser = [
+
+        {
+            foto: "pet.png",
+        },
+
+        {
+            foto: "pet1.png",
+        },
+
+
+        {
+            foto: "pet2.png",
+        },
+
+        {
+            foto: "pet3.png",
+        },
+
+        {
+            foto: "pet4.png",
+        },
+
+        {
+            foto: "pet5.png",
+        },
+
+        {
+            foto: "pet6.png",
+        },
+
+        
+    ]
+
+    const customStyles = {
+        content: {
+          top: '50%',
+          left: '50%',
+          right: 'auto',
+          bottom: 'auto',
+          marginRight: '100%',
+          transform: 'translate(-50%, -50%)',
+        },
+      };
+      
+
+
     return (  
 
         <div className='perfil'>
             <div className='fundo'></div>
-            <div><img className='fotoU' src="perfil.png"/></div>
+            <div><img className='fotoU' src={fotouser[num].foto}/></div>
+            <div className='carregar'><img src='recarregar.png' onClick={handleClick}/></div>
             <h1 className='textosPer'>Sara Silva</h1>
 
+            <div className='titulos'>
+                <h3>Pets</h3>
+                <h3 className='titulo1'>Agenda</h3>
+            </div>
             <div className='alinhamento'>
                     <div className='Pets'>
-                        <h3>Pets</h3>
                         <h1>Cadastro de Pets</h1>
+                
 
                 {
                     animais == 0 ? <p> Carregando</p> : 
@@ -96,12 +158,21 @@ const Perfil = (props) => {
                
 
                 <div className='Pets'>
-                    <h3>Agenda</h3>
-                  <p>Pet:</p>  
-                  <p>Data:</p>
-                  <p>Horário:</p>
-                  <p>Serviço:</p>
-                        
+                
+                <table cellpadding="10" cellspacing="4">
+            <th>Pet</th>
+            <th>Data</th>
+            <th>Horário</th>
+            <th>Serviço</th>
+            <tr/>
+            
+                <td>Tosa</td>
+                <td>dhg</td>
+                <td>shfs</td>
+                <td>bgjfr</td>
+                
+            </table>
+                       
                         
                 </div>
             </div>
@@ -133,15 +204,18 @@ const Perfil = (props) => {
                 <Modal
                 isOpen = {abrirModal}
                 onRequestClose = {FecharModal}
+                style={customStyles}
                 >
                     <h1>Informações do pet</h1>
-                    <button onClick={CloseModal}>Finalizar</button>                    
+                    <button onClick={CloseModal}>Finalizar</button>  
+                                      
                 </Modal>
 
 
                 <Modal
                 isOpen = {abrirModal2}
                 onRequestClose = {FecharModal2}
+                
                 >
                     <h1>Agenda</h1>
                     <Agenda/>

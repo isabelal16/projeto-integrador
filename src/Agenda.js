@@ -96,9 +96,6 @@ const Agenda = () => {
 
     return(
 
-        <body className="fundo">
-
-
         <div className="caixa">
 
             <form onSubmit={(e) => Agendamento(e) }>
@@ -155,8 +152,6 @@ const Agenda = () => {
             </form>
 
             </div>
-            
-        </body>
      
 
     );

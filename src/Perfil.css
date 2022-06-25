@@ -1,17 +1,23 @@
 .fundo{
     background: #91b372;
     width: 100%;
-    height: 350px;
+    height: 250px;
+}
+
+
+.fotoU i{
+    margin-left: -400px;
 }
 
 .fotoU{
     background: white;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    margin-top: -350px;
-    margin-left: 768px;
-
+    margin-top: -250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .fotopet img{
@@ -22,6 +28,11 @@
     margin-left: 80px;
 }
 
+.carregar img {
+    width: 22px;
+    margin-left: 760px;
+    margin-top: -60px;
+}
 
 .perfilP{
     margin-left: 200px;
@@ -32,6 +43,7 @@
 .textosPer{
     text-align: center;
     font-size: 50px;
+    margin-bottom: 100px;
 }
 
 .perfil h3{
@@ -41,18 +53,32 @@
     color: rgb(0, 0, 0);
     margin-left: 80px;
     text-align: center;
-    margin-top: 120px;
     font-size: 20px;
+}
+
+.titulos{
+    display: flex;
+    margin-left: -6px;
+    margin-right: 20px;
+}
+
+.Pets table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.titulos .titulo1{
+    margin-left: 140px;
 }
 
 .add img{
     background: #6c8d65;
     border-radius:  50%;
-    float: inline-end;
     width: 40px;
     height: 40px;
     margin-left: 550px;
-    margin-top: -200px;
+    margin-top: -100px;
 
 }
 
@@ -61,9 +87,8 @@
     border-radius:  50%;
     width: 46px;
     height: 46px;
-    float: right;
-    margin-top: -120px;
-    margin-right: 80px;
+    margin-top: -150px;
+    margin-left: 1220px;
     
 }
 
@@ -94,14 +119,17 @@
 
 .alinhamento{
     display: flex;
+   
 }
 
 
 .Pets{
     width: 50%;
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     border: #6c8d65 solid 2px;
     border-radius: 10px;
+    
 
 }
 

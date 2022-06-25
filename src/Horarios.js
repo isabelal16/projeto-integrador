@@ -63,6 +63,7 @@ const Horarios = () => {
                 <td>shfs</td>
                 <td>bgjfr</td>
                 <td>shfs</td>
+            </table>
 
 
             <Modal>
@@ -78,7 +79,7 @@ const Horarios = () => {
             <button>Finalizar</button>
             </Modal>
 
-            </table>
+           
              </div>
      );
 }
