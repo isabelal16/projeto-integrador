@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+
 
 const Login = () => {
 
@@ -26,10 +28,10 @@ const Login = () => {
 
                 if (response.data == 0) {
                     alert("Email ou Senha incorretos")
-                    return
+                    return 
                 } 
             
-                //use navigat do react router 
+                //use navigate do react router 
 
         })
         .catch(function (error) {
@@ -54,7 +56,6 @@ const Login = () => {
                     <hr/>
                     <p className="centro">Faça login para começar</p>
 
-            
                     <form onSubmit={(e) => Logar(e)} className='centro'>
                         <label>
 

@@ -102,7 +102,8 @@ const Cadastro = () => {
                 
                             <i className="fa-solid fa-key"> </i><input id='senhaCadastro2' autoComplete='new-password' required minLength="8" name ='senha2' type="password" placeholder="Confirme sua senha:"/>
 
-                            
+                            <br/>
+                            <button className='link'><i className="fa-solid fa-arrow-left"></i> Voltar</button>
                             <button className='link'>Salvar</button> 
                             <hr/>
                         </label>
@@ -110,7 +111,7 @@ const Cadastro = () => {
 
 
                     
-                    <button className='link'><i className="fa-solid fa-arrow-left"></i> Voltar</button>
+                    
 
                 </div>
             </div>     

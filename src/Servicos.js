@@ -41,21 +41,26 @@ const Servicos = (props) => {
                     <div className="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                        <img src="serviços2.png" className="d-block w-100" alt="..."/>
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5 className='textosSer'>Consultas</h5>
-                            <p className='textosSer'>Como vai a saúde do seu pet?, marque uma consulta com a gente, somos especialistas em drenagem da glândula adanal.</p>
-                        </div>
+                            <img src="serviços2.png" className="d-block w-100" alt="..."/>
+                            <div className="carousel-caption d-none d-md-block">
+                                <h5 className='textosSer'>Consulta</h5>
+                            </div>
                         </div>
                         <div className="carousel-item">
-                        <img src="serviços.png" className="d-block w-100" alt="..."/>
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5 className='textosSer'>Higiene</h5>
-                            <p className='textosSer'>Adeus cheirinho de pelo molhado!, somos especialistas em limpeza dos ouvidos, banho, tosa, corte nas unhas, secagem e banhos terapêuticos.</p>
+                            <img src="serviços.png" className="d-block w-100" alt="..."/>
+                            <div className="carousel-caption d-none d-md-block">
+                                <h5 className='textosSer'>Higiene</h5>
+                            </div>
                         </div>
+                        <div className="carousel-item">
+                            <img src="vacinapet.png" className="d-block w-100" alt="..."/>
+                            <div className="carousel-caption d-none d-md-block">
+                                <h5 className='textosSer'>Vacina</h5>
+                            </div>
                         </div>
                         
                     </div>
