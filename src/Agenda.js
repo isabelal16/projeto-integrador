@@ -103,13 +103,13 @@ const Agenda = () => {
                 <div>
                     <label>
                         <p className="nomepet"><i class="fa-solid fa-paw"></i> Digite o nome do seu amigão... </p>
-                        <input type="text" name="pet" onChange={inputNameChanged}></input>
+                        <input className="opcaoPet" type="text" name="pet" onChange={inputNameChanged}></input>
 
                     </label> 
                     <label>
                         <p className="nomepet"> Escolha o serviço que irá utilizar... </p>
 
-                        <select name="servico">
+                        <select className="opcaoServico" name="servico">
                         <option>Banho</option>
                         <option>Tosa</option>
                         <option>Vacinação</option>
@@ -122,13 +122,13 @@ const Agenda = () => {
                         <div>
                             <label>
                                 <p className="dia"><i class="fa-solid fa-calendar-check"></i> Escolha o dia... </p>
-                                <input name="data" type="date" id="inputdate"onChange={setdate}></input>
+                                <input className="opcaoDia" name="data" type="date" id="inputdate"onChange={setdate}></input>
                             </label>
                         </div>
 
                         <div>
                             <p className="hora"><i class="fa-solid fa-clock"></i> Escolha um horário... </p>
-                            <input name="hora" type="time" id="inputtime" onChange={inputTimeChanged}></input>
+                            <input className="opcaoHora" name="hora" type="time" id="inputtime" onChange={inputTimeChanged}></input>
                             {(functionaries.length > 0) && (
                         <div>
                         <label className="funcionario1">

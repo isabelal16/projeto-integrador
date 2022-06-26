@@ -201,32 +201,15 @@ const [num, setNum] = useState(0);
                     
                 </Modal>
 
-                <Modal
-                isOpen = {abrirModal}
-                onRequestClose = {FecharModal}
-                style={customStyles}
-                >
-                    <h1>Informações do pet</h1>
-                    <button onClick={CloseModal}>Finalizar</button>  
-                                      
-                </Modal>
-
 
                 <Modal
                 isOpen = {abrirModal2}
                 onRequestClose = {FecharModal2}
                 
                 >
-                    <h1>Agenda</h1>
                     <Agenda/>
                 </Modal>
 
-
-                <div>
-
-
-
-                </div>
 
         </div>
       
