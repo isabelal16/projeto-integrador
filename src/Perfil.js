@@ -10,10 +10,10 @@ const Perfil = (props) => {
 
 const CadastrarPet = () =>{
 
-const nomeAnimal = document.querySelector("").value;
-const especie = document.querySelector("").value;
-const raca = document.querySelector("").value;
-const porte = document.querySelector("").value;
+const nomeAnimal = document.querySelector("input[name='nomeAnimal']").value;
+const especie = document.querySelector("input[name='especie']").value;
+const raca = document.querySelector("input[name='raca']").value;
+const porte = document.querySelector("input[name='porte']").value;
 
 }
 
