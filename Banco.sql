@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.28, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: pet_shop
+-- Host: localhost    Database: pet_shop
 -- ------------------------------------------------------
 -- Server version	8.0.28
 
@@ -23,7 +23,7 @@ DROP TABLE IF EXISTS `agenda`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `agenda` (
-  `id_agenda` int NOT NULL,
+  `id_agenda` int NOT NULL AUTO_INCREMENT,
   `id_servicos` int NOT NULL,
   `id_usuario` int NOT NULL,
   `id_profissional` int NOT NULL,
@@ -31,18 +31,7 @@ CREATE TABLE `agenda` (
   `Horario` datetime NOT NULL,
   `data` date NOT NULL,
   PRIMARY KEY (`id_agenda`,`id_servicos`,`id_usuario`,`id_profissional`,`id_animais`),
-  UNIQUE KEY `id_agenda_UNIQUE` (`id_agenda`),
-  KEY `id_usuario` (`id_usuario`),
-  KEY `id_profissional` (`id_profissional`),
-  KEY `id_animais` (`id_animais`),
-  KEY `id_servicos` (`id_servicos`),
-  CONSTRAINT `agenda_ibfk_1` FOREIGN KEY (`id_servicos`) REFERENCES `servicos` (`id_servicos`),
-  CONSTRAINT `agenda_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`),
-  CONSTRAINT `agenda_ibfk_3` FOREIGN KEY (`id_profissional`) REFERENCES `profissional` (`id_profissional`),
-  CONSTRAINT `agenda_ibfk_4` FOREIGN KEY (`id_profissional`) REFERENCES `profissional` (`id_profissional`),
-  CONSTRAINT `agenda_ibfk_5` FOREIGN KEY (`id_animais`) REFERENCES `animais` (`id_animais`),
-  CONSTRAINT `agenda_ibfk_6` FOREIGN KEY (`id_animais`) REFERENCES `animais` (`id_animais`),
-  CONSTRAINT `agenda_ibfk_7` FOREIGN KEY (`id_servicos`) REFERENCES `servicos` (`id_servicos`)
+  UNIQUE KEY `id_agenda_UNIQUE` (`id_agenda`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -65,16 +54,13 @@ DROP TABLE IF EXISTS `animais`;
 CREATE TABLE `animais` (
   `id_animais` int NOT NULL,
   `id_usuario` int NOT NULL,
-  `nome` varchar(45) DEFAULT NULL,
-  `especie` varchar(45) DEFAULT NULL,
-  `raca` varchar(45) DEFAULT NULL,
-  `porte` varchar(45) DEFAULT NULL,
-  `nascimento` date DEFAULT NULL,
+  `nome` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `especie` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `raca` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `porte` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`id_animais`,`id_usuario`),
-  UNIQUE KEY `id_Animais_UNIQUE` (`id_animais`),
-  KEY `id_usuario` (`id_usuario`),
-  CONSTRAINT `animais_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  UNIQUE KEY `id_Animais_UNIQUE` (`id_animais`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -83,6 +69,7 @@ CREATE TABLE `animais` (
 
 LOCK TABLES `animais` WRITE;
 /*!40000 ALTER TABLE `animais` DISABLE KEYS */;
+INSERT INTO `animais` VALUES (1,1,'loki','cachorro','husky siberiano','médio'),(2,1,'thor','gato','siamês','pequeno'),(3,1,'odin','passáro','periquito','pequeno');
 /*!40000 ALTER TABLE `animais` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -111,6 +98,7 @@ CREATE TABLE `profissional` (
 
 LOCK TABLES `profissional` WRITE;
 /*!40000 ALTER TABLE `profissional` DISABLE KEYS */;
+INSERT INTO `profissional` VALUES (1,'rebecca vaz','tosadora','16993901693','rebecacgmail.com','1234');
 /*!40000 ALTER TABLE `profissional` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -146,24 +134,17 @@ DROP TABLE IF EXISTS `usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuario` (
-  `id_usuario` int NOT NULL,
+  `id_usuario` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(60) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
-  `senha` varchar(45) NOT NULL,
-  `nascimento` date NOT NULL,
-  `logradouro` varchar(45) DEFAULT NULL,
-  `bairro` varchar(45) DEFAULT NULL,
-  `complemento` varchar(45) DEFAULT NULL,
-  `numero` varchar(45) DEFAULT NULL,
-  `cidade` varchar(60) NOT NULL,
-  `estado` char(2) DEFAULT NULL,
-  `cep` varchar(10) DEFAULT NULL,
+  `cpf` varchar(60) DEFAULT NULL,
   `telefone` varchar(20) NOT NULL,
+  `endereco` varchar(45) DEFAULT NULL,
+  `senha` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `id_usuario_UNIQUE` (`id_usuario`),
-  UNIQUE KEY `senha_UNIQUE` (`senha`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -172,6 +153,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES (1,'Maria Luiza','maria@gmail.com',NULL,'1699390627','pedro paulo porto,91',NULL),(2,'qwewe','eqweqwe@t','qweqw','eqweqwe','weqweqw','eqweqwettt'),(3,'isabela','isabela@gmail','123.321.456-78','126547896','majj,bshss 91','1234nnnnnn');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -184,4 +166,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-23 15:35:01
+-- Dump completed on 2022-06-24 16:53:49
