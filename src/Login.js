@@ -52,9 +52,9 @@ const Login = () => {
 
             <div className='login3'>
                 <div className='caixa1'>
-                    <h1 className="centro"><i className="fa-solid fa-paw"></i>Login</h1>
+                    <h1 className="centro">Login</h1>
                     <hr/>
-                    <p className="centro">Faça login para começar</p>
+                    <p className="centro">Faça login para começar<i className="fa-solid fa-paw"></i></p>
 
                     <form onSubmit={(e) => Logar(e)} className='centro'>
                         <label>

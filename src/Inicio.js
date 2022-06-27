@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import Clientes from './Clientes';
 import Menu from './Menu';
 import Rodape from './Rodape';
+import Servicos from './Servicos'
+import PagServicos from './PagServicos';
+import Profissionais from './Profissionais';
 
 const Inicio = () => {
 
@@ -13,7 +16,7 @@ const Inicio = () => {
             <Menu/>
             <div className='titulo'>
                 <h1 className='painel1'>Cuide do seu <br/>melhor amigo!</h1> 
-                <p className='painel2'>Nossa clinica é especializada em consulta veterinária, <br/>cuidado com o seu pet, Vacine no tempo certo!.</p> 
+                <p className='painel2'>Nossa clinica é especializada em consulta veterinária, <br/>cuidados com o seu pet e em vacinação</p> 
             </div>
 
             <div>

@@ -16,16 +16,16 @@ const Admin = () => {
 
             <h4>Horários</h4><br/>
 
-            <p><Link to="/horarios" state={{profissional : 0}}>Alex Silva</Link><br/></p>
+            <p><Link className='link' to="/horarios" state={{profissional : 0}}>Alex Silva</Link><br/></p>
 
-            <p><Link to="/horarios" state={{profissional : 1}}>Anna Souza</Link><br/></p>
+            <p><Link className='link' to="/horarios" state={{profissional : 1}}>Anna Souza</Link><br/></p>
 
-            <p><Link to="/horarios" state={{profissional : 2}}>Carlos Ferreira</Link><br/></p>
+            <p><Link className='link' to="/horarios" state={{profissional : 2}}>Carlos Ferreira</Link><br/></p>
 
-            <p><Link to="/horarios" state={{profissional : 3}}>Maria Fernanda</Link><br/></p>
+            <p><Link className='link' to="/horarios" state={{profissional : 3}}>Maria Fernanda</Link><br/></p>
 
             <h4>Clientes</h4>
-            <p><Link to="/clientes">Pesquisar</Link></p>
+            <p><Link className='link' to="/clientes">Pesquisar</Link></p>
             
         </div>
      );

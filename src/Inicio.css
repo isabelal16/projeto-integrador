@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&family=Tiro+Devanagari+Hindi&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Josefin+Slab:wght@300&family=Karma:wght@300&display=swap');
 
 .painel .titulo {
     display: flex;
@@ -8,6 +8,8 @@
     margin: 20px;
     text-align: center;
     font-size: 60px;
+     font-family: 'Cormorant Garamond', serif;
+    font-family: 'Josefin Slab', serif;
 }
 
 .imagemP{
@@ -56,7 +58,7 @@ body{
     
     h1{
     
-    font-size: 0.5em;
+    font-size: 10px;
     text-align: center;
     
     }
@@ -74,22 +76,27 @@ body{
         .imagemP{
             margin-left: 240px;
             width: 1000px;
-            margin-top: 0px;
+            margin-top: -60px;
             margin-bottom: 40px;
+           
         }
         .painel1{
-            font-size: 70px;
+            font-size: 60px;
             font-family: 'Rokkitt', serif;
             font-family: 'Tiro Devanagari Hindi', serif;
             width: 900px;
             height: 10px;
         }
         .painel2{
-            font-size: 30px;
+            font-size: 22px;
             font-family: 'Rokkitt', serif;
             font-family: 'Tiro Devanagari Hindi', serif;
             color: rgb(134, 134, 134);
             text-align: center;
             width: 900px;
+            margin-left: 160px;
+            margin-top: 30px;
         }
       }
+      
+

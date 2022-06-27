@@ -4,7 +4,6 @@ import Modal from 'react-modal';
 import { Routes, Route, Link, useLocation} from "react-router-dom";
 
 require("./Horarios.css")
-//Criar uma Route Private (para a maioria das telas, já que só usuários e administrador poderão ter acesso a por exemplo perfil, agenda, etc)
 const Horarios = () => {
 
     const location = useLocation()
@@ -16,21 +15,25 @@ const Horarios = () => {
 
         {
             profissional: "Alex Silva",
+            img: "horario.png"
            
         },
 
         {
             profissional: "Anna Souza",
+            img: "horario1.png"
             
         },
        
         {
             profissional: "Carlos Ferreira",
+            img: "horario3.png"
            
         },
        
         {
             profissional: "Maria Fernanda",
+            img: "horario2.png"
     
         } 
        
@@ -44,27 +47,39 @@ const Horarios = () => {
 
 
             <Admin/>
-            <h1>Horários</h1>
-            <br/>
-            <br/>
-            <h3>{horarios[profissional].profissional}</h3>
-            <br/>
-            <br/>
-            <table cellpadding="10" cellspacing="6">
-            <th>Serviço</th>
-            <th>Data</th>
-            <th>Horário</th>
-            <th>Pet</th>
-            <th>Tutor</th>
-            <tr/>
-            
-                <td>Tosa</td>
-                <td>dhg</td>
-                <td>shfs</td>
-                <td>bgjfr</td>
-                <td>shfs</td>
-            </table>
+            <div className='hor2'>
+                <img src={horarios[profissional].img}/>
+                <h1>Horários</h1>
+                <br/>
+                <br/>
+                <h3>{horarios[profissional].profissional}</h3>
+                <br/>
+                <br/>
+                <table BORDER RULES="rows" cellpadding="10" cellspacing="6">
+                <th>Serviço</th>
+                <th>Data</th>
+                <th>Horário</th>
+                <th>Pet</th>
+                <th>Tutor</th>
+                <tr/>
+                
+                    <td>Tosa</td>
+                    <td>dhg</td>
+                    <td>shfs</td>
+                    <td>bgjfr</td>
+                    <td>shfs</td>
+                    <button>Finalizar</button>
 
+                    <tr/>
+                
+                    <td>Tosa</td>
+                    <td>dhg</td>
+                    <td>shfs</td>
+                    <td>bgjfr</td>
+                    <td>shfs</td>
+                    <button>Finalizar</button>
+                </table>
+            </div>
 
             <Modal>
             <p>Dados Tutor</p>

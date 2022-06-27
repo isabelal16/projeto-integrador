@@ -1,18 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+
 .inputc input{
     width: 60%;
-    margin-left: 20%;
     border-radius: 10px;
     margin-top: 10px;
     border: #B5D3AF 2px solid;
+    
     
 }
 
 .clientes h1{
     text-align: center;
-    margin-top: -950px;
+    font-size: 80px;
 }
 
 .clientes2{
     display: flex;
 }
 
+.clientes{
+    text-align: center;
+    margin-left: 200px;
+    font-family: 'Cormorant Garamond', serif;
+}

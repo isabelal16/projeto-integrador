@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Grape+Nuts&family=Raleway&family=Secular+One&display=swap');
-
-body {
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Josefin+Slab:wght@300&family=Karma:wght@300&display=swap');
+body .cadastroLogin{
     height: 100vh;
     padding: 0;
-    background-color:#AABC8A;
+    background-color:#6c8d65;
   }
 .centro{
  
@@ -19,23 +19,26 @@ body .cadastroLogin{
  
     color:rgb(0, 0, 0);
     font-family:'Secular One', sans-serif;
-    background-color:#AABC8A;
+    background-color:#6c8d65;
     font-size: 20px;
+    
     
 }
  
 .cadastroLogin h1{
  
-    font-family:  'Grape Nuts', cursive;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Josefin Slab', serif;
     color:rgb(0, 0, 0);
-    font-size: 100px;
+    font-size: 70px;
  
 }
 
     
 .caixa2{
- 
-    background-color: #B8D6B3;
+
+    
+    background-color:  #94ac8f;
     text-align: center;
     border:none;
     border-radius: 15px;
@@ -59,6 +62,8 @@ body .cadastroLogin{
 .cadastroLogin p{
  
     font-size: 15px;
+    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Josefin Slab', serif;
  
 }
 
@@ -97,7 +102,7 @@ body .cadastroLogin{
  
 .caixa1{
  
-    background-color: #B8D6B3;
+    background-color: #94ac8f;
     text-align: center;
     border:none;
     border-radius: 15px;
@@ -113,7 +118,9 @@ body .cadastroLogin{
     left: 0;
 
 }
-@media only screen and (max-width: 1400px) {
+
+
+/*@media only screen and (max-width: 1400px) {
     body {
         max-width: 100%;
     }
@@ -171,6 +178,6 @@ body .cadastroLogin{
         
     
     }
-  }
+  }*/
 
 
