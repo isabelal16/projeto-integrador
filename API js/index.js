@@ -116,6 +116,21 @@ app.post('/login', (req, res) => {
       
 })
 
+app.get('/animais/:idusuario', (req, res) => {
+
+    const idusuario = req.params.idusuario
+    
+ 
+  connection.query(`SELECT * FROM animais WHERE id_usuario = ${idusuario};`, function (error, results, fields) {
+    if (error) throw error;
+    res.send(results);
+  });
+   
+  
+})
+
+
 app.listen(port, () => {
   console.log(`a API está rodando em localhost:${port}`)
 })
+

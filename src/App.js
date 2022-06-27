@@ -10,7 +10,8 @@ import Clientes from './Clientes';
 import Admin from './Admin';
 import Horarios from './Horarios';
 import Profissionais from './Profissionais';
-import PagServicos from './PagServicos'
+import PagServicos from './PagServicos';
+import Pets from './Pets'
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/horarios" element={<Horarios/>}/>
         <Route path="/profissionais" element={<Profissionais/>}/>
         <Route path="/pagservicos" element={<PagServicos/>}/>
+        <Route path="/pets" element={<Pets/>}/>
       </Routes>
 
     </div>
