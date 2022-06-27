@@ -8,6 +8,15 @@ Modal.setAppElement('#root')
 
 const Perfil = (props) => {
 
+const CadastrarPet = () =>{
+
+const nomeAnimal = document.querySelector("").value;
+const especie = document.querySelector("").value;
+const raca = document.querySelector("").value;
+const porte = document.querySelector("").value;
+
+}
+
 const [num, setNum] = useState(0);
 
   function randomNumberInRange(min, max) {
@@ -178,12 +187,12 @@ const [num, setNum] = useState(0);
             </div>
             
 
-            <div className='add' onClick={OpenModal}><img src='add.png'></img></div>
-            <div className='agenda' ><img onClick={AbrirModal2} src='agenda.png'  /></div>
+                <div className='add' onClick={OpenModal}><img src='add.png'></img></div>
+                <div className='agenda' ><img onClick={AbrirModal2} src='agenda.png'  /></div>
                 <br/>
                 <br/>
                 <br/>
-                <Rodape/>
+                
 
                 <Modal 
                 isOpen = {modalIsOpen}
@@ -197,7 +206,7 @@ const [num, setNum] = useState(0);
                     <p>Porte:</p><input className='inputPerfil'></input>
                      <br/><br/>
                     <button onClick={CloseModal}>Voltar</button>
-                    <button onClick={CloseModal}>Finalizar</button>
+                    <button onClick={CadastrarPet}>Finalizar</button>
                     
                 </Modal>
 
@@ -211,6 +220,7 @@ const [num, setNum] = useState(0);
                 </Modal>
 
 
+                <Rodape/>
         </div>        
 
     );

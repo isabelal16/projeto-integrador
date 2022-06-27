@@ -137,7 +137,7 @@ const Agenda = () => {
                             {functionaries.map( functionary =>
 
                                 <label className="funcionario" key={functionary.id}>
-                                    <input type="radio" name="functionary" value={functionary.id} onClick={() => { setFunctionary(functionary) }} />{functionary.name}
+                                    <input className="nomeFuncionario" type="radio" name="functionary" value={functionary.id} onClick={() => { setFunctionary(functionary) }} />{functionary.name}
                                 </label>
                                 )}
                         </label>
