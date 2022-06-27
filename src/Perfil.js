@@ -8,12 +8,66 @@ Modal.setAppElement('#root')
 
 const Perfil = (props) => {
 
-const CadastrarPet = () =>{
+    const [animais, alteraAnimais] = React.useState([]);
 
-const nomeAnimal = document.querySelector("input[name='nomeAnimal']").value;
-const especie = document.querySelector("input[name='especie']").value;
-const raca = document.querySelector("input[name='raca']").value;
-const porte = document.querySelector("input[name='porte']").value;
+    React.useEffect( () => {
+       
+
+        Buscapets()
+
+    }, [])
+
+    const Buscapets = () =>{
+        const axios = require ("axios").default;
+
+        const id_usuario = localStorage.getItem('id_usuario');
+        axios.get('http://localhost:3001/animais/'+ id_usuario)
+        .then(function (response) {
+                
+        const dados = response.data;
+        console.log (dados)
+        alteraAnimais (dados)
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+    }
+
+const CadastrarPet = (e) =>{
+
+    console.log("teste")
+
+    e.preventDefault();
+
+    const nome = document.querySelector("input[name='nome']").value;
+    const especie = document.querySelector("input[name='especie']").value;
+    const raca = document.querySelector("input[name='raca']").value;
+    const porte = document.querySelector("input[name='porte']").value;
+
+    const obj = {
+
+        id_usuario: localStorage.getItem('id_usuario'),
+        nome: nome,
+        especie: especie,
+        raca: raca,
+        porte:porte
+    }
+
+    const axios = require ("axios").default;
+
+    axios.post('http://localhost:3001/CadastrarPet', obj)
+        .then(function (response) {
+             
+            console.log (response) 
+            CloseModal()
+            Buscapets()
+
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+
+
 
 }
 
@@ -39,16 +93,6 @@ const [num, setNum] = useState(0);
         setIsOpen(false)
     }
 
-    const [abrirModal, modalAberto] = useState(false)
-
-    function AbrirModal (){
-        modalAberto(true)
-    }
-
-    function FecharModal (){
-        modalAberto(false) 
-    }
-
     const [abrirModal2, modalAberto2] = useState(false)
 
     function AbrirModal2 (){
@@ -63,22 +107,6 @@ const [num, setNum] = useState(0);
     const nome = props.nome
 
     require("./Perfil.css");
-
-    const [animais, alteraAnimais] = React.useState([]);
-    const axios = require("axios").default;
-
-    React.useEffect( () => {
-        axios.get('http://localhost:3001')
-        .then(function (response) {
-                
-        const dados = response.data;
-        console.log (dados)
-        alteraAnimais (dados)
-        })
-        .catch(function (error) {
-        console.log(error);
-        })
-    }, [])
 
     const fotouser = [
 
@@ -140,30 +168,30 @@ const [num, setNum] = useState(0);
                 <h3 className='titulo1'>Agenda</h3>
             </div>
             <div className='alinhamento'>
-                    <div className='Pets'>
+                <div className='Pets'>
                         <h1>Cadastro de Pets</h1>
                 
 
-                {
-                    animais == 0 ? <p> Carregando...</p> : 
-                    <div>
-                        {animais.map (u => {
-                            return(
-                                <>  <br/>
+                    {
+                        animais == 0 ? <p> Carregando...</p> : 
+                        <div>
+                            {animais.map (u => {
+                                return(
+                                    <>  <br/>
 
-                                    <hr/>
-                                    <p>Nome: {u.nome}</p>
-                                    <p>Espécie: {u.especie}</p>
-                                    <p>Raça: {u.raca}</p>
-                                    <p>Porte: {u.porte}</p>                                                               
-                                    <hr/>
+                                        <hr/>
+                                        <p>Nome: {u.nome}</p>
+                                        <p>Espécie: {u.especie}</p>
+                                        <p>Raça: {u.raca}</p>
+                                        <p>Porte: {u.porte}</p>                                                               
+                                        <hr/>
 
-                                </>
-                            )
-                        })}
-                    </div>
-                }
-                    </div>
+                                    </>
+                                )
+                            })}
+                        </div>
+                    }
+            </div>
                
 
                 <div className='Pets'>
@@ -200,10 +228,10 @@ const [num, setNum] = useState(0);
                 >
                     
                     <h1> Adicionar pet </h1>
-                    <p>Nome do animal:</p><input className='inputPerfil'></input>
-                    <p>Espécie:</p><input className='inputPerfil'></input>
-                    <p>Raça:</p><input className='inputPerfil'></input>
-                    <p>Porte:</p><input className='inputPerfil'></input>
+                    <p>Nome do animal:</p><input name='nome' className='inputPerfil'></input>
+                    <p>Espécie:</p><input name='especie' className='inputPerfil'></input>
+                    <p>Raça:</p><input name='raca' className='inputPerfil'></input>
+                    <p>Porte:</p><input name='porte' className='inputPerfil'></input>
                      <br/><br/>
                     <button onClick={CloseModal}>Voltar</button>
                     <button onClick={CadastrarPet}>Finalizar</button>

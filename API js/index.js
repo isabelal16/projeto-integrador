@@ -23,7 +23,7 @@ var connection = mysql.createConnection({
 app.get('/', (req, res) => {
     
  
-    connection.query('SELECT * FROM animais', function (error, results, fields) {
+    connection.query('', function (error, results, fields) {
       if (error) throw error;
       res.send(results);
     });
@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 app.post('/', (req, res) => {
     connection.connect();
  
-    connection.query('INSERT INTO tipo_curso (id_tipo_curso, nome, escolaridade, idade_minima) VALUES (6, "postura e fala", "ensino médio completo", "15 anos")', function (error, results, fields) {
+    connection.query('', function (error, results, fields) {
       if (error) throw error;
       res.send(results);
     });
@@ -129,6 +129,31 @@ app.get('/animais/:idusuario', (req, res) => {
   
 })
 
+app.get('/CadastrarPet', (req, res) => {
+})
+
+app.post('/CadastrarPet', (req, res) => {
+
+    const nome = req.body.nome;
+    const especie  = req.body.especie;
+    const raca = req.body.raca;
+    const porte = req.body.porte;
+    const id_usuario = req.body.id_usuario;
+    
+    const query = `
+    INSERT INTO animais 
+    (id_usuario, nome, especie, raca, porte) 
+    VALUES 
+    ("${id_usuario}" , "${nome}" , "${especie}" , "${raca}" , "${porte}" );
+    `;
+  
+  
+    connection.query( query, function (error, results, fields) {
+      if (error) throw error;
+      res.send(results);
+    });
+      
+})
 
 app.listen(port, () => {
   console.log(`a API está rodando em localhost:${port}`)

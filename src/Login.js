@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
-
+import { Link , useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
     require("./CadastroLogin.css"); 
+    const navigate = useNavigate()
 
     const Logar = (e) => {
 
@@ -30,7 +29,13 @@ const Login = () => {
                     alert("Email ou Senha incorretos")
                     return 
                 } 
-            
+                
+                
+                const id_usuario = response.data[0].id_usuario
+                localStorage.setItem('id_usuario' , id_usuario)
+                
+                navigate('/perfil')
+
                 //use navigate do react router 
 
         })
