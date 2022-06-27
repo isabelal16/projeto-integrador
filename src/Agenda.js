@@ -10,6 +10,7 @@ const Agenda = () => {
         setIsOpen(false)
     }
 
+    const [animais, alteraAnimais] = useState([]);
 
     const [name, setName] = useState();
     const servico = useState();
@@ -49,12 +50,37 @@ const Agenda = () => {
         ]);
     };
 
+    React.useEffect(()=>{
+        const axios = require("axios").default;
+        const idusuario = 1;
+        axios.get('http://localhost:3001/animais/'+idusuario)
+        .then(function (response) {
+                console.log(response.data)
+                alteraAnimais(response.data)
+            
+                //use navigate do react router 
+
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+    },[])
+
+
     const Salvar = (e) => {
         e.preventDefault();
 
        const dataformatada = date.target.value
 
-       console.log(name,servico,time,dataformatada,functionary)
+       const obj = {
+        pet: name, 
+        servico: servico, 
+        data: dataformatada,
+        hora: time, 
+        functionary: functionary
+    }
+
+       console.log(obj)
        
     }
     
@@ -62,7 +88,7 @@ const Agenda = () => {
 
     const Agendamento = (e) => {
 
-        console.log ("teste") 
+         
 
         e.preventDefault();
 
@@ -80,6 +106,8 @@ const Agenda = () => {
             functionary: functionary
         }
 
+        console.log (obj)
+        
         const axios = require("axios").default;
 
         axios.post('http://localhost:3001/agenda', obj)
@@ -99,12 +127,12 @@ const Agenda = () => {
 
         <div className="caixa">
 
-            <form onSubmit={(e) => Agendamento(e) }>
+            <form onSubmit={(e) => Salvar(e) }>
 
                 <div>
                     <label>
-                        <p className="nomepet"><i class="fa-solid fa-paw"></i> Digite o nome do seu amigão... </p>
-                        <input className="opcaoPet" type="text" name="pet" onChange={inputNameChanged}></input>
+                        <p className="nomepet"><i class="fa-solid fa-paw"></i> Para qual pet você quer agendar?</p>
+                        
 
                     </label> 
                     <label>
@@ -148,7 +176,7 @@ const Agenda = () => {
                 </div>
 
                 <button className="botao1" onClick={CloseModal}><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
-                <button className="botao2" ><i class="fa-solid fa-check"></i> salvar</button>
+                <button type="submit" className="botao2" ><i class="fa-solid fa-check"></i> Salvar</button>
                 
             </form>
 

@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Horarios from './Horarios';
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 
-
-//Criar uma Route Private (para a maioria das telas, já que só usuários e administrador poderão ter acesso a por exemplo perfil, agenda, etc)
 const Admin = () => {
 
     require ("./Admin.css")
@@ -24,8 +22,9 @@ const Admin = () => {
 
             <p><Link className='link' to="/horarios" state={{profissional : 3}}>Maria Fernanda</Link><br/></p>
 
-            <h4>Clientes</h4>
-            <p><Link className='link' to="/clientes">Pesquisar</Link></p>
+            <h4>Admin</h4>
+            <p><Link className='link' to="/clientes">Clientes</Link></p>
+            <p><Link className='link' to="/pets">Pets</Link></p>
             
         </div>
      );
