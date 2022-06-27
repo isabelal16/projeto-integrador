@@ -48,7 +48,8 @@ const Agenda = () => {
             }
         ]);
     };
-    const salvar = (e) => {
+
+    const Salvar = (e) => {
         e.preventDefault();
 
        const dataformatada = date.target.value

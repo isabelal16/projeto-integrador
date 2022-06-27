@@ -40,7 +40,6 @@ const Cadastro = () => {
         .catch(function (error) {
         console.log(error);
         })
-
     }
 
     return(

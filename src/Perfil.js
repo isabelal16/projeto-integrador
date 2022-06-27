@@ -136,7 +136,7 @@ const [num, setNum] = useState(0);
                 
 
                 {
-                    animais == 0 ? <p> Carregando</p> : 
+                    animais == 0 ? <p> Carregando...</p> : 
                     <div>
                         {animais.map (u => {
                             return(
@@ -197,7 +197,7 @@ const [num, setNum] = useState(0);
                     <p>Porte:</p><input className='inputPerfil'></input>
                      <br/><br/>
                     <button onClick={CloseModal}>Voltar</button>
-                    <button onClick={AbrirModal}>Salvar</button>
+                    <button onClick={CloseModal}>Finalizar</button>
                     
                 </Modal>
 
@@ -211,19 +211,7 @@ const [num, setNum] = useState(0);
                 </Modal>
 
 
-        </div>
-      
-
-        
-                
-        
-        
-     
-
-        
-
-
-        
+        </div>        
 
     );
 };
