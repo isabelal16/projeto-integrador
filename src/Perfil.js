@@ -191,10 +191,10 @@ const [num, setNum] = useState(0);
                 >
                     
                     <h1> Adicionar pet </h1>
-                    <p>Nome do animal:</p><input className='inputPerfil'></input>
-                    <p>Espécie:</p><input className='inputPerfil'></input>
-                    <p>Raça:</p><input className='inputPerfil'></input>
-                    <p>Porte:</p><input className='inputPerfil'></input>
+                    <p>Nome do animal:</p><input name='nomeAnimal' className='inputPerfil'></input>
+                    <p>Espécie:</p><input name='especie' className='inputPerfil'></input>
+                    <p>Raça:</p><input name='raca' className='inputPerfil'></input>
+                    <p>Porte:</p><input name='porte' className='inputPerfil'></input>
                      <br/><br/>
                     <button onClick={CloseModal}>Voltar</button>
                     <button onClick={CloseModal}>Finalizar</button>
