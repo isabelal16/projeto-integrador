@@ -41,12 +41,33 @@ const Agenda = () => {
                 id: 4,
                 name: 'Maria Rita',
             },
-            {
-                id: 5,
-                name: 'Sem Preferência',
-            }
         ]);
     };
+
+    const [ agenda, alteraAgenda] = React.useState([]);
+
+    React.useEffect( () => {
+       
+
+        postarAgenda()
+
+    }, [])
+
+    const postarAgenda = () =>{
+        const axios = require ("axios").default;
+
+        const id_usuario = localStorage.getItem('id_usuario');
+        axios.get('http://localhost:3001/agenda/'+ id_usuario)
+        .then(function (response) {
+                
+        const dados = response.data;
+        console.log (dados)
+        alteraAgenda (dados)
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+    }
 
     React.useEffect(()=>{
 
@@ -84,7 +105,6 @@ const Agenda = () => {
                 console.log(response.data)
                 alteraAnimais(response.data)
             
-                //use navigate do react router 
 
         })
         .catch(function (error) {
@@ -96,16 +116,33 @@ const Agenda = () => {
         e.preventDefault();
 
        const dataformatada = date.target.value
-
+        const servico2 = document.getElementById("servico").value
+        const pet2 = document.getElementById("pet2").value
        const obj = {
-        pet: name, 
-        servico: servico, 
+        id_usuario: localStorage.getItem("id_usuario"),
+        id_animais: pet2, 
+        servico: servico2, 
         data: dataformatada,
-        hora: time, 
-        functionary: functionary
+        Horario: time, 
+        id_profissional: functionary.id
     }
 
        console.log(obj)
+
+       const axios = require("axios").default;
+
+       axios.post('http://localhost:3001/agenda', obj)
+       .then(function (response) {
+            
+           console.log (response) 
+           CloseModal()
+           postarAgenda()
+
+       })
+       .catch(function (error) {
+       console.log(error);
+       })
+
        
     }
     
@@ -152,18 +189,26 @@ const Agenda = () => {
 
         <div className="caixa">
 
+
             <form onSubmit={(e) => Salvar(e) }>
 
                 <div>
                     <label>
-                        <p className="nomepet"><i class="fa-solid fa-paw"></i> Para qual pet você quer agendar?</p>
+                    <p className="nomepet" > <i class="fa-solid fa-paw"></i> Para qual pet você quer agendar?</p>
+
+                        <select id="pet2" className="nomepet">
+                            {
+                                animais == 0 ? <option>Nenhum animal cadastrado</option> :
+                                animais.map(a => <option value={a.id_animais}>{a.nome}</option>)
+                            }
+                        </select>
                         
 
                     </label> 
                     <label>
                         <p className="nomepet"> Escolha o serviço que irá utilizar... </p>
 
-                        <select className="opcaoServico" name="servico">
+                        <select className="opcaoServico" id="servico" name="servico">
                         <option>Banho</option>
                         <option>Tosa</option>
                         <option>Vacinação</option>
@@ -204,9 +249,9 @@ const Agenda = () => {
                 <button type="submit" className="botao2" onClick={postarAgenda} ><i class="fa-solid fa-check"></i> Salvar</button>
                 
             </form>
-
             </div>
      
+        
 
     );
 
