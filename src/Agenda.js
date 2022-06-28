@@ -49,6 +49,34 @@ const Agenda = () => {
     };
 
     React.useEffect(()=>{
+
+
+        postarAgenda()
+
+        
+    },[])
+
+    const postarAgenda = () => {
+
+
+        const axios = require ("axios").default;
+
+        const id_usuario = localStorage.getItem('id_usuario');
+        axios.get('http://localhost:3001/agenda/'+ id_usuario)
+        .then(function (response) {
+                
+        const dados = response.data;
+        console.log (dados)
+        alteraAgenda (dados)
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+
+
+
+    }
+
         const axios = require("axios").default;
         const idusuario = 1;
         axios.get('http://localhost:3001/animais/'+idusuario)
@@ -62,7 +90,6 @@ const Agenda = () => {
         .catch(function (error) {
         console.log(error);
         })
-    },[])
 
 
     const Salvar = (e) => {
