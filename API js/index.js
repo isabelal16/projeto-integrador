@@ -158,4 +158,3 @@ app.post('/CadastrarPet', (req, res) => {
 app.listen(port, () => {
   console.log(`a API está rodando em localhost:${port}`)
 })
-

@@ -8,8 +8,6 @@ const Login = () => {
 
     const Logar = (e) => {
 
-        console.log ("teste") 
-
         e.preventDefault();
 
         const email = document.querySelector("input[name='email']").value;
@@ -32,8 +30,10 @@ const Login = () => {
                 
                 
                 const id_usuario = response.data[0].id_usuario
+                const nome = response.data[0].nome
                 localStorage.setItem('id_usuario' , id_usuario)
-                
+                localStorage.setItem('nome' , nome)
+
                 navigate('/perfil')
 
         })
@@ -57,7 +57,7 @@ const Login = () => {
                 <div className='caixa1'>
                     <h1 className="centro">Login</h1>
                     <hr/>
-                    <p className="centro">Faça login para começar<i className="fa-solid fa-paw"></i></p>
+                    <p className="centro">Faça login para começar </p>
 
                     <form onSubmit={(e) => Logar(e)} className='centro'>
                         <label>

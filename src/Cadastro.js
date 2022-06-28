@@ -1,12 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Cadastro = () => {
 
     require("./CadastroLogin.css");
+    const navigate = useNavigate()
 
     const Cadastra = (e) => {
-
-        console.log ("teste") 
 
         e.preventDefault();
 
@@ -32,6 +32,8 @@ const Cadastro = () => {
         .then(function (response) {
              
             console.log (response) 
+            alert("Cadastro Efetuado com sucesso")
+            navigate('/login')
 
         })
         .catch(function (error) {

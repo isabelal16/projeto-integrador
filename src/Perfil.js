@@ -2,10 +2,23 @@ import React, { useState } from 'react';
 import Rodape from './Rodape';
 import Modal from 'react-modal';
 import Agenda from './Agenda';
+import { useNavigate } from 'react-router-dom';
 
 Modal.setAppElement('#root')
 
 const Perfil = (props) => {
+
+    const navigate = useNavigate()
+
+    const logOff = () => {
+
+        console.log("teste")
+
+        localStorage.removeItem('id_usuario')
+        localStorage.removeItem('nome')
+        navigate('/')
+
+    }
 
     const [animais, alteraAnimais] = React.useState([]);
 
@@ -32,9 +45,7 @@ const Perfil = (props) => {
         })
     }
 
-const CadastrarPet = (e) =>{
-
-    console.log("teste")
+    const CadastrarPet = (e) =>{
 
     e.preventDefault();
 
@@ -154,10 +165,10 @@ const [num, setNum] = useState(0);
     return (  
 
         <div className='perfil'>
-            <div className='fundo'></div>
+            <div className='fundo'> <button className='logOffButton' onClick={logOff}>Sair</button> </div> 
             <div><img className='fotoU' src={fotouser[num].foto}/></div>
             <div className='carregar'><img src='recarregar.png' onClick={handleClick}/></div>
-            <h1 className='textosPer'>Sara Silva</h1>
+            <h1 className='textosPer'>{localStorage.getItem ('nome')}</h1>
 
             <div className='titulos'>
                 <h3>Pets</h3>
@@ -169,7 +180,7 @@ const [num, setNum] = useState(0);
                 
 
                     {
-                        animais == 0 ? <p> Carregando...</p> : 
+                        animais == 0 ? <p> Nenhum Pet Cadastrado...</p> : 
                         <div>
                             {animais.map (u => {
                                 return(
@@ -245,7 +256,7 @@ const [num, setNum] = useState(0);
                     <Agenda/>
                 </Modal>
 
-
+                
                 <Rodape/>
         </div>        
 
