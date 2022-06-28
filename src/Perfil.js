@@ -8,7 +8,7 @@ Modal.setAppElement('#root')
 
 const Perfil = (props) => {
 
-    const [agenda , alteraAgenda] = React.useState([]);
+    const agenda  = React.useState([]);
 
 
     const navigate = useNavigate()
@@ -223,10 +223,10 @@ const [num, setNum] = useState(0);
                                     <>  <br/>
 
                                         
-                                        <td>Pet: {u.pet}</td>
-                                        <td>Data: {u.data}</td>
-                                        <td>Horário: {u.horario}</td>
-                                        <td>Serviço: {u.servico}</td>                                                               
+                                        <td> {u.pet}</td>
+                                        <td> {u.data}</td>
+                                        <td> {u.horario}</td>
+                                        <td> {u.servico}</td>                                                               
                                         
                                     </>
                                 )
