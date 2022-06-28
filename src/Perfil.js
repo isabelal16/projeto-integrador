@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Routes, Route, Link} from 'react-router-dom';
 import Rodape from './Rodape';
 import Modal from 'react-modal';
 import Agenda from './Agenda';

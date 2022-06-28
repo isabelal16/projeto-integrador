@@ -1,6 +1,4 @@
 import React, { useState } from "react"; 
-import Perfil from "./Perfil";
-import Rodape from "./Rodape";
 
 const Agenda = () => {
 

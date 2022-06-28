@@ -1,7 +1,4 @@
-import React, { useState } from 'react';
-import {  Routes, Route, Link } from 'react-router-dom';
-import Inicio from './Inicio';
-import Perfil from './Perfil';
+import React from 'react';
 
 const Cadastro = () => {
 
