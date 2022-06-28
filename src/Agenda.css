@@ -10,7 +10,7 @@ body .caixa{
     text-align: center;
     border-color: 1;
     margin-top: 10%;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .dia{
@@ -20,7 +20,7 @@ body .caixa{
     text-align: center;
     border-color: 1;
     margin-top: 10%;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .hora{
@@ -30,7 +30,7 @@ body .caixa{
     text-align: center;
     border-color: 1;
     margin-top: 5%;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .caixa{
@@ -39,9 +39,8 @@ body .caixa{
     border:none;
     border-radius: 15px;
     box-shadow: 0px 0px 20px #ccc;
-    height:920px;
-    width: 800px;
-    margin-left: 500px;
+    height: 500px;
+    width: 400px;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -54,7 +53,7 @@ body .caixa{
     text-align: center;
     border-color: 1;
     margin-top: 10%;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .funcionario1{
@@ -72,7 +71,7 @@ body .caixa{
 
 background-color:#6c8d65;
 color: black;
-font-size: 30px;
+font-size: 20px;
 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 border-radius: 10px;
 margin-left: 10px;
@@ -83,7 +82,7 @@ margin-top: 5%;
 
     background-color: #6c8d65;
     color: black;
-    font-size: 30px;
+    font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border-radius: 10px;
     margin-left: 20px;
@@ -105,7 +104,7 @@ margin-top: 5%;
 .opcaoDia{
     padding: 4%;
     width: 75%;
-    font-size: 120%;
+    font-size: 20;
 }
 
 .opcaoPet{

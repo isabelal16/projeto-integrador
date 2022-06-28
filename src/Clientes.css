@@ -15,12 +15,30 @@
     font-size: 80px;
 }
 
-.clientes2{
-    display: flex;
-}
 
 .clientes{
     text-align: center;
     margin-left: 200px;
     font-family: 'Cormorant Garamond', serif;
+}
+
+.clientes2{
+    margin-left: 430px;
+    width: 700px;
+    margin-top: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    border: 0.3px black solid;
+}
+
+.clientes2 h3{
+    text-align: center;
+    font-size: 30px;
+}
+
+.clientes2 hr{
+    color: black;
+}
+
+.clientes2 p{
+    font-size: 20px;
 }

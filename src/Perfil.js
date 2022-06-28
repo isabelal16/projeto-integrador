@@ -144,12 +144,9 @@ const [num, setNum] = useState(0);
 
     const customStyles = {
         content: {
-          top: '50%',
-          left: '50%',
-          right: 'auto',
-          bottom: 'auto',
-          marginRight: '100%',
-          transform: 'translate(-50%, -50%)',
+          left: '35%',
+          background: 'transparent',
+          border: 'none'
         },
       };
       
@@ -222,9 +219,10 @@ const [num, setNum] = useState(0);
                 <br/>
                 
 
-                <Modal 
+                <Modal
                 isOpen = {modalIsOpen}
                 onRequestClose = {CloseModal}
+                style = {customStyles}
                 >
                     
                     <h1> Adicionar pet </h1>
@@ -242,6 +240,7 @@ const [num, setNum] = useState(0);
                 <Modal
                 isOpen = {abrirModal2}
                 onRequestClose = {FecharModal2}
+                style = {customStyles}
                 
                 >
                     <Agenda/>

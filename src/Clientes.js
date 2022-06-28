@@ -12,7 +12,13 @@ const Clientes = () => {
                 <div className='inputc'><input type='text' placeholder='Digite para pesquisar os clientes'/></div>
                 
             </div>
-            <div> 
+            <div className='clientes2'> 
+                <h3>Alexandra Pinho</h3>
+                <hr/>
+                <p>Telefone:</p>
+                <p>Email:</p>
+                <p>CPF:</p>
+                <p>Endereço:</p>
                 <p></p>
             </div>
         </div>

@@ -12,9 +12,16 @@ const Clientes = () => {
                 <div className='inputc'><input type='text' placeholder='Digite para pesquisar os pets'/></div>
                 
             </div>
-            <div> 
+            <div className='clientes2'> 
+                <h3>Lilica</h3>
+                <hr/>
+                <p>Tutor:</p>
+                <p>Espécie:</p>
+                <p>Raça:</p>
+                <p>Porte:</p>
                 <p></p>
             </div>
+                <p></p>
         </div>
      );
 }
