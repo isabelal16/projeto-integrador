@@ -174,7 +174,7 @@ const Agenda = () => {
                 </div>
 
                 <button className="botao1" onClick={CloseModal}><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
-                <button type="submit" className="botao2" ><i class="fa-solid fa-check"></i> Salvar</button>
+                <button type="submit" className="botao2" onClick={postarAgenda} ><i class="fa-solid fa-check"></i> Salvar</button>
                 
             </form>
 
