@@ -8,6 +8,9 @@ Modal.setAppElement('#root')
 
 const Perfil = (props) => {
 
+    const [agenda , alteraAgenda] = React.useState([]);
+
+
     const navigate = useNavigate()
 
     const logOff = () => {
@@ -45,7 +48,7 @@ const Perfil = (props) => {
         })
     }
 
-    const CadastrarPet = (e) =>{
+const CadastrarPet = (e) =>{
 
     e.preventDefault();
 
@@ -200,22 +203,38 @@ const [num, setNum] = useState(0);
                     }
             </div>
                
+               
 
                 <div className='Pets'>
                 
                 <table cellpadding="10" cellspacing="4">
-            <th>Pet</th>
-            <th>Data</th>
-            <th>Horário</th>
-            <th>Serviço</th>
-            <tr/>
-            
-                <td>Tosa</td>
-                <td>dhg</td>
-                <td>shfs</td>
-                <td>bgjfr</td>
+
+                    <th>Pet</th>
+                    <th>Data</th>
+                    <th>Horário</th>
+                    <th>Serviço</th>
+                    <tr/>
+
+                    {
+                        agenda == 0 ? <p> Nenhum horário marcado...</p> : 
+                        <div>
+                            {agenda.map (u => {
+                                return(
+                                    <>  <br/>
+
+                                        
+                                        <td>Pet: {u.pet}</td>
+                                        <td>Data: {u.data}</td>
+                                        <td>Horário: {u.horario}</td>
+                                        <td>Serviço: {u.servico}</td>                                                               
+                                        
+                                    </>
+                                )
+                            })}
+                        </div>
+                    }
                 
-            </table>
+                </table>
                        
                         
                 </div>
