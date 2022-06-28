@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Grape+Nuts&family=Raleway&family=Secular+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Josefin+Slab:wght@300&family=Karma:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
 body .cadastroLogin{
     height: 100vh;
     padding: 0;
-    background-color:#6c8d65;
-  }
-.centro{
- 
-    text-align:center;
- 
+    background-color:#6c8d65;  
 }
+
+.centro{
+    text-align:center;
+}
+
 .cadastroLogin{
     display: flex;
 }
@@ -22,21 +24,19 @@ body .cadastroLogin{
     background-color:#6c8d65;
     font-size: 20px;
     
-    
 }
  
 .cadastroLogin h1{
  
-    font-family: 'Cormorant Garamond', serif;
-    font-family: 'Josefin Slab', serif;
+    font-family: 'Baloo 2', cursive;
     color:rgb(0, 0, 0);
     font-size: 70px;
+    margin-top: 3.8%;
  
 }
 
     
 .caixa2{
-
     
     background-color:  #94ac8f;
     text-align: center;
@@ -61,9 +61,8 @@ body .cadastroLogin{
  
 .cadastroLogin p{
  
-    font-size: 15px;
-    font-family: 'Cormorant Garamond', serif;
-    font-family: 'Josefin Slab', serif;
+    font-size: 20px;
+    font-family: 'Hammersmith One', sans-serif;
  
 }
 

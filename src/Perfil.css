@@ -136,3 +136,13 @@
 .inputPerfil{
     width: 20%;
 }
+
+.logOffButton{
+    padding: 0.2%;
+    color: white;
+    background: #6c8d65;
+    width: 5%;
+    float: right;
+    margin-top: 0.5%;
+    margin-right: 0.5%;
+}
