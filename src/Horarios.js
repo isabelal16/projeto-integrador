@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Admin from './Admin';
 import Modal from 'react-modal';
-import { Routes, Route, Link, useLocation} from "react-router-dom";
+import { useLocation} from "react-router-dom";
 
 require("./Horarios.css")
 const Horarios = () => {
@@ -32,7 +32,7 @@ const Horarios = () => {
         },
        
         {
-            profissional: "Maria Fernanda",
+            profissional: "Maria Rita",
             img: "horario2.png"
     
         } 
