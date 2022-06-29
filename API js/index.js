@@ -14,9 +14,9 @@ app.use(function(req, res, next) {
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'gui',
+  user     : 'luiza1',
   password : '1234',
-  database : 'petshop',
+  database : 'pet_shop',
   port: 3306
 });
 
@@ -69,22 +69,30 @@ app.post('/usuario', (req, res) => {
     
 })
 
-app.get('/agenda', (req, res) => {
-})
+app.get('/agenda/:idusuario', (req, res) => {
+
+  const idusuario = req.params.idusuario
+  
+
+connection.query(`SELECT * FROM agenda WHERE id_usuario = ${idusuario};`, function (error, results, fields) {
+  if (error) throw error;
+  res.send(results);
+});
 
 app.post('/agenda', (req, res) => {
 
-  const pet = req.body.pet;
-  const servico = req.body.servico;
-  const data = req.body.data;
-  const hora = req.body.hora;
-  const functionary = req.body.functionary;
+  const id_usuario= req.body.id_usuario
+  const id_animais= req.body.id_animais
+  const servico= req.body.servico 
+  const data= req.body.data
+  const Horario= req.body.Horario 
+  const id_profissional= req.body.id_profissional
   
   const query = `
   INSERT INTO agenda
-  (pet, servico, data, hora, functionary) 
+  (id_usuario, id_animais, servico, data, Horario, id_profissional) 
   VALUES 
-  ( "${pet}", "${servico}" , "${data}" , "${hora}" , "${functionary}");
+  ( "${id_usuario}", "${id_animais}", "${servico}" , "${data}" , "${Horario}" , "${id_profissional}");
   `;
 
 

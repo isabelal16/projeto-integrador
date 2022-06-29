@@ -8,6 +8,31 @@ Modal.setAppElement('#root')
 
 const Perfil = (props) => {
 
+    const [ agenda, alteraAgenda] = React.useState([]);
+
+
+
+    React.useEffect(()=>{
+        const axios = require("axios").default;
+        const idusuario = 1;
+
+
+        axios.get('http://localhost:3001/agenda/'+idusuario)
+        .then(function (response) {
+                console.log(response.data)
+                alteraAgenda(response.data)
+            
+
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+       
+
+        
+    },[])
+
+
     const navigate = useNavigate()
 
     const logOff = () => {
@@ -45,7 +70,7 @@ const Perfil = (props) => {
         })
     }
 
-    const CadastrarPet = (e) =>{
+const CadastrarPet = (e) =>{
 
     e.preventDefault();
 
@@ -200,22 +225,38 @@ const [num, setNum] = useState(0);
                     }
             </div>
                
+               
 
                 <div className='Pets'>
                 
                 <table cellpadding="10" cellspacing="4">
-            <th>Pet</th>
-            <th>Data</th>
-            <th>Horário</th>
-            <th>Serviço</th>
-            <tr/>
-            
-                <td>Tosa</td>
-                <td>dhg</td>
-                <td>shfs</td>
-                <td>bgjfr</td>
+
+                    <th>Pet</th>
+                    <th>Data</th>
+                    <th>Horário</th>
+                    <th>Serviço</th>
+                    <tr/>
+
+                    {
+                        agenda == 0 ? <p> Nenhum horário marcado...</p> : 
+                        <div>
+                            {agenda.map (u => {
+                                return(
+                                    <>  <br/>
+
+                                        
+                                        <td>{u.id_animais}</td>
+                                        <td>{u.data}</td>
+                                        <td>{u.Horario}</td>
+                                        <td>{u.servico}</td>                                                               
+                                        
+                                    </>
+                                )
+                            })}
+                        </div>
+                    }
                 
-            </table>
+                </table>
                        
                         
                 </div>

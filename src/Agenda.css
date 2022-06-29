@@ -39,7 +39,6 @@ body .caixa{
     border:none;
     border-radius: 15px;
     box-shadow: 0px 0px 20px #ccc;
-    height: 500px;
     width: 400px;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -98,12 +97,12 @@ margin-top: 5%;
 
 .opcaoHora{
     padding: 1%;
-    width: 13%;
+    width: 25%;
 }
 
 .opcaoDia{
     padding: 4%;
-    width: 75%;
+    width: 90%;
     font-size: 20;
 }
 
