@@ -14,7 +14,6 @@ React.useEffect(()=>{
     const axios = require("axios").default;
     const idusuario = 1;
 
-
     axios.get('http://localhost:3001/agenda/'+idusuario)
     .then(function (response) {
         console.log(response.data)
@@ -25,8 +24,6 @@ React.useEffect(()=>{
     .catch(function (error) {
     console.log(error);
     })
-       
-
         
 },[])
 
@@ -99,8 +96,6 @@ const CadastrarPet = (e) =>{
         .catch(function (error) {
         console.log(error);
     })
-
-
 
 }
 
