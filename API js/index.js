@@ -73,11 +73,11 @@ app.get('/agenda/:idusuario', (req, res) => {
 
   const idusuario = req.params.idusuario
   
-
-connection.query(`SELECT * FROM agenda WHERE id_usuario = ${idusuario};`, function (error, results, fields) {
-  if (error) throw error;
-  res.send(results);
-});
+  connection.query(`SELECT * FROM agenda WHERE id_usuario = ${idusuario};`, function (error, results, fields) {
+    if (error) throw error;
+    res.send(results);
+  });
+})
 
 app.post('/agenda', (req, res) => {
 
