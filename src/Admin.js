@@ -11,7 +11,7 @@ const Admin = () => {
             <br/>
             <br/>
 
-            <h4>Horários</h4><br/>
+            <h4>Horários</h4>
 
             <p><Link className='link' to="/horarios" state={{profissional : 3 , id:1 }}>Maria Rita</Link><br/></p>
 
@@ -21,7 +21,8 @@ const Admin = () => {
 
             <p><Link className='link' to="/horarios" state={{profissional : 2 , id:4}}>Carlos Ferreira</Link><br/></p>
 
-            <h4>Admin</h4>
+            <br/>
+            <h4>Administração</h4>
             <p><Link className='link' to="/clientes">Clientes</Link></p>
             <p><Link className='link' to="/pets">Pets</Link></p>
             

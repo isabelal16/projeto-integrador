@@ -1,6 +1,7 @@
 import React , {useState}from 'react';
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import Rodape from './Rodape';
+import Profissionais from './Profissionais';
 
 const Servicos = (props) => {
 
@@ -73,7 +74,10 @@ const Servicos = (props) => {
                         <span className="visually-hidden">Próximo</span>
                     </button>
                 </div>
+
             </div>
+
+            <Profissionais/>
             
             <Rodape/>
         </div>
