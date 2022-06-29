@@ -8,67 +8,65 @@ Modal.setAppElement('#root')
 
 const Perfil = (props) => {
 
-    const [ agenda, alteraAgenda] = React.useState([]);
+const [ agenda, alteraAgenda] = React.useState([]);
+
+React.useEffect(()=>{
+    const axios = require("axios").default;
+    const idusuario = 1;
 
 
-
-    React.useEffect(()=>{
-        const axios = require("axios").default;
-        const idusuario = 1;
-
-
-        axios.get('http://localhost:3001/agenda/'+idusuario)
-        .then(function (response) {
-                console.log(response.data)
-                alteraAgenda(response.data)
+    axios.get('http://localhost:3001/agenda/'+idusuario)
+    .then(function (response) {
+        console.log(response.data)
+        alteraAgenda(response.data)
             
 
-        })
-        .catch(function (error) {
-        console.log(error);
-        })
+    })
+    .catch(function (error) {
+    console.log(error);
+    })
        
 
         
-    },[])
+},[])
 
 
-    const navigate = useNavigate()
+const navigate = useNavigate()
 
-    const logOff = () => {
+const logOff = () => {
 
-        console.log("teste")
+    console.log("teste")
 
-        localStorage.removeItem('id_usuario')
-        localStorage.removeItem('nome')
-        navigate('/')
+    localStorage.removeItem('id_usuario')
+    localStorage.removeItem('nome')
+    navigate('/')
 
-    }
+}
 
-    const [animais, alteraAnimais] = React.useState([]);
+const [animais, alteraAnimais] = React.useState([]);
 
-    React.useEffect( () => {
+React.useEffect( () => {
        
 
-        Buscapets()
+    Buscapets()
 
-    }, [])
+}, [])
 
-    const Buscapets = () =>{
-        const axios = require ("axios").default;
+const Buscapets = () =>{
+    const axios = require ("axios").default;
 
-        const id_usuario = localStorage.getItem('id_usuario');
-        axios.get('http://localhost:3001/animais/'+ id_usuario)
-        .then(function (response) {
+    const id_usuario = localStorage.getItem('id_usuario');
+    axios.get('http://localhost:3001/animais/'+ id_usuario)
+    .then(function (response) {
                 
-        const dados = response.data;
-        console.log (dados)
-        alteraAnimais (dados)
-        })
-        .catch(function (error) {
-        console.log(error);
-        })
-    }
+    const dados = response.data;
+    console.log (dados)
+    alteraAnimais (dados)
+    })
+    .catch(function (error) {
+    console.log(error);
+    })
+}
 
 const CadastrarPet = (e) =>{
 
@@ -100,7 +98,7 @@ const CadastrarPet = (e) =>{
         })
         .catch(function (error) {
         console.log(error);
-        })
+    })
 
 
 
