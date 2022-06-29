@@ -163,6 +163,31 @@ app.post('/CadastrarPet', (req, res) => {
       
 })
 
+app.get('/buscarFuncionario', (req, res) => {
+})
+
+app.post('/buscarFuncionario', (req, res) => {
+
+  const id_usuario= req.body.id_usuario
+  const id_animais= req.body.id_animais
+  const servico= req.body.servico 
+  const data= req.body.data
+  const horario= req.body.horario 
+  const id_profissional= req.body.id_profissional
+  
+  const query = `
+  SELECT * FROM agenda WHERE
+  id_usuario = "${id_usuario}" , id_animais = "${id_animais}" , servico = "${servico}" , data = "${data}" , horario = "${horario}" , id_profissional = "${id_profissional}";
+  `;
+
+
+  connection.query( query, function (error, results, fields) {
+    if (error) throw error;
+    res.send(results);
+  });
+    
+})
+
 app.listen(port, () => {
   console.log(`a API está rodando em localhost:${port}`)
 })
