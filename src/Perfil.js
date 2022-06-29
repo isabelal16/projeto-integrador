@@ -227,31 +227,51 @@ const [num, setNum] = useState(0);
 
                 <div className='Pets'>
                 
-                <table cellpadding="10" cellspacing="4">
+                <table >
+                    <tr>
+                        <th>Pet</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Serviço</th>
+                    </tr>
 
-                    <th>Pet</th>
-                    <th>Data</th>
-                    <th>Horário</th>
-                    <th>Serviço</th>
-                    <tr/>
+                    
 
                     {
                         agenda == 0 ? <p> Nenhum horário marcado...</p> : 
-                        <div>
+                        <>
                             {agenda.map (u => {
+                                
+
+                                //Formatar data
+                                const x = u.data
+                                x.split ("T")
+                                const data = x.split("T")[0]
+                                data.split("-")
+                                const dia = data.split("-")[2]
+                                const mes = data.split("-")[1]
+
+                                //Formatar horario
+                                const y = u.Horario
+                                y.split (":")
+                                const hora = y.split(":")[0]
+                                const minuto = y.split(":")[1]
+
+                                
                                 return(
-                                    <>  <br/>
+                                    <tr>  
 
                                         
-                                        <td>{u.id_animais}</td>
-                                        <td>{u.data}</td>
-                                        <td>{u.Horario}</td>
+                                        <td>{u.nome}</td>
+                                        <td>{dia}/{mes}</td>
+                                        <td>{hora}:{minuto}</td>
                                         <td>{u.servico}</td>                                                               
                                         
-                                    </>
+                                    </tr>
+
                                 )
                             })}
-                        </div>
+                        </>
                     }
                 
                 </table>

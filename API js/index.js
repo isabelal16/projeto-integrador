@@ -14,9 +14,9 @@ app.use(function(req, res, next) {
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'luiza1',
+  user     : 'isa',
   password : '1234',
-  database : 'pet_shop',
+  database : 'petshop2',
   port: 3306
 });
 
@@ -73,7 +73,7 @@ app.get('/agenda/:idusuario', (req, res) => {
 
   const idusuario = req.params.idusuario
   
-  connection.query(`SELECT * FROM agenda WHERE id_usuario = ${idusuario};`, function (error, results, fields) {
+  connection.query(`SELECT agenda.*,animais.nome FROM agenda, animais WHERE agenda.id_usuario = ${idusuario} and animais.id_animais = agenda.id_animais;`, function (error, results, fields) {
     if (error) throw error;
     res.send(results);
   });

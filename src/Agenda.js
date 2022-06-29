@@ -62,8 +62,6 @@ const Agenda = () => {
         console.log(error);
         })
 
-
-        
         
     },[])
 
@@ -90,8 +88,19 @@ const Agenda = () => {
        
 
 
+    React.useEffect( () => {
+       
+
+        postarAgenda()
+
+    }, [])
+
+
     const Salvar = (e) => {
         e.preventDefault();
+
+        
+
 
        const dataformatada = date.target.value
         const servico2 = document.getElementById("servico").value
@@ -104,6 +113,7 @@ const Agenda = () => {
         Horario: time, 
         id_profissional: functionary.id
     }
+
 
        console.log(obj)
 
@@ -187,7 +197,7 @@ const Agenda = () => {
                 </div>
 
                 <button className="botao1" onClick={CloseModal}><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
-                <button type="submit" className="botao2" onClick={postarAgenda} ><i class="fa-solid fa-check"></i> Salvar</button>
+                <button type="submit" className="botao2" onClick={postarAgenda()} ><i class="fa-solid fa-check"></i> Salvar</button>
                 
             </form>
             </div>
