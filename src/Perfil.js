@@ -8,7 +8,29 @@ Modal.setAppElement('#root')
 
 const Perfil = (props) => {
 
-    const [agenda , alteraAgenda] = React.useState([]);
+    const [ agenda, alteraAgenda] = React.useState([]);
+
+
+
+    React.useEffect(()=>{
+        const axios = require("axios").default;
+        const idusuario = 1;
+
+
+        axios.get('http://localhost:3001/agenda/'+idusuario)
+        .then(function (response) {
+                console.log(response.data)
+                alteraAgenda(response.data)
+            
+
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+       
+
+        
+    },[])
 
 
     const navigate = useNavigate()
@@ -223,10 +245,10 @@ const [num, setNum] = useState(0);
                                     <>  <br/>
 
                                         
-                                        <td>Pet: {u.pet}</td>
-                                        <td>Data: {u.data}</td>
-                                        <td>Horário: {u.horario}</td>
-                                        <td>Serviço: {u.servico}</td>                                                               
+                                        <td>{u.id_animais}</td>
+                                        <td>{u.data}</td>
+                                        <td>{u.Horario}</td>
+                                        <td>{u.servico}</td>                                                               
                                         
                                     </>
                                 )

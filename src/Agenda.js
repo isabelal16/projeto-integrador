@@ -46,17 +46,12 @@ const Agenda = () => {
 
     const [ agenda, alteraAgenda] = React.useState([]);
 
-    React.useEffect( () => {
-       
 
-        postarAgenda()
-
-    }, [])
 
     React.useEffect(()=>{
         const axios = require("axios").default;
-        const idusuario = 1;
-        axios.get('http://localhost:3001/animais/'+idusuario)
+        const id_usuario = localStorage.getItem('id_usuario');
+        axios.get('http://localhost:3001/animais/'+id_usuario)
         .then(function (response) {
                 console.log(response.data)
                 alteraAnimais(response.data)
@@ -67,8 +62,8 @@ const Agenda = () => {
         console.log(error);
         })
 
-       
 
+        
         
     },[])
 
@@ -130,43 +125,6 @@ const Agenda = () => {
     }
     
     require("./Agenda.css")
-
-    const Agendamento = (e) => {
-
-         
-
-        e.preventDefault();
-
-        const pet = document.querySelector("input[name='pet']").value;
-        const servico = document.querySelector("input[name='servico']").value;
-        const data = document.querySelector("input[name='data']").value;
-        const hora = document.querySelector("input[name='hora']").value;
-        const functionary = document.querySelector("input[name='functionary']").value;
-
-        const obj = {
-            pet: pet, 
-            servico: servico, 
-            data: data,
-            hora: hora, 
-            functionary: functionary
-        }
-
-        console.log (obj)
-        
-        const axios = require("axios").default;
-
-        axios.post('http://localhost:3001/agenda', obj)
-        .then(function (response) {
-             
-            console.log (response) 
-
-        })
-        .catch(function (error) {
-        console.log(error);
-        })
-
-    }
-
 
     return(
 
