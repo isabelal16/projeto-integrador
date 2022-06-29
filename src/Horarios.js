@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Admin from './Admin';
-import { useLocation} from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 require("./Horarios.css")
 const Horarios = () => {
@@ -8,6 +8,8 @@ const Horarios = () => {
     const [funcionario , alteraFuncionario] = React.useState([]);
     const location = useLocation()
     const profissional = location.state.profissional
+    const id = location.state.id
+
 
     React.useEffect( () => {
 
@@ -15,14 +17,29 @@ const Horarios = () => {
 
     }, [])
 
-    const buscarFuncionario = (e) => {
+    const buscarFuncionario = () => {
 
-        e.preventDefault();
+        const id_usuario = document.getElementById('2');
+        const id_animais = document.getElementById('2');
+        const servico = document.getElementById('2');
+        const data = document.getElementById('2');
+        const horario = document.getElementById('2');
+        const id_profissional = document.getElementById('2');
 
-        const axios = require ("axios").default;
+        const obj = {
+            id_usuario: id_usuario,
+            id_animais: id_animais,
+            servico: servico,
+            data: data,
+            horario: horario,
+            id_profissional: id_profissional
+        }
 
-        const id_usuario = localStorage.getItem('id_usuario');
-        axios.get('http://localhost:3001/buscarFuncionario/'+ id_usuario)
+        console.log("teste")
+
+        const axios = require ("axios");
+
+        axios.get('http://localhost:3001/buscarFuncionario/' , obj)
         .then(function (response) {
                 
             const dados = response.data;
@@ -39,6 +56,7 @@ const Horarios = () => {
         
 
         {
+            
             profissional: "Alex Silva",
             img: "horario.png"
             
@@ -86,6 +104,7 @@ const Horarios = () => {
                     <th>Horário</th>
                     <th>Pet</th>
                     <th>Tutor</th>
+                   
 
                     <tr/>
                     {
@@ -96,11 +115,12 @@ const Horarios = () => {
                                     <>  
 
                                         <tr/>
+                                        <td>{id}</td>
                                         <td> {u.servico}</td>
                                         <td> {u.data}</td>
                                         <td> {u.horario}</td>
-                                        <td> {u.pet}</td> 
-                                        <td> {u.tutor}</td>   
+                                        <td> {u.id_animais}</td>                                        
+                                        <td> {u.id_usuario}</td>
                                         <tr/>
 
                                     </>

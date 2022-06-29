@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import Horarios from './Horarios';
-import { Routes, Route, Link, useLocation } from "react-router-dom";
+import React from 'react';
+import { Link } from "react-router-dom";
 
 const Admin = () => {
 
@@ -14,13 +13,13 @@ const Admin = () => {
 
             <h4>Horários</h4><br/>
 
-            <p><Link className='link' to="/horarios" state={{profissional : 0}}>Alex Silva</Link><br/></p>
+            <p><Link className='link' to="/horarios" state={{profissional : 3 , id:1 }}>Maria Rita</Link><br/></p>
 
-            <p><Link className='link' to="/horarios" state={{profissional : 1}}>Anna Souza</Link><br/></p>
+            <p><Link className='link' to="/horarios" state={{profissional : 0 , id:2}}>Alex Silva</Link><br/></p>
 
-            <p><Link className='link' to="/horarios" state={{profissional : 2}}>Carlos Ferreira</Link><br/></p>
+            <p><Link className='link' to="/horarios" state={{profissional : 1 , id:3}}>Anna Souza</Link><br/></p>
 
-            <p><Link className='link' to="/horarios" state={{profissional : 3}}>Maria Fernanda</Link><br/></p>
+            <p><Link className='link' to="/horarios" state={{profissional : 2 , id:4}}>Carlos Ferreira</Link><br/></p>
 
             <h4>Admin</h4>
             <p><Link className='link' to="/clientes">Clientes</Link></p>

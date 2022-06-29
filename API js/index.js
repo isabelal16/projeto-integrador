@@ -173,11 +173,11 @@ app.post('/buscarFuncionario', (req, res) => {
   const servico= req.body.servico 
   const data= req.body.data
   const horario= req.body.horario 
-  const id_profissional= req.body.id_profissional
+  const id = req.body.id
   
   const query = `
   SELECT * FROM agenda WHERE
-  id_usuario = "${id_usuario}" , id_animais = "${id_animais}" , servico = "${servico}" , data = "${data}" , horario = "${horario}" , id_profissional = "${id_profissional}";
+  id_usuario = "${id_usuario}" , id_animais = "${id_animais}" , servico = "${servico}" , data = "${data}" , horario = "${horario}" , id = ${id} ;
   `;
 
 
