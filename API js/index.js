@@ -176,6 +176,17 @@ app.get('/buscarProfissional/:profissional', (req, res) => {
 
 })
 
+app.get('/buscarUsuario/:usuario', (req, res) => {
+
+  const query = `SELECT * FROM usuario ;`;
+  
+  connection.query( query , function (error, results, fields) {
+    if (error) throw error;
+    res.send(results);
+  });
+
+})
+
 app.listen(port, () => {
   console.log(`a API está rodando em localhost:${port}`)
 })

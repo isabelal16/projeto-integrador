@@ -8,8 +8,6 @@ const Horarios = () => {
     const [Profissional , alteraProfissional] = React.useState([]);
     const location = useLocation()
     const profissional = location.state.profissional
-    const [ agenda, alteraAgenda] = React.useState([]);
-
 
     React.useEffect( () => {
 

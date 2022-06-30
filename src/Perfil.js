@@ -109,7 +109,7 @@ const [num, setNum] = useState(0);
     setNum(randomNumberInRange(0, 6));
   };
 
-    //MODAIS
+    //MODAL PET
 
     const [modalIsOpen, setIsOpen] = useState(false)
 
@@ -120,6 +120,8 @@ const [num, setNum] = useState(0);
     function CloseModal (){
         setIsOpen(false)
     }
+
+    //MODAL AGENDA
 
     const [abrirModal2, modalAberto2] = useState(false)
 

@@ -17,7 +17,7 @@ const Agenda = () => {
         
     },[])
 
-    const modalAberto2 = useState(false)
+    const [abrirModal2, modalAberto2] = useState(false)
 
     function FecharModal2 (){
         modalAberto2 (false)
@@ -185,8 +185,8 @@ const Agenda = () => {
 
                 </div>
 
-                <button className="botao1"><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
-                <button type="submit" className="botao2" onClick={postarAgenda()} ><i class="fa-solid fa-check"></i> Salvar</button>
+                <button type="text" className="botao1"><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
+                <button type="submit" className="botao2" ><i class="fa-solid fa-check"></i> Salvar</button>
                 
             </form>
             </div>
