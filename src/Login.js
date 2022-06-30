@@ -1,5 +1,7 @@
+import { getDefaultNormalizer } from '@testing-library/react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Inicio from './Inicio'
 
 const Login = () => {
 
@@ -23,10 +25,15 @@ const Login = () => {
         axios.post('http://localhost:3001/login', obj)
         .then(function (response) {
 
+            if (email == "admin@gmail.com" && senha == "avocadobichos123"){
+                    
+                navigate('/admin')
+            } else
+
                 if (response.data == 0) {
                     alert("Email ou Senha incorretos")
                     return 
-                }     
+                }  else   {
                 
                 
                 const id_usuario = response.data[0].id_usuario
@@ -35,6 +42,9 @@ const Login = () => {
                 localStorage.setItem('nome' , nome)
 
                 navigate('/perfil')
+                }
+
+               
 
         })
         .catch(function (error) {
@@ -68,7 +78,7 @@ const Login = () => {
                         <i className="fa-solid fa-key"></i><input name="senha" autoComplete='current-password' required minLength="3" type="password" placeholder="Senha"/>                                             
                         <br/>
                         <br/>
-                        <button className='link' ><i className="fa-solid fa-arrow-left"></i> Voltar </button>
+                        <button className='link'><i className="fa-solid fa-arrow-left"></i> Voltar </button>
                         <button className='link'> Entrar </button>
                             
                         <hr/>

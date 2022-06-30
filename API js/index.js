@@ -167,7 +167,7 @@ app.get('/buscarProfissional/:profissional', (req, res) => {
 
   const profissional = req.params.profissional
 
-  const query = `SELECT * FROM agenda WHERE id_profissional = "${profissional}" ;`;
+  const query = `SELECT agenda.*,animais.nome as nomepet ,usuario.nome FROM agenda, animais, usuario WHERE agenda.id_profissional = "${profissional}" and animais.id_animais = agenda.id_animais and animais.id_usuario = usuario.id_usuario ORDER BY agenda.data asc; `;
   
   connection.query( query , function (error, results, fields) {
     if (error) throw error;

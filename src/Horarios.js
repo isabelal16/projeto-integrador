@@ -94,7 +94,7 @@ const Horarios = () => {
                     <tr/>
 
                     {
-                        Profissional == 0 ? <p> Carregando... </p> : 
+                        Profissional == 0 ? <p> Nenhum horário agendado </p> : 
                         <>
                             {Profissional.map (u => {
                                 
@@ -120,8 +120,8 @@ const Horarios = () => {
                                         <td>{u.servico}</td>
                                         <td>{dia}/{mes}</td>
                                         <td>{hora}:{minuto}</td>
-                                        <td>{u.id_animais}</td>
-                                        <td>{u.id_usuario}</td>
+                                        <td>{u.nomepet}</td>
+                                        <td>{u.nome}</td>
                                         
                                     </tr>
 
