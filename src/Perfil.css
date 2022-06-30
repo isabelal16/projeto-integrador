@@ -146,3 +146,48 @@
     margin-top: 0.5%;
     margin-right: 0.5%;
 }
+@media only screen and (max-width: 1366px) {
+    .rodape{
+        width: 100%;
+        padding-left: 30px;
+        padding: 40px;
+        
+        
+    }
+        .dropdown-menu{
+            margin-right: 30px;
+            margin: 50px;
+        }
+
+        .add img{
+            background: #6c8d65;
+            border-radius:  50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 567px;
+            margin-top: -120px;
+        
+        }
+        .agenda img{
+            background: #6c8d65;
+            border-radius:  50%;
+            width: 46px;
+            margin-top: -164px;
+            margin-left: 1200px;
+            
+        }
+        .alinhamento{
+            display: flex;
+            margin: 49px
+        }
+        
+        .Pets{
+        width: 123%;
+        margin-left: 50px;
+        margin-right: 50px;
+        border: #6c8d65 solid 2px;
+        border-radius: 10px;
+        
+
+    }
+}
