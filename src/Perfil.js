@@ -12,7 +12,7 @@ const [ agenda, alteraAgenda] = React.useState([]);
 
 React.useEffect(()=>{
     const axios = require("axios").default;
-    const idusuario = 1;
+    const idusuario = localStorage.getItem('id_usuario');
 
     axios.get('http://localhost:3001/agenda/'+idusuario)
     .then(function (response) {

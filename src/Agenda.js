@@ -2,7 +2,22 @@ import React, { useState } from "react";
 
 const Agenda = () => {
 
-    const [abrirModal2, modalAberto2] = useState(false)
+    React.useEffect(()=>{
+        const axios = require("axios").default;
+        const id_usuario = localStorage.getItem('id_usuario');
+        axios.get('http://localhost:3001/animais/'+id_usuario)
+        .then(function (response) {
+                console.log(response.data)
+                alteraAnimais(response.data)
+        })
+        .catch(function (error) {
+        console.log(error);
+        })
+
+        
+    },[])
+
+    const modalAberto2 = useState(false)
 
     function FecharModal2 (){
         modalAberto2 (false)
@@ -46,24 +61,12 @@ const Agenda = () => {
 
     const [ agenda, alteraAgenda] = React.useState([]);
 
+    React.useEffect( () => {
+       
 
+        postarAgenda()
 
-    React.useEffect(()=>{
-        const axios = require("axios").default;
-        const id_usuario = localStorage.getItem('id_usuario');
-        axios.get('http://localhost:3001/animais/'+id_usuario)
-        .then(function (response) {
-                console.log(response.data)
-                alteraAnimais(response.data)
-            
-
-        })
-        .catch(function (error) {
-        console.log(error);
-        })
-
-        
-    },[])
+    }, [])
 
     const postarAgenda = () => {
         
@@ -85,22 +88,9 @@ const Agenda = () => {
 
     }
 
-       
-
-
-    React.useEffect( () => {
-       
-
-        postarAgenda()
-
-    }, [])
-
-
     const Salvar = (e) => {
+
         e.preventDefault();
-
-        
-
 
        const dataformatada = date.target.value
         const servico2 = document.getElementById("servico").value
@@ -114,7 +104,6 @@ const Agenda = () => {
             Horario: time, 
             id_profissional: functionary.id
         }
-
 
         console.log(obj)
 
@@ -131,8 +120,7 @@ const Agenda = () => {
        .catch(function (error) {
        console.log(error);
        })
-
-       
+ 
     }
     
     require("./Agenda.css")
@@ -197,7 +185,7 @@ const Agenda = () => {
 
                 </div>
 
-                <button className="botao1" onClick={FecharModal2}><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
+                <button className="botao1"><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
                 <button type="submit" className="botao2" onClick={postarAgenda()} ><i class="fa-solid fa-check"></i> Salvar</button>
                 
             </form>
