@@ -16,8 +16,7 @@ const Profissionais = (props) => {
         {
             nome: "Alex Silva",
             descricao: `Alex é especializado em diversos tipos de banhos e tosquias, trabalha na área há mais de 10 anos e é apaixonado 
-            por animais silvestres, recentemente está cursando seu primeiro semestre em Veterinária na Univesp, e com todo carinho e paciência,
-             é responsavel pela área de banho e tosa da nossa clínica.`,
+            por animais silvestres, recentemente está cursando seu primeiro semestre em Veterinária na Univesp, e com todo carinho e paciência,.`,
             imgprof: "alex.png"
         },
 
@@ -30,7 +29,7 @@ const Profissionais = (props) => {
        
         {
             nome: "Anna souza ",
-            descricao: "Anna esta no utimo ano da facudade de medicina veterinaria ela como uma ",
+            descricao: "Anna esta no utimo ano da facudade de medicina veterinaria ela como uma  ",
             imgprof: "profissional1.png"
         },
        
@@ -38,7 +37,7 @@ const Profissionais = (props) => {
         { 
             nome: "Maria Rita",
             descricao: "Alex, juntamente com uma equipe de 4 integrantes, são responsáveis pelo Banho e a Tosa do seu querido amigo.",
-            imgprof: "ana.png"
+            imgprof: "PJ.jpg"
         } 
        
     ]
