@@ -5,46 +5,28 @@ import { useLocation } from "react-router-dom";
 require("./Horarios.css")
 const Horarios = () => {
 
-    const [funcionario , alteraFuncionario] = React.useState([]);
+    const [Profissional , alteraProfissional] = React.useState([]);
     const location = useLocation()
     const profissional = location.state.profissional
-    const id = location.state.id
-
 
     React.useEffect( () => {
 
-        buscarFuncionario()
+        console.log(profissional)
+        buscarProfissional()
 
-    }, [])
+    }, [profissional])
 
-    const buscarFuncionario = () => {
 
-        const id_usuario = document.getElementById('2');
-        const id_animais = document.getElementById('2');
-        const servico = document.getElementById('2');
-        const data = document.getElementById('2');
-        const horario = document.getElementById('2');
-        const id_profissional = document.getElementById('2');
-
-        const obj = {
-            id_usuario: id_usuario,
-            id_animais: id_animais,
-            servico: servico,
-            data: data,
-            horario: horario,
-            id_profissional: id_profissional
-        }
-
-        console.log("teste")
+    const buscarProfissional = () => {
 
         const axios = require ("axios");
 
-        axios.get('http://localhost:3001/buscarFuncionario/' , obj)
+        axios.get('http://localhost:3001/buscarProfissional/' )
         .then(function (response) {
                 
             const dados = response.data;
             console.log (dados)
-            alteraFuncionario (dados)
+            alteraProfissional (dados)
         })
         .catch(function (error) {
             console.log(error);
@@ -53,7 +35,16 @@ const Horarios = () => {
 
     const horarios = [
 
+        {
+            profissional: "Alex Silva",
+            img: "horario.png"
+        },   
         
+        {
+            profissional: "Maria Rita",
+            img: "horario2.png"
+    
+        },
 
         {
             
@@ -72,14 +63,8 @@ const Horarios = () => {
             profissional: "Carlos Ferreira",
             img: "horario3.png"
            
-        },
-       
-        {
-            profissional: "Maria Rita",
-            img: "horario2.png"
-    
-        } 
-       
+        }
+           
     ]
 
 
@@ -99,36 +84,52 @@ const Horarios = () => {
                 <br/>
                 <br/>
                 <table BORDER RULES="rows" cellPadding="10" cellSpacing="6">
-                    <th>Serviço</th>
-                    <th>Data</th>
-                    <th>Horário</th>
-                    <th>Pet</th>
-                    <th>Tutor</th>
-                   
 
                     <tr/>
+                        <th>Serviço</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Pet</th>
+                        <th>Tutor</th>
+                    <tr/>
+
                     {
-                        funcionario == 0 ? <p> carregando... </p> : 
-                        <div>
-                            {funcionario.map (u => {
+                        profissional == 0 ? <p> Carregando... </p> : 
+                        <>
+                            {profissional.map (u => {
+                                
+
+                                //Formatar data
+                                const x = u.data
+                                x.split ("T")
+                                const data = x.split("T")[0]
+                                data.split("-")
+                                const dia = data.split("-")[2]
+                                const mes = data.split("-")[1]
+
+                                //Formatar horario
+                                const y = u.Horario
+                                y.split (":")
+                                const hora = y.split(":")[0]
+                                const minuto = y.split(":")[1]
+
+                                
                                 return(
-                                    <>  
+                                    <tr>  
 
-                                        <tr/>
-                                        <td>{id}</td>
-                                        <td> {u.servico}</td>
-                                        <td> {u.data}</td>
-                                        <td> {u.horario}</td>
-                                        <td> {u.id_animais}</td>                                        
-                                        <td> {u.id_usuario}</td>
-                                        <tr/>
+                                        <td>{u.servico}</td>
+                                        <td>{dia}/{mes}</td>
+                                        <td>{hora}:{minuto}</td>
+                                        <td>{u.id_animais}</td>
+                                        <td>{u.id_usuario}</td>
+                                        
+                                    </tr>
 
-                                    </>
                                 )
                             })}
-                        </div>
-                    }  
-                    <tr/>                  
+                        </>
+                    }
+                                     
                 
                 </table>
             </div>

@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const Agenda = () => {
 
-    const [modalIsOpen, setIsOpen] = useState(false)
+    const [abrirModal2, modalAberto2] = useState(false)
 
-    function CloseModal (){
-        setIsOpen(false)
+    function FecharModal2 (){
+        modalAberto2 (false)
     }
 
     const [animais, alteraAnimais] = useState([]);
@@ -66,8 +66,7 @@ const Agenda = () => {
     },[])
 
     const postarAgenda = () => {
-
-
+        
         const axios = require ("axios").default;
 
         const id_usuario = localStorage.getItem('id_usuario');
@@ -75,11 +74,12 @@ const Agenda = () => {
         .then(function (response) {
                 
         const dados = response.data;
-        console.log (dados)
-        alteraAgenda (dados)
+            console.log (dados)
+            alteraAgenda (dados);
         })
+
         .catch(function (error) {
-        console.log(error);
+            console.log(error);
         })
 
 
@@ -105,17 +105,18 @@ const Agenda = () => {
        const dataformatada = date.target.value
         const servico2 = document.getElementById("servico").value
         const pet2 = document.getElementById("pet2").value
-       const obj = {
-        id_usuario: localStorage.getItem("id_usuario"),
-        id_animais: pet2, 
-        servico: servico2, 
-        data: dataformatada,
-        Horario: time, 
-        id_profissional: functionary.id
-    }
+
+        const obj = {
+            id_usuario: localStorage.getItem("id_usuario"),
+            id_animais: pet2, 
+            servico: servico2, 
+            data: dataformatada,
+            Horario: time, 
+            id_profissional: functionary.id
+        }
 
 
-       console.log(obj)
+        console.log(obj)
 
        const axios = require("axios").default;
 
@@ -123,8 +124,8 @@ const Agenda = () => {
        .then(function (response) {
             
            console.log (response) 
-           CloseModal()
-           postarAgenda()
+           FecharModal2()
+           postarAgenda()        
 
        })
        .catch(function (error) {
@@ -196,7 +197,7 @@ const Agenda = () => {
 
                 </div>
 
-                <button className="botao1" onClick={CloseModal}><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
+                <button className="botao1" onClick={FecharModal2}><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
                 <button type="submit" className="botao2" onClick={postarAgenda()} ><i class="fa-solid fa-check"></i> Salvar</button>
                 
             </form>

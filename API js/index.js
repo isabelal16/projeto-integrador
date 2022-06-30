@@ -14,9 +14,9 @@ app.use(function(req, res, next) {
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'isa',
+  user     : 'luiza1',
   password : '1234',
-  database : 'petshop2',
+  database : 'pet_shop',
   port: 3306
 });
 
@@ -163,21 +163,30 @@ app.post('/CadastrarPet', (req, res) => {
       
 })
 
-app.get('/buscarFuncionario', (req, res) => {
+app.get('/buscarProfissional', (req, res) => {
+
+  const profissional = req.body.profissional
+
+  const query = `SELECT * FROM agenda WHERE id_profissional = "${profissional}" ;`;
+  
+  connection.query( query , function (error, results, fields) {
+    if (error) throw error;
+    res.send(results);
+  });
+
 })
 
-app.post('/buscarFuncionario', (req, res) => {
+app.post('/buscarProfissional', (req, res) => {
 
   const id_usuario= req.body.id_usuario
-  const id_animais= req.body.id_animais
-  const servico= req.body.servico 
+  const id_animais= req.body.id_animais   
+  const Horario= req.body.horario 
   const data= req.body.data
-  const horario= req.body.horario 
-  const id = req.body.id
+  const servico= req.body.servico
   
   const query = `
   SELECT * FROM agenda WHERE
-  id_usuario = "${id_usuario}" , id_animais = "${id_animais}" , servico = "${servico}" , data = "${data}" , horario = "${horario}" , id = ${id} ;
+  id_usuario = "${id_usuario}" , id_animais = "${id_animais}" , servico = "${servico}" , data = "${data}" , Horario = "${Horario}" ;
   `;
 
 
