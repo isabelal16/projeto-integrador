@@ -14,9 +14,9 @@ app.use(function(req, res, next) {
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'luiza1',
+  user     : 'isa',
   password : '1234',
-  database : 'pet_shop',
+  database : 'petshop2',
   port: 3306
 });
 
@@ -126,7 +126,7 @@ app.post('/login', (req, res) => {
 
 app.get('/animais/:idusuario', (req, res) => {
 
-    const idusuario = req.params.idusuario
+    const idusuario = req.body.idusuario
     
  
   connection.query(`SELECT * FROM animais WHERE id_usuario = ${idusuario};`, function (error, results, fields) {
@@ -163,9 +163,9 @@ app.post('/CadastrarPet', (req, res) => {
       
 })
 
-app.get('/buscarProfissional', (req, res) => {
+app.get('/buscarProfissional/:profissional', (req, res) => {
 
-  const profissional = req.body.profissional
+  const profissional = req.params.profissional
 
   const query = `SELECT * FROM agenda WHERE id_profissional = "${profissional}" ;`;
   
@@ -176,26 +176,26 @@ app.get('/buscarProfissional', (req, res) => {
 
 })
 
-app.post('/buscarProfissional', (req, res) => {
+// app.post('/buscarProfissional', (req, res) => {
 
-  const id_usuario= req.body.id_usuario
-  const id_animais= req.body.id_animais   
-  const Horario= req.body.horario 
-  const data= req.body.data
-  const servico= req.body.servico
+//   const id_usuario= req.body.id_usuario
+//   const id_animais= req.body.id_animais   
+//   const Horario= req.body.horario 
+//   const data= req.body.data
+//   const servico= req.body.servico
   
-  const query = `
-  SELECT * FROM agenda WHERE
-  id_usuario = "${id_usuario}" , id_animais = "${id_animais}" , servico = "${servico}" , data = "${data}" , Horario = "${Horario}" ;
-  `;
+//   const query = `
+//   SELECT * FROM agenda WHERE
+//   id_usuario = "${id_usuario}" , id_animais = "${id_animais}" , servico = "${servico}" , data = "${data}" , Horario = "${Horario}" ;
+//   `;
 
 
-  connection.query( query, function (error, results, fields) {
-    if (error) throw error;
-    res.send(results);
-  });
+//   connection.query( query, function (error, results, fields) {
+//     if (error) throw error;
+//     res.send(results);
+//   });
     
-})
+// })
 
 app.listen(port, () => {
   console.log(`a API está rodando em localhost:${port}`)

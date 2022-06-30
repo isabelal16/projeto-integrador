@@ -8,6 +8,8 @@ const Horarios = () => {
     const [Profissional , alteraProfissional] = React.useState([]);
     const location = useLocation()
     const profissional = location.state.profissional
+    const [ agenda, alteraAgenda] = React.useState([]);
+
 
     React.useEffect( () => {
 
@@ -21,7 +23,7 @@ const Horarios = () => {
 
         const axios = require ("axios");
 
-        axios.get('http://localhost:3001/buscarProfissional/' )
+        axios.get('http://localhost:3001/buscarProfissional/'+profissional )
         .then(function (response) {
                 
             const dados = response.data;
@@ -94,9 +96,9 @@ const Horarios = () => {
                     <tr/>
 
                     {
-                        profissional == 0 ? <p> Carregando... </p> : 
+                        Profissional == 0 ? <p> Carregando... </p> : 
                         <>
-                            {profissional.map (u => {
+                            {Profissional.map (u => {
                                 
 
                                 //Formatar data
