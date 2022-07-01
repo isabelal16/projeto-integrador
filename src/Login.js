@@ -1,7 +1,6 @@
 import { getDefaultNormalizer } from '@testing-library/react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Inicio from './Inicio'
 
 const Login = () => {
 

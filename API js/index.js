@@ -14,9 +14,9 @@ app.use(function(req, res, next) {
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'gui',
+  user     : 'luiza1',
   password : '1234',
-  database : 'petshop',
+  database : 'pet_shop',
   port: 3306
 });
 
@@ -176,9 +176,20 @@ app.get('/buscarProfissional/:profissional', (req, res) => {
 
 })
 
-app.get('/buscarUsuario/:usuario', (req, res) => {
+app.get('/buscarUsuario/', (req, res) => {
 
-  const query = `SELECT * FROM usuario ;`;
+  const query = `SELECT nome, email, cpf, telefone, endereco FROM usuario ORDER BY nome asc  ;`;
+  
+  connection.query( query , function (error, results, fields) {
+    if (error) throw error;
+    res.send(results);
+  });
+
+})
+
+app.get('/buscarPet/', (req, res) => {
+
+  const query = `SELECT id_usuario, nome, especie, raca, porte FROM animais ORDER BY nome asc  ;`;
   
   connection.query( query , function (error, results, fields) {
     if (error) throw error;

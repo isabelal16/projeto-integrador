@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const Admin = () => {
 
     require ("./Admin.css")
+    
     return ( 
         <div className='adm'>
 

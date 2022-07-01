@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 .inputc input{
     width: 60%;
@@ -31,6 +31,7 @@
 }
 
 .clientes2 h3{
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     font-size: 30px;
 }
@@ -40,5 +41,6 @@
 }
 
 .clientes2 p{
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }

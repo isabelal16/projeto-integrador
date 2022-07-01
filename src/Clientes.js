@@ -5,7 +5,7 @@ require("./Clientes.css");
 
 const Clientes = () => {
 
-    const [usuario , alteraUsuario] = React.useState([]);
+    const [ usuario , alteraUsuario] = React.useState([]);
 
     React.useEffect( () => {
 
@@ -18,7 +18,7 @@ const Clientes = () => {
 
         const axios = require ("axios");
 
-        axios.get('http://localhost:3001/buscarUsuario/'+ usuario )
+        axios.get('http://localhost:3001/buscarUsuario/' )
         .then(function (response) {
                 
             const dados = response.data;
@@ -47,18 +47,18 @@ const Clientes = () => {
 
                         {usuario.map (u => {
                             return(
-                                <>  <br/>
-
+                                <>  
+                                    <br/>
+                                    <h3> {u.nome}</h3>
                                     <hr/>
-                                    <h3>{u.nome}</h3>
-                                    <hr/>
-                                    <p>{u.telefone}</p>
-                                    <p> {u.email}</p>
-                                    <p> {u.cpf}</p> 
-                                    <p>{u.endereco}</p>                                                              
+                                    <p>TELEFONE: {u.telefone}</p>
+                                    <p>EMAIL: {u.email}</p>
+                                    <p>CPF: {u.cpf}</p> 
+                                    <p>ENDEREÇO: {u.endereco}</p>                                                              
                                     <hr/>
 
                                 </>
+                                
                             )
                         })}
 
