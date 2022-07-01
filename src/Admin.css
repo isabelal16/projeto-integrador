@@ -36,3 +36,12 @@
     text-decoration: none;
 
 }
+
+.lOff{
+    padding: 0.2%;
+    color: white;
+    background: #6c8d65;
+    width: 20%;
+    margin-left: 10%;
+    margin-top: 35%;
+}
