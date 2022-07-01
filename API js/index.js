@@ -14,9 +14,9 @@ app.use(function(req, res, next) {
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'luiza1',
+  user     : 'isa',
   password : '1234',
-  database : 'pet_shop',
+  database : 'petshop2',
   port: 3306
 });
 
@@ -189,7 +189,7 @@ app.get('/buscarUsuario/', (req, res) => {
 
 app.get('/buscarPet/', (req, res) => {
 
-  const query = `SELECT id_usuario, nome, especie, raca, porte FROM animais ORDER BY nome asc  ;`;
+  const query = `SELECT animais.*,usuario.nome as nomeusuario FROM animais, usuario  WHERE animais.id_usuario = usuario.id_usuario ORDER BY usuario.nome asc;`;
   
   connection.query( query , function (error, results, fields) {
     if (error) throw error;

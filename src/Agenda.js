@@ -1,4 +1,7 @@
 import React, { useState } from "react"; 
+import Modal from 'react-modal';
+import { Link } from "react-router-dom";
+
 
 const Agenda = () => {
 
@@ -17,10 +20,11 @@ const Agenda = () => {
         
     },[])
 
-    const [abrirModal2, modalAberto2] = useState(false)
+    const [abrirModal2, modalAberto2] = useState(true)
 
     function FecharModal2 (){
         modalAberto2 (false)
+        window.location.reload();
     }
 
     const [animais, alteraAnimais] = useState([]);
@@ -125,13 +129,28 @@ const Agenda = () => {
     
     require("./Agenda.css")
 
+
+    const customStyles = {
+        content: {
+          left: '35%',
+          background: 'transparent',
+          border: 'none'
+        },
+      };
+
     return(
 
-        <div className="caixa">
+        
 
-
+        <Modal
+        isOpen = {abrirModal2}
+        onRequestClose = {FecharModal2}
+        style = {customStyles}
+        
+        >
+            <div className="caixa">
             <form onSubmit={(e) => Salvar(e) }>
-
+                
                 <div>
                     <label>
                     <p className="nomepet" > <i class="fa-solid fa-paw"></i> Para qual pet você quer agendar?</p>
@@ -185,13 +204,13 @@ const Agenda = () => {
 
                 </div>
 
-                <button type="text" className="botao1"><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
-                <button type="submit" className="botao2" ><i class="fa-solid fa-check"></i> Salvar</button>
+                <button type="text" className="botao1" onClick={FecharModal2} ><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
+                <button type="submit" className="botao2"><i class="fa-solid fa-check"></i> Salvar</button>
                 
             </form>
             </div>
      
-        
+        </Modal>
 
     );
 

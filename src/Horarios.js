@@ -120,8 +120,8 @@ const Horarios = () => {
                                         <td>{u.servico}</td>
                                         <td>{dia}/{mes}</td>
                                         <td>{hora}:{minuto}</td>
-                                        <td>{u.nomepet}</td>
-                                        <td>{u.nome}</td>
+                                        <td>{u.nomepet[0].toUpperCase() + u.nomepet.substr(1)}</td>
+                                        <td>{u.nome[0].toUpperCase() + u.nome.substr(1)}</td>
                                         
                                     </tr>
 

@@ -49,12 +49,12 @@ const Clientes = () => {
                             return(
                                 <>  
                                     <br/>
-                                    <h3> {u.nome}</h3>
+                                    <h3> {u.nome[0].toUpperCase() + u.nome.substr(1)}</h3>
                                     <hr/>
-                                    <p>TUTOR: {u.id_usuario}</p>
-                                    <p>ESPÉCIE: {u.especie}</p>
-                                    <p>RAÇA: {u.raca}</p> 
-                                    <p>PORTE: {u.porte}</p>                                                              
+                                    <p>TUTOR: {u.nomeusuario[0].toUpperCase() + u.nomeusuario.substr(1)}</p>
+                                    <p>ESPÉCIE: {u.especie[0].toUpperCase() + u.especie.substr(1)}</p>
+                                    <p>RAÇA: {u.raca[0].toUpperCase() + u.raca.substr(1)}</p> 
+                                    <p>PORTE: {u.porte[0].toUpperCase() + u.porte.substr(1)}</p>                                                              
                                     <hr/>
 
                                 </>

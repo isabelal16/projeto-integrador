@@ -49,12 +49,12 @@ const Clientes = () => {
                             return(
                                 <>  
                                     <br/>
-                                    <h3> {u.nome}</h3>
+                                    <h3> {u.nome[0].toUpperCase() + u.nome.substr(1)}</h3>
                                     <hr/>
                                     <p>TELEFONE: {u.telefone}</p>
                                     <p>EMAIL: {u.email}</p>
                                     <p>CPF: {u.cpf}</p> 
-                                    <p>ENDEREÇO: {u.endereco}</p>                                                              
+                                    <p>ENDEREÇO: {u.endereco[0].toUpperCase() + u.endereco.substr(1)}</p>                                                              
                                     <hr/>
 
                                 </>

@@ -99,6 +99,11 @@ const CadastrarPet = (e) =>{
 
 }
 
+
+// AGENDA
+
+
+
 const [num, setNum] = useState(0);
 
   function randomNumberInRange(min, max) {
@@ -207,10 +212,10 @@ const [num, setNum] = useState(0);
                                     <>  <br/>
 
                                         <hr/>
-                                        <p>Nome: {u.nome}</p>
-                                        <p>Espécie: {u.especie}</p>
-                                        <p>Raça: {u.raca}</p>
-                                        <p>Porte: {u.porte}</p>                                                               
+                                        <p>Nome: {u.nome[0].toUpperCase() + u.nome.substr(1)}</p>
+                                        <p>Espécie: {u.especie[0].toUpperCase() + u.especie.substr(1)}</p>
+                                        <p>Raça: {u.raca[0].toUpperCase() + u.raca.substr(1)}</p>
+                                        <p>Porte: {u.porte[0].toUpperCase() + u.porte.substr(1)}</p>                                                               
                                         <hr/>
 
                                     </>
@@ -259,10 +264,10 @@ const [num, setNum] = useState(0);
                                     <tr>  
 
                                         
-                                        <td>{u.nome}</td>
+                                        <td>{u.nome[0].toUpperCase() + u.nome.substr(1)}</td>
                                         <td>{dia}/{mes}</td>
                                         <td>{hora}:{minuto}</td>
-                                        <td>{u.servico}</td>                                                               
+                                        <td>{u.servico[0].toUpperCase() + u.servico.substr(1)}</td>                                                               
                                         
                                     </tr>
 
@@ -307,7 +312,6 @@ const [num, setNum] = useState(0);
                 isOpen = {abrirModal2}
                 onRequestClose = {FecharModal2}
                 style = {customStyles}
-                
                 >
                     <Agenda/>
                 </Modal>
