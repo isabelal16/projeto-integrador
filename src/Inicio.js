@@ -16,7 +16,7 @@ const Inicio = () => {
             <Menu/>
             <div className='titulo'>
                 <h1 className='painel1'>Cuide do seu <br/>melhor amigo!</h1> 
-                <p className='painel2'>Nossa clinica é especializada em consulta veterinária, <br/>cuidados com o seu pet e em vacinação</p> 
+                <p className='painel2'>Nossa clinica é especializada em consulta veterinária, cuidados com o seu pet e em vacinação</p> 
             </div>
 
             <div>

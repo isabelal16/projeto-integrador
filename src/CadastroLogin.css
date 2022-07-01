@@ -26,15 +26,23 @@ body .cadastroLogin{
     
 }
  
-.cadastroLogin h1{
+.Cadastro h1{
  
     font-family: 'Baloo 2', cursive;
     color:rgb(0, 0, 0);
-    font-size: 70px;
+    font-size: 50px;
     margin-top: 3.8%;
  
 }
 
+.login2 h1{
+ 
+    font-family: 'Baloo 2', cursive;
+    color:rgb(0, 0, 0);
+    font-size: 50px;
+    margin-top: 3.8%;
+ 
+}
     
 .caixa2{
     
@@ -43,23 +51,34 @@ body .cadastroLogin{
     border:none;
     border-radius: 15px;
     margin: 30px;
-    height:800px;
+    height: 650px;
     width: 500px;
-    margin-left: 200px;
-    margin-top: 16%;
+    margin-left: 100px;
+    margin-top: 1%;
 }
  
 
-.cadastroLogin input{
+.Cadastro input{
  
-    padding: 6.5px;
+    padding: 3px;
     width: 397px;
     border:none;
     border-radius: 2px;
+    font-size: 15px;
    
 }
+
+.login2 input{
+    padding: 8px;
+    width: 397px;
+    border:none;
+    border-radius: 2px;
+    font-size: 20px;
+}
  
-.cadastroLogin p{
+
+
+.CadastroLogin p{
  
     font-size: 20px;
     font-family: 'Hammersmith One', sans-serif;
@@ -79,12 +98,17 @@ body .cadastroLogin{
 
 
 .login2 img{
-    margin-top: 5%;
+    width: 650px;
     
+}
+
+.inputlogin{
+    margin-top: 35px;
 }
 
 .Cadastro img{
     margin-top: 0;
+    width: 470px;
 
 }
 
@@ -107,8 +131,8 @@ body .cadastroLogin{
     border-radius: 15px;
     height:500px;
     width: 500px;
-    margin-left: 200px;
-    margin-top: 35%;
+    margin-left: 100px;
+    margin-top: 15%;
 }
 .imgFundoLogin{
     width: calc(80vh);
@@ -119,7 +143,7 @@ body .cadastroLogin{
 }
 
 
-@media only screen and (max-width: 1400px) {
+/* @media only screen and (max-width: 1400px) {
     body {
         max-width: 100%;
     }
@@ -177,4 +201,4 @@ body .cadastroLogin{
         
     
     }
-  }
+  } */

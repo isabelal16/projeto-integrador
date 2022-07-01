@@ -66,7 +66,7 @@ const Cadastro = () => {
                     <form onSubmit={(e) => Cadastra(e) } className='centro'>
                         <label>
 
-                            <i className="fa-solid fa-user"></i><input required minLength="5" name ='nome' type="text" placeholder="Nome" />
+                            <i className="fa-solid fa-user"></i> <input required minLength="5" name ='nome' type="text" placeholder="Nome" />
     
                             <br/>
                             <br/>

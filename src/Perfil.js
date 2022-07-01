@@ -201,7 +201,6 @@ const [num, setNum] = useState(0);
             </div>
             <div className='alinhamento'>
                 <div className='Pets'>
-                        <h1>Cadastro de Pets</h1>
                 
 
                     {
@@ -236,11 +235,12 @@ const [num, setNum] = useState(0);
                         <th>Horário</th>
                         <th>Serviço</th>
                     </tr>
+                    
 
                     
 
                     {
-                        agenda == 0 ? <p> Nenhum horário marcado...</p> : 
+                        agenda == 0 ? <div><br></br><td>Nenhum horário marcado...</td></div>  : 
                         <>
                             {agenda.map (u => {
                                 
