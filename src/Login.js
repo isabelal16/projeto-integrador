@@ -71,7 +71,7 @@ const Login = () => {
                     <form onSubmit={(e) => Logar(e)} className='centro'>
                         <label>
 
-                        <i className="fa-solid fa-unlock-keyhole"></i><input name="email" autoComplete='username' required type="email" placeholder="Email"/> 
+                        <i className="fa-solid fa-unlock-keyhole"></i><input className='inputlogin' name="email" autoComplete='username' required type="email" placeholder="Email"/> 
                         <br/>
                         <br/>
                         <i className="fa-solid fa-key"></i><input name="senha" autoComplete='current-password' required minLength="3" type="password" placeholder="Senha"/>                                             
@@ -79,8 +79,6 @@ const Login = () => {
                         <br/>
                         <button className='link'><i className="fa-solid fa-arrow-left"></i> Voltar </button>
                         <button className='link'> Entrar </button>
-                            
-                        <hr/>
 
                         </label>
                     </form>    

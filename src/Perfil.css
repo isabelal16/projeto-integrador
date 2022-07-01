@@ -85,8 +85,8 @@
 .agenda img{
     background: #6c8d65;
     border-radius:  50%;
-    width: 46px;
-    height: 46px;
+    width: 43px;
+    height: 43px;
     margin-top: -150px;
     margin-left: 1220px;
     
@@ -142,7 +142,7 @@
     color: white;
     background: #6c8d65;
     width: 5%;
-    float: right;
+    right: 0.5%;
     margin-top: 0.5%;
     margin-right: 0.5%;
 }
