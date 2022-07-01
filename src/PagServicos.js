@@ -24,19 +24,23 @@ const PagServicos = (props) => {
                 Temos diversos tipos de banhos especiais, terapeuticos
                 `,
             img:"serviços.png",
-            imgprof: "alex.png"
         },
 
         {
             servico: "Consulta",
-            descricao: "Aqui neste espaço, seu animalzinho será atendido particularmente por um profissional da clínica. Ele realizará procedimentos que ajudaram com sua saúde, e indicará tratamentos necessários para um bem estar maior ao seu animalzinho. Aqui também será onde seu pet será encaminhado para cirurgias caso necessário. Os atendimentos são 24horas.",
+            descricao: `Aqui neste espaço, seu animalzinho será atendido particularmente por um profissional da clínica. Ele realizará 
+            procedimentos que ajudaram com sua saúde, e indicará tratamentos necessários para um bem estar maior ao seu animal. 
+            Aqui também será onde seu pet será encaminhado para cirurgias caso necessário. Os atendimentos são 24horas, eventuais dúvidas
+            ou em caso de emergência entre em contato conosco imediatamente a qualquer horário .`,
             img:"serviços2.png",
-            imgprof: "profissional.png"
         },
 
         {
             servico: "Vacina",
-            descricao: "É só uma picadinha!. As vacinas são aplicadas para dar ao seu pet maior tempo de vida, auxiliar na saúde do seu pet e até mesmo na sua, te previnindo de algumas Zoonozes.",
+            descricao: `É só uma picadinha!. As vacinas são aplicadas para dar ao seu pet maior tempo de vida e proteger de doenças, 
+            auxiliar na saúde do seu pet e até mesmo na sua, previnindo de algumas Zoonozes. Cuidado nunca é de mais! sempre mantenha
+            as vacinas do seu animal em dia, e a sua também. Para mais informações sobre nossas vacinas e carteirinha de seu pet
+            entre em contato conosco a qualquer momento, nosso atendimento é 24Horas.`,
             img:"vacinapet.png",
             
         }
@@ -46,13 +50,13 @@ const PagServicos = (props) => {
     return ( 
         <div>
             <Menu/>
-        <div className='pagservico'>
+            <div className='pagservico'>
 
-        <div className='textimg'><img className='imagem1'src={servicos[x].img}/>
-        <button>Agende já</button>
-        <h1 className='h1serv'>{servicos[x].servico}</h1><br/>
-        <p>{servicos[x].descricao}</p></div>
-        </div>
+                <div className='textimg'><img className='imagem1'src={servicos[x].img}/>
+                <button>Agende já</button>
+                <h1 className='h1serv'>{servicos[x].servico}</h1><br/>
+                <p>{servicos[x].descricao}</p></div>
+            </div>
         </div>
 
      );

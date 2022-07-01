@@ -14,9 +14,9 @@ app.use(function(req, res, next) {
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'isa',
+  user     : 'luiza1',
   password : '1234',
-  database : 'petshop2',
+  database : 'pet_shop',
   port: 3306
 });
 
