@@ -3,12 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
 
-body .cadastroLogin{
-    height: 100vh;
-    padding: 0;
-    background-color:#6c8d65;  
-}
-
 .centro{
     text-align:center;
 }
@@ -23,7 +17,12 @@ body .cadastroLogin{
     font-family:'Secular One', sans-serif;
     background-color:#6c8d65;
     font-size: 20px;
+    height: 100%;
     
+}
+
+.bodyLogin{
+    height: 100vh;
 }
  
 .Cadastro h1{
@@ -31,7 +30,6 @@ body .cadastroLogin{
     font-family: 'Baloo 2', cursive;
     color:rgb(0, 0, 0);
     font-size: 50px;
-    margin-top: 3.8%;
  
 }
 
@@ -51,8 +49,8 @@ body .cadastroLogin{
     border:none;
     border-radius: 15px;
     margin: 30px;
-    height: 650px;
     width: 500px;
+    height: 687px;
     margin-left: 100px;
     margin-top: 1%;
 }
@@ -94,6 +92,18 @@ body .cadastroLogin{
     padding: 3px;
     border: black solid 2px;
     margin: 7px;
+    margin-top: 10px;
+}
+
+.buttonLogin{
+    text-decoration: none;
+    background: rgba(60, 85, 51, 0.87);
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0px 0px 6px #ccc;
+    padding: 3px;
+    border: black solid 2px;
+    margin: 7px;
 }
 
 
@@ -107,7 +117,7 @@ body .cadastroLogin{
 }
 
 .Cadastro img{
-    margin-top: 0;
+    margin-top: 10%;
     width: 470px;
 
 }
@@ -119,6 +129,7 @@ body .cadastroLogin{
 
 .login{
     width: 50%;
+    margin-top: 1%;
     text-align: center;
 
 }
@@ -129,17 +140,28 @@ body .cadastroLogin{
     text-align: center;
     border:none;
     border-radius: 15px;
-    height:500px;
+    height:450px;
     width: 500px;
     margin-left: 100px;
     margin-top: 15%;
 }
+
 .imgFundoLogin{
     width: calc(80vh);
     position: absolute;
     bottom: 0;
     left: 0;
 
+}
+
+.loCadastro{
+    text-decoration: none;
+    color: rgb(61, 61, 231);
+}
+
+.loLogin{
+  text-decoration: none; 
+  color: rgb(61, 61, 231); 
 }
 
 

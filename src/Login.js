@@ -1,6 +1,6 @@
 import { getDefaultNormalizer } from '@testing-library/react';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
@@ -54,6 +54,7 @@ const Login = () => {
 
     return (  
 
+        <div className='bodyLogin'>
         <div className='login2 cadastroLogin'>
 
 
@@ -77,16 +78,18 @@ const Login = () => {
                         <i className="fa-solid fa-key"></i><input name="senha" autoComplete='current-password' required minLength="3" type="password" placeholder="Senha"/>                                             
                         <br/>
                         <br/>
-                        <button className='link'><i className="fa-solid fa-arrow-left"></i> Voltar </button>
-                        <button className='link'> Entrar </button>
+                        <button className='buttonLogin'><i className="fa-solid fa-arrow-left"></i> Voltar </button>
+                        <button className='buttonLogin'> Entrar </button>
 
                         </label>
                     </form>    
+                    <hr/>
+                    <p>Não possui uma conta? <Link className='loCadastro' to='/cadastro'>Cadastre-se</Link></p>
                 </div>  
             </div>
 
         </div>
-
+        </div>
 
     );
 }
