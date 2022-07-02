@@ -240,7 +240,7 @@ const [num, setNum] = useState(0);
                     
 
                     {
-                        agenda == 0 ? <div><br></br><td>Nenhum horário marcado...</td></div>  : 
+                        agenda == 0 ? <div><br></br><td>Nenhum horário marcado... </td></div>  : 
                         <>
                             {agenda.map (u => {
                                 
@@ -295,16 +295,17 @@ const [num, setNum] = useState(0);
                 onRequestClose = {CloseModal}
                 style = {customStyles}
                 >
-                    
-                    <h1> Adicionar pet </h1>
-                    <p>Nome do animal:</p><input name='nome' className='inputPerfil'></input>
-                    <p>Espécie:</p><input name='especie' className='inputPerfil'></input>
-                    <p>Raça:</p><input name='raca' className='inputPerfil'></input>
-                    <p>Porte:</p><input name='porte' className='inputPerfil'></input>
-                     <br/><br/>
-                    <button onClick={CloseModal}>Voltar</button>
-                    <button onClick={CadastrarPet}>Finalizar</button>
-                    
+                    <div className='modalCadastropet'>
+                        <h1> Adicionar pet </h1>
+                        <p>Nome do animal:</p><input name='nome' className='inputPerfil'></input>
+                        <p>Espécie:</p><input name='especie' className='inputPerfil'></input>
+                        <p>Raça:</p><input name='raca' className='inputPerfil'></input>
+                        <p>Porte:</p><input name='porte' className='inputPerfil'></input>
+                        <br/><br/>
+                        <button className='bModalPet' onClick={CloseModal}><i class="fa-solid fa-arrow-left-long"></i>Voltar</button>
+                        <button className='bModalPet' onClick={CadastrarPet}>Finalizar</button>
+                    </div>
+
                 </Modal>
 
 
