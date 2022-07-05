@@ -14,9 +14,9 @@ app.use(function(req, res, next) {
 var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'luiza1',
+  user     : 'isa',
   password : '1234',
-  database : 'pet_shop',
+  database : 'petshop2',
   port: 3306
 });
 
@@ -102,6 +102,17 @@ app.post('/agenda', (req, res) => {
   });
     
 })
+
+app.delete('/agenda/:idagenda', (req, res) => {
+
+  const idagenda = req.params.idagenda
+  
+  connection.query(`DELETE FROM agenda WHERE id_agenda = ${idagenda};`, function (error, results, fields) {
+    if (error) throw error;
+    res.send(results);
+  });
+})
+
 
 app.get('/login', (req, res) => {
 })

@@ -152,13 +152,14 @@ const Agenda = () => {
             <form onSubmit={(e) => Salvar(e) }>
                 
                 <div>
+                    <img className="voltar1" onClick={FecharModal2} src="voltar1.png"/>
                     <label>
                     <p className="nomepet" > <i class="fa-solid fa-paw"></i> Para qual pet você quer agendar?</p>
 
                         <select id="pet2" className="nomepet">
                             {
                                 animais == 0 ? <option>Nenhum animal cadastrado</option> :
-                                animais.map(a => <option value={a.id_animais}>{a.nome}</option>)
+                                animais.map(a => <option value={a.id_animais}>{a.nome[0].toUpperCase() + a.nome.substr(1)}</option>)
                             }
                         </select>
                         
@@ -203,9 +204,9 @@ const Agenda = () => {
                 
 
                 </div>
-
-                <button type="text" className="botao1" onClick={FecharModal2} ><i class="fa-solid fa-arrow-left-long"></i> Voltar</button>
+                
                 <button type="submit" className="botao2"><i class="fa-solid fa-check"></i> Salvar</button>
+
                 
             </form>
             </div>

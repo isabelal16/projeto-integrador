@@ -195,6 +195,8 @@ const [num, setNum] = useState(0);
             <div className='carregar'><img src='recarregar.png' onClick={handleClick}/></div>
             <h1 className='textosPer'>{localStorage.getItem ('nome')}</h1>
 
+            
+
             <div className='titulos'>
                 <h3>Pets</h3>
                 <h3 className='titulo1'>Agenda</h3>
@@ -228,19 +230,21 @@ const [num, setNum] = useState(0);
 
                 <div className='Pets'>
                 
-                <table >
+                <table>
                     <tr>
                         <th>Pet</th>
                         <th>Data</th>
                         <th>Horário</th>
                         <th>Serviço</th>
                     </tr>
+
+                    
                     
 
                     
 
                     {
-                        agenda == 0 ? <div><br></br><td>Nenhum horário marcado... </td></div>  : 
+                        agenda == 0 ? <div><br></br><p>Nenhum horário marcado... </p></div>  : 
                         <>
                             {agenda.map (u => {
                                 
@@ -302,8 +306,8 @@ const [num, setNum] = useState(0);
                         <p>Raça:</p><input name='raca' className='inputPerfil'></input>
                         <p>Porte:</p><input name='porte' className='inputPerfil'></input>
                         <br/><br/>
-                        <button className='bModalPet' onClick={CloseModal}><i class="fa-solid fa-arrow-left-long"></i>Voltar</button>
                         <button className='bModalPet' onClick={CadastrarPet}>Finalizar</button>
+                        <img className='voltar' onClick={CloseModal} src='voltar1.png'/>
                     </div>
 
                 </Modal>

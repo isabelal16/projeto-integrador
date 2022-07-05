@@ -33,6 +33,23 @@ const Horarios = () => {
         })
     }
 
+    const deleteAgenda = (idagenda) => {
+
+        const axios = require ("axios");
+
+        axios.delete('http://localhost:3001/agenda/'+idagenda )
+        .then(function (response) {
+                
+            const dados = response.data;
+            console.log (dados)
+            window.location.reload();
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
+    }
+
+
     const horarios = [
 
         {
@@ -112,7 +129,7 @@ const Horarios = () => {
                                 y.split (":")
                                 const hora = y.split(":")[0]
                                 const minuto = y.split(":")[1]
-
+                                const idagenda = u.id_agenda
                                 
                                 return(
                                     <tr>  
@@ -122,6 +139,7 @@ const Horarios = () => {
                                         <td>{hora}:{minuto}</td>
                                         <td>{u.nomepet[0].toUpperCase() + u.nomepet.substr(1)}</td>
                                         <td>{u.nome[0].toUpperCase() + u.nome.substr(1)}</td>
+                                        <button onClick={ () => deleteAgenda(idagenda)}>Finalizar</button>
                                         
                                     </tr>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Cadastro = () => {
 
@@ -57,7 +57,8 @@ const Cadastro = () => {
 
                     <br/>
         
-                    <h1><i className="fa-solid fa-dog"></i>Cadastro</h1>
+                    <h1 >Cadastro</h1>
+                    <Link to="/"><img className='voltar3' src='voltar1.png'/></Link>
 
                     <hr/>
 
@@ -99,15 +100,13 @@ const Cadastro = () => {
                             <br/>
                 
                             <i className="fa-solid fa-key"> </i><input id='senhaCadastro2' autoComplete='new-password' required minLength="8" name ='senha2' type="password" placeholder="Confirme sua senha:"/>
-
                             <br/>
-                            <button className='link'><i className="fa-solid fa-arrow-left"></i> Voltar</button>
+                            <p className='pcadastro'>Possui uma conta? <Link className='loLogin' to='/login'>Conecte-se</Link></p>
                             <button className='link'>Salvar</button> 
-                            <hr/>
                         </label>
                     </form>
 
-
+                    
                     
                     
 

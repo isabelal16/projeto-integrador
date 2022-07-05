@@ -37,7 +37,7 @@ const PagServicos = (props) => {
 
         {
             servico: "Vacina",
-            descricao: `É só uma picadinha!. As vacinas são aplicadas para dar ao seu pet maior tempo de vida e proteger de doenças, 
+            descricao: `As vacinas são aplicadas para dar ao seu pet maior tempo de vida e proteger de doenças, 
             auxiliar na saúde do seu pet e até mesmo na sua, previnindo de algumas Zoonozes. Cuidado nunca é de mais! sempre mantenha
             as vacinas do seu animal em dia, e a sua também. Para mais informações sobre nossas vacinas e carteirinha de seu pet
             entre em contato conosco a qualquer momento, nosso atendimento é 24Horas.`,

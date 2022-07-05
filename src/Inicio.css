@@ -62,12 +62,63 @@ body{
     text-align: center;
     
     }
+
     p{
     
     font-size: 1.0em;
     line-height: 1.0em;
     text-align: center;
+    }
+
+    .somos{
+        display: flex;
+        margin-top: 80px;
+    }
     
+    .desc{
+        text-align: center;
+        width: 600px;
+        margin-top: 60px;
+        margin-left: 100px;
+        background: #B5D3AF;
+        height: 300px;
+        border-radius: 10px;
+    }
+    .desc p{
+        font-size: 17px;
+    }
+
+    .desc h4{
+        margin-top: 30px;
+        font-size: 25px;
+        margin-bottom: 30px;
+        color: white;
+    }
+
+    .gatodog{
+        width: 400px;
+        margin-left: 150px;
+    }
+
+
+    .porque{
+        display: flex;
+        justify-content: center;
+    }
+
+    .porque img{
+        width: 100px;
+        border-radius: 50%;
+        margin-left: 50px;
+    }
+
+    .pq{
+        width: 200px;
+    }
+
+    .h2pq{
+        text-align: center;
+        margin-top: 30px;
     }
     @media only screen and (max-width: 1366px) {
         .painel {
