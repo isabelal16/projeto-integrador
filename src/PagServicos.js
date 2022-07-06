@@ -53,7 +53,6 @@ const PagServicos = (props) => {
             <div className='pagservico'>
 
                 <div className='textimg'><img className='imagem1'src={servicos[x].img}/>
-                <button>Agende já</button>
                 <h1 className='h1serv'>{servicos[x].servico}</h1><br/>
                 <p>{servicos[x].descricao}</p></div>
             </div>

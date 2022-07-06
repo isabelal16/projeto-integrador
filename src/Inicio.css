@@ -83,6 +83,8 @@ body{
         background: #B5D3AF;
         height: 300px;
         border-radius: 10px;
+        font-family: 'Cormorant Garamond', serif;
+        
     }
     .desc p{
         font-size: 17px;
@@ -93,6 +95,7 @@ body{
         font-size: 25px;
         margin-bottom: 30px;
         color: white;
+        font-weight: bolder;
     }
 
     .gatodog{
@@ -104,21 +107,56 @@ body{
     .porque{
         display: flex;
         justify-content: center;
+        margin-top: 40px;
     }
 
-    .porque img{
+    .pq img{
         width: 100px;
         border-radius: 50%;
         margin-left: 50px;
     }
 
+    .espaco img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .espaco{
+        width: 280px;
+        margin-top: 40px;
+    }
+    .linkserv{
+        text-decoration: none;
+        background: white;
+        color: black;
+        padding: 5px;
+        font-size: 20px;
+        border-radius: 10px;
+
+    }
+
+    .espaco p{
+        font-size: 25px;
+        margin-top: 30px;
+        font-family: 'Cormorant Garamond', serif;
+        margin-left: -25px;
+        
+    }
+
     .pq{
         width: 200px;
+        margin-right: 30px;
+    }
+
+    .pq p{
+        font-size: 13px;
     }
 
     .h2pq{
         text-align: center;
-        margin-top: 30px;
+        margin-top: 50px;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: bolder;
     }
     @media only screen and (max-width: 1366px) {
         .painel {

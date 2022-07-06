@@ -12,7 +12,7 @@ const Menu = ( ) => {
 
             <div className='logo'>
             <Link to = "/" ><img src='logo.png' ></img></Link>
-                <h2>Avocados Bichos</h2>           
+                <h2>Avocado Bichos</h2>           
             </div>
 
             <div className='titulos'>

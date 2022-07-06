@@ -29,6 +29,7 @@ const Inicio = () => {
                 <div className='desc'>
                     <h4>Quem Somos?</h4>
                     <p>A Avocado Bichos é uma clínica especializada na saúde e conforto do seu pet. Foi fundada em maio de 2022, se destaca pelo zelo com os animais e pela busca ao aperfeiçoamento na prestação de serviços pet. Apaixonada por animais, a equipe tem como prioridade proporcionar conforto e segurança desde a saúde à recreação através de toda nossa infraestrutura.</p>
+                    <Link to="/servicos" className='linkserv'>Nossos serviços</Link>
                 </div>
             </div>
             <h2 className='h2pq'>Por que escolher a Avocado Bichos?</h2>
@@ -48,6 +49,27 @@ const Inicio = () => {
                 <div className='pq'>
                     <img src='emergencia.png'/>
                     <p>Equipe preparada para quaisquer tipos de emergência</p>
+                </div>
+            </div>
+
+
+            <h2 className='h2pq'>Nossa infraestrutura</h2>
+            <div className='porque'>
+                <div className='espaco'>
+                    <img src='consulta.png'/>
+                    <p>Consultório</p>
+                </div>
+                <div className='espaco'>
+                    <img src='recepção.jpg'/>
+                   <p> Recepção</p>
+                </div>
+                <div className='espaco'>
+                    <img src='banhotosa.png'/>
+                   <p> Banho e tosa</p>
+                </div>
+                <div className='espaco'>
+                    <img src='playground.jpg'/>
+                    <p>Playground</p>
                 </div>
             </div>
 
