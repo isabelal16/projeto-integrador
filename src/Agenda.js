@@ -46,19 +46,19 @@ const Agenda = () => {
         setFunctionaries([
             {
                 id: 1,
-                name: 'Alex Silva',
+                name: 'Maria Rita',
             },
             {
                 id: 2,
-                name: 'Anna Souza',
+                name: 'Alex Silva',
             },
             {
                 id: 3,
-                name: 'Carlos Ferreira',
+                name: 'Anna Souza',
             },
             {
                 id: 4,
-                name: 'Maria Rita',
+                name: 'Carlos Ferreira'
             },
         ]);
     };
