@@ -31,7 +31,7 @@ body .cadastroLogin{
     font-family: 'Baloo 2', cursive;
     color:rgb(0, 0, 0);
     font-size: 50px;
-    margin-top: 3.8%;
+    margin-top: 2%;
  
 }
 
@@ -51,10 +51,8 @@ body .cadastroLogin{
     border:none;
     border-radius: 15px;
     margin: 30px;
-    height: 650px;
     width: 500px;
     margin-left: 100px;
-    margin-top: 1%;
 }
  
 
@@ -154,6 +152,7 @@ body .cadastroLogin{
     margin-left: 100px;
     margin-top: 15%;
 }
+
 .imgFundoLogin{
     width: calc(80vh);
     position: absolute;

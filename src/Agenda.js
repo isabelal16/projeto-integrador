@@ -206,7 +206,7 @@ const Agenda = () => {
                 </div>
 
                 <button type="submit" className="botao2"><i class="fa-solid fa-check"></i> Salvar</button>
-                <img className='voltar1' onClick={FecharModal2} src='voltar1.png' />
+                
                 
             </form>
             </div>

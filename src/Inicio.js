@@ -28,7 +28,7 @@ const Inicio = () => {
                 <div><img  className='gatodog' src='gatodog.gif'/></div>
                 <div className='desc'>
                     <h4>Quem Somos?</h4>
-                    <p>A Avocado Bichos é uma clínica especializada na saúde e conforto do seu pet. Foi fundada em maio de 2022, se destaca pelo zelo com os animais e pela busca ao aperfeiçoamento na prestação de serviços pet. Apaixonada por animais, a equipe tem como prioridade proporcionar conforto e segurança desde a saúde à recreação através de toda nossa infraestrutura.</p>
+                    <p>A Avocado Bichos é uma clínica especializada na saúde e conforto do seu pet. Estamos no mercado desde abril de 2012, nossa clínica se destaca pelo zelo com os animais e pela busca ao aperfeiçoamento na prestação de serviços pet. Apaixonada por animais, a equipe tem como prioridade proporcionar conforto e segurança desde a saúde à recreação através de toda nossa infraestrutura.</p>
                     <Link to="/servicos" className='linkserv'>Nossos serviços</Link>
                 </div>
             </div>
