@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300&display=swap');
+
+.adm{
+    min-height: 656px;
+    max-height: 1000000px;
+    background: #91b372;
+    width: 200px;
+    font-family: 'Cormorant Garamond', serif;
+    position: fixed;
+}
+
+.adm img{
+    border-radius: 50%;
+    width: 120px;
+    margin-left: 30px;
+}
+
+.adm p{
+    
+    font-family: 'Kreon', serif;
+    margin-left: 25px;
+    color: white;
+    font-size: 20px;
+    
+}
+
+.adm h4{
+    margin-left: 20px;
+    color: white;
+}
+
+.adm .link{
+    
+    color: black;
+    text-decoration: none;
+
+}
+
+.lOff{
+    padding: 0.2%;
+    color: white;
+    background: #6c8d65;
+    width: 30%;
+    margin-left: 10%;
+    margin-top: 35%;
+    font-size: 18px;
+    
+}

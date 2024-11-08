@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.inputc input{
+    width: 60%;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: #B5D3AF 2px solid;
+    
+    
+}
+
+.clientes h1{
+    text-align: center;
+    font-size: 80px;
+}
+
+
+.clientes{
+    text-align: center;
+    margin-left: 200px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.clientes2{
+    margin-left: 430px;
+    width: 700px;
+    margin-top: 30px;
+    font-family: 'Cormorant Garamond', serif;
+    border: 0.3px black solid;
+}
+
+.clientes2 h3{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+.clientes2 hr{
+    color: black;
+}
+
+.clientes2 p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}

@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@300&family=Tiro+Devanagari+Hindi&display=swap');
+
+.textosSer{
+    color: black;
+    background-color: #B5D3AF;
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.slideTa{
+    margin-top: 50px ;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 7%;
+}
+
+.listaSer{
+    background: #082E01;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logoServicos{
+    display: flex;
+}
+
+.logoServicos h2{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.dropdown{
+    margin: 15px;
+}
+@media only screen and (max-width: 1366px) {
+    .rodape{
+        width: 100%;
+        padding-left: 30px;
+        padding: 40px;
+        
+        
+    }
+        .dropdown-menu{
+            margin-right: 30px;
+            margin: 50px;
+        }
+
+}

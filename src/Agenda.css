@@ -1,0 +1,110 @@
+body .caixa{
+
+    background-color: #6c8d65;
+
+}
+
+.nomepet{
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    border-color: 1;
+    margin-top: 7%;
+    font-size: 20px;
+}
+
+.dia{
+
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    border-color: 1;
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.hora{
+
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    border-color: 1;
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+.caixa{
+    background-color: #B8D6B3;
+    text-align: center;
+    border:none;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px #ccc;
+    width: 400px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.profissional{
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    border-color: 1;
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.funcionario1{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}´
+
+.funcionario{
+    height: 30px;
+    display: flex;  
+}
+
+
+.botao2{
+
+    background-color: #6c8d65;
+    color: black;
+    font-size: 20px;
+    padding: 3px;
+    width: 130px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+
+}
+
+.opcaoServico{
+    width: 35%;
+    padding: 2%;
+    font-size: 130%;
+}
+
+.opcaoHora{
+    padding: 1%;
+    width: 25%;
+}
+
+.opcaoDia{
+    padding: 4%;
+    width: 90%;
+    font-size: 20;
+}
+
+.opcaoPet{
+    padding: 1%;
+    width: 75%;
+}
+
+.voltar1{
+    width: 35px;
+    position: absolute;
+    margin-left: -45px;
+    margin-top: 13px;
+    
+}

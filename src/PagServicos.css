@@ -1,0 +1,52 @@
+.pagservico img{
+
+    
+}
+
+.imagem1{
+    object-fit: cover;
+    clip-path: ellipse(500px 320px at 10% 20%);
+    margin-left: -200px;
+    position: absolute;
+    margin-top: -40px;
+    
+
+}
+
+
+.pagservico p{
+    font-size: 20px;
+    margin-top: 40px;
+    width: 900px;
+    text-align: center;
+    margin-left: 400px;
+}
+
+.h1serv{
+    margin-top: 40px;
+    text-align: center;
+    margin-left: 300px;
+}
+
+.profissionais img{
+    width: 150px;
+    margin-left: -100px;
+    
+}
+
+.profissionais{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+.pagservico button{
+    background: #B5D3AF;
+    border: none;
+    font-size: 23px;
+    float: right;
+    border-radius: 2px;
+    position: fixed;
+    right: 10px;
+    bottom: 40px;
+}

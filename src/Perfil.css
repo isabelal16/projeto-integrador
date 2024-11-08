@@ -1,0 +1,223 @@
+.modalCadastropet{
+    background-color: #6c8d65;
+    text-align: center;
+    border:none;
+    border-radius: 15px;
+    width: 450px;
+    height: 475px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 19px;
+}
+
+.bModalPet{
+    background-color:#6c8d65;
+    color: black;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100px;
+}
+
+.fundo{
+    background: #91b372;
+    width: 100%;
+    height: 250px;
+}
+
+
+.fotoU i{
+    margin-left: -400px;
+}
+
+.fotoU{
+    background: white;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: -250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fotopet img{
+    width: 100px;
+    height: 100px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 80px;
+}
+
+.carregar img {
+    width: 22px;
+    margin-left: 760px;
+    margin-top: -60px;
+}
+
+.perfilP{
+    margin-left: 200px;
+    margin-bottom: 40px;
+    margin-top: -60px;
+}
+
+.textosPer{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+.perfil h3{
+    background:#91b372;
+    width: 40%;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    margin-left: 80px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.titulos{
+    display: flex;
+    margin-left: -6px;
+    margin-right: 20px;
+}
+
+.Pets table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+.titulos .titulo1{
+    margin-left: 140px;
+}
+
+.add img{
+    background: #6c8d65;
+    border-radius:  50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 550px;
+    margin-top: -100px;
+
+}
+
+.agenda img{
+    background: #6c8d65;
+    border-radius:  50%;
+    width: 43px;
+    height: 43px;
+    margin-top: -150px;
+    margin-left: 1220px;
+    
+}
+
+.agenda2{
+    display: flex;
+    justify-content: center;
+}
+
+.conteudo{
+    display: flex;
+}
+
+.botaoA{
+    background: #6c8d65;
+    border-radius:  50%;
+    width: 40px;
+    float: inline-end;
+}
+
+/* .Modal{
+    background: #6c8d65;
+    width: 400px;
+    height: 600px;
+    text-align: center;
+    margin-left: 50%;
+
+} */
+
+.alinhamento{
+    display: flex;
+   
+}
+
+
+.Pets{
+    width: 50%;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: #6c8d65 solid 2px;
+    border-radius: 10px;
+    
+
+}
+
+.inputPerfil{
+    width: 50%;
+    
+}
+
+.logOffButton{
+    padding: 0.2%;
+    color: white;
+    background: #6c8d65;
+    width: 5%;
+    margin-top: 0.7%;
+    margin-left: 0.7%;
+}
+
+.voltar{
+    width: 40px;
+    position: absolute;
+    margin-top: -390px;
+    margin-left: -240px;
+}
+@media only screen and (max-width: 1366px) {
+    .rodape{
+        width: 100%;
+        padding-left: 30px;
+        padding: 40px;
+        
+        
+    }
+        .dropdown-menu{
+            margin-right: 30px;
+            margin: 50px;
+        }
+
+        .add img{
+            background: #6c8d65;
+            border-radius:  50%;
+            width: 40px;
+            height: 40px;
+            margin-left: 567px;
+            margin-top: -178px;
+        
+        }
+        .agenda img{
+            background: #6c8d65;
+            border-radius:  50%;
+            width: 46px;
+            margin-top: -230px;
+            margin-left: 1185px;
+            
+        }
+        .alinhamento{
+            display: flex;
+            margin: 49px
+        }
+        
+        .Pets{
+        width: 123%;
+        margin-left: 50px;
+        margin-right: 50px;
+        border: #6c8d65 solid 2px;
+        border-radius: 10px;
+        
+
+    }
+}

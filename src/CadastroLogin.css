@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Grape+Nuts&family=Raleway&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+body .cadastroLogin{
+    height: 100vh;
+    padding: 0;
+    background-color:#94ac8f;  
+}
+
+.centro{
+    text-align:center;
+}
+
+.cadastroLogin{
+    display: flex;
+}
+ 
+body .cadastroLogin{
+ 
+    color:rgb(0, 0, 0);
+    font-family:'Secular One', sans-serif;
+    background-color:#94ac8f;
+    font-size: 20px;
+    
+}
+ 
+.Cadastro h1{
+ 
+    font-family: 'Baloo 2', cursive;
+    color:rgb(0, 0, 0);
+    font-size: 50px;
+    margin-top: 2%;
+ 
+}
+
+.login2 h1{
+ 
+    font-family: 'Baloo 2', cursive;
+    color:rgb(0, 0, 0);
+    font-size: 50px;
+    margin-top: 3.8%;
+ 
+}
+    
+.caixa2{
+    
+    background-color:  #B5D3AF;
+    text-align: center;
+    border:none;
+    border-radius: 15px;
+    margin: 30px;
+    width: 500px;
+    margin-left: 100px;
+}
+ 
+
+.Cadastro input{
+ 
+    padding: 3px;
+    width: 397px;
+    border:none;
+    border-radius: 2px;
+    font-size: 15px;
+   
+}
+
+.login2 input{
+    padding: 8px;
+    width: 397px;
+    border:none;
+    border-radius: 2px;
+    font-size: 20px;
+}
+ 
+.login3{
+    width: 50%;
+}
+
+.login3 .voltar2{
+    width: 40px;
+    position: absolute;
+    margin-left: -200px;
+    margin-top: -120px;
+}
+
+
+.CadastroLogin p{
+ 
+    font-size: 20px;
+    font-family: 'Hammersmith One', sans-serif;
+ 
+}
+
+.cadastroLogin .link{
+    text-decoration: none;
+    background: rgba(60, 85, 51, 0.87);
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 6px #ccc;
+    padding: 5px;
+    border: black solid 1px;
+    margin: 7px;
+    width: 120px;
+}
+
+
+
+.login3 .voltar3{
+    width: 40px;
+    position: absolute;
+    margin-left: -200px;
+    margin-top: -60px;
+}
+
+
+.login2 img{
+    width: 650px;
+    
+}
+
+.inputlogin{
+    margin-top: 35px;
+}
+
+.Cadastro img{
+    margin-top: 0;
+    width: 470px;
+
+}
+
+.login2{
+    display: flex;
+}
+
+
+.login{
+    width: 50%;
+    text-align: center;
+
+}
+ 
+.caixa1{
+ 
+    background-color: #B5D3AF;
+    text-align: center;
+    border:none;
+    border-radius: 15px;
+    height: 400px;
+    width: 500px;
+    margin-left: 100px;
+    margin-top: 15%;
+}
+
+.imgFundoLogin{
+    width: calc(80vh);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+}
+
+.loCadastro{
+    text-decoration: none;
+    color: rgb(61, 61, 231);
+    font-size: 13px;
+}
+
+.loLogin{
+  text-decoration: none; 
+  color: rgb(61, 61, 231); 
+  font-size: 13px;
+}
+
+.plogin{
+    font-size: 13px;
+    margin-top: -20px;
+    margin-right: -170px;
+}
+
+.pcadastro{
+    font-size: 13px;
+    margin-right: -230px;
+}
+
+
+
+/* @media only screen and (max-width: 1400px) {
+    body {
+        max-width: 100%;
+    }
+    .imgFundoLogin{
+        width: calc(100vh/1.5);
+    }
+    .caixa2{
+        margin: 30px;
+      }
+      .cadastroLogin .link{
+        text-decoration: none;
+        background: rgba(60, 85, 51, 0.87);
+        color: white;
+        border-radius: 6px;
+        padding: 0px, 30px;
+        border: black solid 2px;
+        margin: 7px;
+    }
+    .caixa1{
+ 
+        background-color: #B8D6B3;
+        text-align: center;
+        border:none;
+        border-radius: 15px;
+        height:500px;
+        width: 500px;
+        margin-left: 2px;
+        margin-top: 35%;
+
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .login{
+        width: 50%;
+        text-align: center;
+    
+    }
+    .cadastroLogin .link{
+        text-decoration: none;
+        background: rgba(60, 85, 51, 0.87);
+        color: white;
+        border-radius: 6px;
+        padding: 0px, 30px;
+        border: black solid 2px;
+        margin: 50px;
+    }
+    .imgFundoLogin{
+        width: 500px;
+        margin-top: 50px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 100;
+        
+    
+    }
+  } */

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+
+.hor table{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    background:#F0F2F0;
+    width: 70%;
+    border-radius: 2px;
+}
+
+.hor2{
+    text-align: center;
+    margin-left: 200px;
+    font-family: 'Cormorant Garamond', serif;
+
+}
+
+.hor h1{
+    margin-top: -250px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 80px;
+}
+
+.horarios p{
+    margin-left: 200px;
+}
+
+.hor h3{
+    font-size: 50px;
+    color: #91b372;
+}
+
+.hor2 img{
+    width: 300px;
+    margin-left: 800px;
+
+}
